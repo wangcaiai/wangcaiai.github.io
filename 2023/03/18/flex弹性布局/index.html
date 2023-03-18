@@ -7,25 +7,28 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
+<meta name="description" content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css遗漏">
-<meta property="og:url" content="http://www.wangcai.club/2023/03/18/css%E9%81%97%E6%BC%8F/index.html">
+<meta property="og:title" content="flex弹性布局">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="下午会有太阳">
-<meta property="og:description" content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
+<meta property="og:description" content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
 <meta property="og:locale">
 <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-<meta property="article:published_time" content="2023-03-18T10:57:56.000Z">
-<meta property="article:modified_time" content="2023-03-18T11:00:47.349Z">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-03-18T09:41:29.000Z">
+<meta property="article:modified_time" content="2023-03-18T12:38:56.373Z">
 <meta property="article:author" content="wangcai">
-<meta property="article:tag" content="css">
+<meta property="article:tag" content="flex布局">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
 
-    <meta name="keywords" content="css">
+    <meta name="keywords" content="弹性布局">
 
 
-<title >css遗漏</title>
+<title >flex弹性布局</title>
 
 <!-- Favicon -->
 
@@ -70,8 +73,8 @@
 
 
 <!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/cat.png","icon16":"/img/cat.png","icon32":"/img/beaucat.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/img/cat.ico","showText":"下午会有太阳","hideText":"一切都有转机","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-18 19:00:47"};</script>
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/cat.png","icon16":"/img/cat.png","icon32":"/img/beaucat.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/img/cat.ico","showText":"下午会有太阳","hideText":"一切都有转机","assets":null,"internal_provider":"local","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-18 20:38:56"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
@@ -228,7 +231,7 @@
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/img/css_1.png">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/img/flex1.png">
     <!-- banner cover end -->
     
 
@@ -244,10 +247,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            CSS遗漏知识点
+                            flex!
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            css遗漏
+                            flex弹性布局
                         </h1>
 
                         
@@ -289,10 +292,20 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
-        <img alt="Avatar" class="trm-avatar" src="/img/avatar.png">
+        <img alt="Avatar" class="trm-avatar" src="/img/Avatar.jpg">
     </div>
     <h5 class="trm-name trm-mb-15">
         旺财
@@ -307,7 +320,7 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <div class="trm-social">
@@ -319,7 +332,7 @@
 </div>
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -353,7 +366,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -364,6 +377,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#display：flex弹性布局"  data-scroll-to="#display：flex弹性布局"><span class="toc-number">1.</span> <span class="toc-text">display：flex弹性布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#flex-direction"  data-scroll-to="#flex-direction"><span class="toc-number">1.1.</span> <span class="toc-text">flex-direction:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#flex-wrap"  data-scroll-to="#flex-wrap"><span class="toc-number">1.2.</span> <span class="toc-text">flex-wrap:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#justify-content"  data-scroll-to="#justify-content"><span class="toc-number">1.3.</span> <span class="toc-text">justify-content:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#align-items"  data-scroll-to="#align-items"><span class="toc-number">1.4.</span> <span class="toc-text">align-items:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#align-content"  data-scroll-to="#align-content"><span class="toc-number">1.5.</span> <span class="toc-text">align-content:</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -384,7 +404,7 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            18:57
+            17:41
         </div>
     </div>
     <div class="col-sm-4">
@@ -396,137 +416,55 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <blockquote>
-<p><strong>margin</strong> </p>
-<p>只跟一个参数时表示上下左右的外边距</p>
-<p>跟两个参数时表示 上下 左右的外边距</p>
-<p>跟三个参数时表示 上 左右 下 的外边距</p>
-<p>跟四个参数时表示从上开始顺时针的外边距</p>
-</blockquote>
-<blockquote>
-<p>​	<strong>border-radius</strong></p>
-<p>只跟一个参数时表示四个圆角的弧度</p>
-<p>跟两个参数时表示按上左下右 上右下左作用圆角</p>
-<p>跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角</p>
-<p>跟四个参数时表示按照左上 右上 右下 左下的顺序作用圆角</p>
-</blockquote>
-<p><strong>block</strong></p>
-<blockquote>
-<p>块级元素的默认值，独占一行，可以修改元素的宽高</p>
-<p>块级元素包括div h1-h6 p </p>
-</blockquote>
-<p><strong>inline</strong></p>
-<blockquote>
-<p>行内元素的默认值，同占一行，不可以更改元素的宽高</p>
-<p>行内元素包括span b i s u a</p>
-</blockquote>
-<p><strong>inline-block</strong></p>
-<blockquote>
-<p>行内块元素的默认值，同占一行，可以修改宽高</p>
-<p>行内块元素包括img input</p>
-</blockquote>
-<p><strong>定位</strong></p>
-<blockquote>
-<blockquote>
-<p><strong>static</strong></p>
-<p>静态定位，会影响其他元素，调整方式：margin</p>
-</blockquote>
-<blockquote>
-<p><strong>relative</strong></p>
-<p>相对定位，参考系是原来的自己，不影响其他元素，可以显示层叠效果，元素不脱离文档流</p>
-<p>relative永远是参考自己没有定位前的坐标为原点进行位移</p>
-<p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>absolute</strong></p>
-<p>绝对定位，可以实现层叠效果，默认以body为参照物（如果要更改参照物，则将父元素添加定位：position：relative 子绝父相），元素脱离文档流（不占用原来的位置），absolute是参考离自己最近的参考系点进行定位</p>
-<p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>fixed</strong><br>    固定定位，元素固定在窗口的某个位置，元素脱离文档流（不占用原来位置），left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>float</strong><br>    浮动定位</p>
-</blockquote>
-<blockquote>
-<p><strong>具有脱离文档流特性的标签</strong><br>    absolute<br>    fixed<br>    float</p>
-</blockquote>
-<blockquote>
-<p><strong>层叠</strong></p>
-<p>标准流中的元素不存在层叠关系</p>
-<p>后来居上排列书写的时候, 后面的元素会覆盖前边元素之上</p>
-<ul>
-<li>定位元素：定位元素会层叠在标准流元素上面<ul>
-<li>定位元素间可以使用z-index设置优先级</li>
-<li>必须是定位元素，非static</li>
+    <h2 id="display：flex弹性布局"><a href="#display：flex弹性布局" class="headerlink" title="display：flex弹性布局"></a>display：flex弹性布局</h2><p> 在不同方向排列元素<br>        重新排列元素的显示顺序<br>        更改元素的对齐方式<br>        动态地将元素装入容器</p>
+<p><img src="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/flex1.png" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction:"></a>flex-direction:</h3><ul>
+<li><p>row（默认值）：主轴为水平方向，起点在左端。</p>
+</li>
+<li><p>row-reverse：主轴为水平方向，起点在右端。</p>
+</li>
+<li><p>column：主轴为垂直方向，起点在上沿。</p>
+</li>
+<li><p>column-reverse：主轴为垂直方向，起点在下沿。</p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap:"></a>flex-wrap:</h3><ul>
+<li>nowrap（默认）：不换行。</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
 </ul>
 </li>
-<li>浮动元素：float为left或right</li>
-<li>标准元素 –&gt; 浮动元素 –&gt; 定位元素</li>
 </ul>
-</blockquote>
-<blockquote>
-<p><strong>z-index</strong></p>
-<img src='/img/css_1.png'  loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'/>
-</blockquote>
-</blockquote>
-<p><strong>弹性布局</strong></p>
-<blockquote>
-<p><code>display: flex;</code></p>
-<blockquote>
-<p>如果其中一个div确定了宽度，则剩下的宽度由其他div按比分</p>
-</blockquote>
-<blockquote>
-<p>更改布局排列方向</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-direction: column</span><br></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>justify-content横向调整</p>
-<p>&#x2F;  居中   &#x2F;<br>justify-content: center;<br>&#x2F;  靠右  &#x2F;<br>justify-content: flex-end;<br>&#x2F;  靠左  &#x2F;<br>justify-content: flex-start;</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>align-items纵向调整</p>
-<p>&#x2F;   居中     &#x2F;<br>align-items: center;<br>&#x2F;	靠下	&#x2F;<br>align-items: flex-end;<br>    &#x2F;	靠上	&#x2F;<br>align-items: flex-start;</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><strong>单位</strong></p>
-<blockquote>
-<p><strong>px</strong></p>
-<blockquote>
-<p>像素，固定单位，会随着页面缩放而改变</p>
-</blockquote>
-<p><strong>%</strong></p>
-<blockquote>
-<p>百分比，相对长度，上级元素的百分比</p>
-</blockquote>
-<p><strong>vm</strong></p>
-<blockquote>
-<p>view width,页面百分比宽度</p>
-</blockquote>
-<p><strong>vh</strong></p>
-<blockquote>
-<p>view height,页面百分比高度</p>
-</blockquote>
-</blockquote>
-<p><strong>字体单位</strong></p>
-<blockquote>
-<p><strong>em</strong></p>
-<blockquote>
-<p>会根据上级元素改变大小</p>
-</blockquote>
-<p><strong>rem</strong></p>
-<blockquote>
-<p>只会根据页面改变大小</p>
-</blockquote>
-</blockquote>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content:"></a>justify-content:</h3><ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</li>
+</ul>
+<p><img src="/flex2.png" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items:"></a>align-items:</h3><ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p><img src="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/align-items.gif" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content:"></a>align-content:</h3><p>定义了多根轴线的对齐方式，如果项目只有一根轴线，那么该属性将不起作用</p>
+<ul>
+<li><p>flex-start：与交叉轴的起点对齐。</p>
+</li>
+<li><p>flex-end：与交叉轴的终点对齐。</p>
+</li>
+<li><p>center：与交叉轴的中点对齐。</p>
+</li>
+<li><p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
+</li>
+<li><p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</p>
+</li>
+<li><p>stretch（默认值）：轴线占满整个交叉轴。</p>
+<p><img src="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/align-content.gif" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+</li>
+</ul>
 
 </article>
     
@@ -541,13 +479,12 @@
         </h5>
     </div>
     
-    
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/03/18/Vue2-%E5%B0%9A%E5%93%81%E6%B1%87/" class="trm-cover-frame trm-anima-link">
+        <a href="/2023/03/18/vue2-sph/" class="trm-cover-frame trm-anima-link">
             
             
-                <img alt="cover" class="no-fancybox" src="/img/sph_cover.png">
+                <img alt="cover" class="no-fancybox" src="/img/sph_1.jpg">
             
         </a>
         
@@ -558,7 +495,7 @@
                 </a>
             </div>
             <h5>
-                <a href="/2023/03/18/Vue2-%E5%B0%9A%E5%93%81%E6%B1%87/" class="trm-anima-link">
+                <a href="/2023/03/18/vue2-sph/" class="trm-anima-link">
                     Vue2_尚品汇项目
                 </a>
             </h5>
@@ -572,6 +509,7 @@
         </div>
     </div>
 </div>
+    
     
 </div>
 
