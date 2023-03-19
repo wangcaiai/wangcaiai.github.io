@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="JavaScript内置对象123mathMath.random();  &#x2F;&#x2F; 返回随机数Date() &#x2F;&#x2F; 日期对象，是构造函数，必须用new来创建  倒计时案例123456789101112131415function cutDown ( time ) &amp;#123;  var nowTime &#x3D; +new Date();  &#x2F;&#x2F; 返回当前总毫秒数  var intTime &#x3D; +new Dat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js复习">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/19/js%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="下午会有太阳">
+<meta property="og:description" content="JavaScript内置对象123mathMath.random();  &#x2F;&#x2F; 返回随机数Date() &#x2F;&#x2F; 日期对象，是构造函数，必须用new来创建  倒计时案例123456789101112131415function cutDown ( time ) &amp;#123;  var nowTime &#x3D; +new Date();  &#x2F;&#x2F; 返回当前总毫秒数  var intTime &#x3D; +new Dat">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-03-19T07:34:24.000Z">
+<meta property="article:modified_time" content="2023-03-19T15:39:38.735Z">
+<meta property="article:author" content="wangcai">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+
+    <meta name="keywords" content="js">
+
+
+<title >js复习</title>
+
+<!-- Favicon -->
+
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-19 23:39:38"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+    
+    
+        <div class="trm-logo-text">
+            嘿，<span>好久不见！</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友情链接
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/6416bbc7a682492fcc96884d.jpg">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            温故而知新
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            js复习
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        旺财
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                RESIDENCE:
+            </div>
+            <div class="trm-label trm-label-light">
+                M78 Nebula
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                age:
+            </div>
+            <div class="trm-label trm-label-light">
+                22
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                CITY:
+            </div>
+            <div class="trm-label trm-label-light">
+                MIANYANG
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:1836523160@qq.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#JavaScript"  data-scroll-to="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#内置对象"  data-scroll-to="#内置对象"><span class="toc-number">1.1.</span> <span class="toc-text">内置对象</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#倒计时案例"  data-scroll-to="#倒计时案例"><span class="toc-number">1.2.</span> <span class="toc-text">倒计时案例</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#数组"  data-scroll-to="#数组"><span class="toc-number">1.3.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#添加与删除"  data-scroll-to="#添加与删除"><span class="toc-number">1.3.1.</span> <span class="toc-text">添加与删除</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#排序"  data-scroll-to="#排序"><span class="toc-number">1.3.2.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#数组索引"  data-scroll-to="#数组索引"><span class="toc-number">1.3.3.</span> <span class="toc-text">数组索引</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#数组去重"  data-scroll-to="#数组去重"><span class="toc-number">1.3.4.</span> <span class="toc-text">数组去重</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#字符出现的位置及次数"  data-scroll-to="#字符出现的位置及次数"><span class="toc-number">1.3.5.</span> <span class="toc-text">字符出现的位置及次数</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#根据位置返回字符串"  data-scroll-to="#根据位置返回字符串"><span class="toc-number">1.3.6.</span> <span class="toc-text">根据位置返回字符串</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#统计出现次数最多的字符和次数"  data-scroll-to="#统计出现次数最多的字符和次数"><span class="toc-number">1.3.7.</span> <span class="toc-text">统计出现次数最多的字符和次数</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#字符串操作"  data-scroll-to="#字符串操作"><span class="toc-number">1.4.</span> <span class="toc-text">字符串操作</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#获取元素"  data-scroll-to="#获取元素"><span class="toc-number">1.5.</span> <span class="toc-text">获取元素</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#鼠标事件"  data-scroll-to="#鼠标事件"><span class="toc-number">1.6.</span> <span class="toc-text">鼠标事件</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#显示当前系统时间"  data-scroll-to="#显示当前系统时间"><span class="toc-number">1.7.</span> <span class="toc-text">显示当前系统时间</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/19
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:34
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">math</span><br><span class="line">Math.random();  // 返回随机数</span><br><span class="line">Date() // 日期对象，是构造函数，必须用new来创建</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒计时案例"><a href="#倒计时案例" class="headerlink" title="倒计时案例"></a>倒计时案例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function cutDown ( time ) &#123;</span><br><span class="line">  var nowTime = +new Date();  // 返回当前总毫秒数</span><br><span class="line">  var intTime = +new Date(); // 返回输入的总毫秒数</span><br><span class="line">  var Times = (intTime - nowTime) / 1000; // 返回剩余总时间</span><br><span class="line">  var d = parseInt(Times / 60 / 60 /24); //返回剩余总天数</span><br><span class="line">  d = d &lt;= 10 ? &#x27;0&#x27; + d : d;</span><br><span class="line">  var h = parseInt(Times /60 /60 %24); // 返回剩余总小时</span><br><span class="line">  h = h &lt;= 10 ? &#x27;0&#x27; + h : h;</span><br><span class="line">  var m = parseInt(Times /60 %60);返回剩余分钟</span><br><span class="line">  m = m &lt;= 10 ? &#x27;0&#x27; + m : m;</span><br><span class="line">  var s = parseInt(Times %60);返回剩余秒数</span><br><span class="line">  s = s &lt;= 10 ? &#x27;0&#x27; + s : s;</span><br><span class="line"></span><br><span class="line">console.log(cutDown(&#x27;2023-3-21 11:00:00&#x27;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="添加与删除"><a href="#添加与删除" class="headerlink" title="添加与删除"></a>添加与删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">push(参数1) // 在数组末尾添加一个或多个元素，会返回新的长度</span><br><span class="line">unshift(参数1) // 向数组开头添加一个或多个元素，返回新的长度</span><br><span class="line">shift() // 删除数组开头的第一个元素，数组长度-1，无参数，返回第一个元素的值</span><br><span class="line">pop() // 删除数组末尾的一个元素，无参数 返回它删除的元素的值</span><br></pre></td></tr></table></figure>
+
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reverse() // 颠倒数组中元素的顺序</span><br><span class="line">sort() // 对元素进行排序 默认排序顺序是在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列时构建的 默认升序排列</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">indexOf() // 数组中查找给定元素的第一个索引，存在则返回索引号，不存在则返回-1</span><br><span class="line">lastIndexOf() // 在数组的最后一个索引 存在则返回索引号，不存在返回-1</span><br></pre></td></tr></table></figure>
+<h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function unique (arr) &#123;</span><br><span class="line">  var newArr = [];</span><br><span class="line">  for (i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    if (newArr.indexOf(arr[i]) === -1) &#123;</span><br><span class="line">      newArr.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return newArr;</span><br><span class="line">&#125;</span><br><span class="line">var demo = unique ([1,1,3,2,5])</span><br><span class="line">console.log (demo);</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符出现的位置及次数"><a href="#字符出现的位置及次数" class="headerlink" title="字符出现的位置及次数"></a>字符出现的位置及次数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var str = &#x27;ahsgdyfwdysdvwagda&#x27;;</span><br><span class="line">var index = str.indeOf(&#x27;w&#x27;);</span><br><span class="line">var num = 0;</span><br><span class="line">while (index != -1) &#123;</span><br><span class="line">  console.log(index);</span><br><span class="line">  num ++;</span><br><span class="line">  index = str.indexOf(&#x27;w&#x27;,index + 1)</span><br><span class="line">&#125;</span><br><span class="line">console.log(&#x27;w出现的次数是：&#x27; +num);</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据位置返回字符串"><a href="#根据位置返回字符串" class="headerlink" title="根据位置返回字符串"></a>根据位置返回字符串</h3><p><img src="https://pic.imgdb.cn/item/6417195ba682492fcc3cf226.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="统计出现次数最多的字符和次数"><a href="#统计出现次数最多的字符和次数" class="headerlink" title="统计出现次数最多的字符和次数"></a>统计出现次数最多的字符和次数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var str = &#x27;aooaooaaabcdo&#x27;;</span><br><span class="line">    var n = &#123;&#125;; // n为对象</span><br><span class="line">    for (var i = 0; i &lt;= str.length; i++)&#123;</span><br><span class="line">      var char = str.charAt(i);</span><br><span class="line">      if (n [char])&#123;  // n[char]表示n这个对象里有没有这个属性</span><br><span class="line">        n[char]++;</span><br><span class="line">      &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">      n[char] = 1; // 相当于先执行了n[char] = 1，创建了对象，然后再判断是否已经存在对象</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(n);</span><br><span class="line">    //遍历对象</span><br><span class="line">    var max = 0;</span><br><span class="line">    var ch = &#x27;&#x27;;</span><br><span class="line">      for (var k in n)&#123; // 遍历对象需要使用 for in</span><br><span class="line">        //k 得到的是属性名,n[k]得到的是属性值</span><br><span class="line">      if (n[k] &gt; max)&#123;</span><br><span class="line">        max = n[k];</span><br><span class="line">        ch = k; // 此处的属性名k 是for in中的局部变量 只有在循环中才有用 , 所以我们需要创建一个 ch 来存储 k</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line">    console.log(max);</span><br><span class="line">    console.log(&#x27;出现次数最多的是&#x27; + ch);</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><p><img src="https://pic.imgdb.cn/item/64172903a682492fcc5c355a.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">	//getElementById</span><br><span class="line">//var timer = document.getElementById(&#x27;id&#x27;);</span><br><span class="line">//返回的是一个元素对象</span><br><span class="line">// console.dir(timer);打印返回的元素对象，能查看里面的属性和方法</span><br><span class="line"></span><br><span class="line">	//getElementsByTagName</span><br><span class="line">//var dv = document.getElementsByTagName(&#x27;div&#x27;);</span><br><span class="line">//返回的是获取的元素对象集合，以伪数组形式存储。</span><br><span class="line">//如果页面中没有这个元素，返回空的伪数组</span><br><span class="line"></span><br><span class="line">	//H5新增</span><br><span class="line">// getElementByClassName(&#x27;类名&#x27;); 根据类名返回元素对象集合</span><br><span class="line">// var name1 = document.getElementsByClassName(&#x27;classname&#x27;);</span><br><span class="line">//querySelector（&#x27;选择器&#x27;） 返回指定选择器的第一个元素</span><br><span class="line">// var firstele = document.querySelector(&#x27;.box&#x27;);</span><br><span class="line">// var firstele2 = document.querySelector(&#x27;#id&#x27;);</span><br><span class="line">//querySelectorAll（&#x27;选择器&#x27;） 返回指定选择器的所有元素对象集合 伪数组</span><br><span class="line">   //获取body元素</span><br><span class="line">//var bodyele = document.body;</span><br><span class="line">	//获取html元素</span><br><span class="line">//var htmlele = document.documentElement;</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><p><img src="https://pic.imgdb.cn/item/64172bcca682492fcc621c96.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="显示当前系统时间"><a href="#显示当前系统时间" class="headerlink" title="显示当前系统时间"></a>显示当前系统时间</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var btn = document.querySelector(&#x27;button&#x27;);</span><br><span class="line">  var div = document.querySelector(&#x27;div&#x27;);</span><br><span class="line">  btn.onclick = function ()&#123;</span><br><span class="line">    // div.innerText = &#x27;2022-3-22&#x27;;</span><br><span class="line">    div.innerText = getDate();</span><br><span class="line">  &#125;</span><br><span class="line">  function getDate()&#123;</span><br><span class="line">    var date = new Date();</span><br><span class="line">    var year = date.getFullYear();</span><br><span class="line">    var month = date.getMonth() + 1;</span><br><span class="line">    var dates = date.getDate();</span><br><span class="line">    var arr =[&#x27;星期一&#x27;,&#x27;星期二&#x27;,&#x27;星期三&#x27;,&#x27;星期四&#x27;,&#x27;星期五&#x27;,&#x27;星期六&#x27;,&#x27;星期天&#x27;];</span><br><span class="line">    var day = date.getDay();</span><br><span class="line">    return &#x27;今天是&#x27; + year + &#x27;年&#x27; + month + &#x27;月&#x27; + dates + &#x27;日&#x27; + arr[day];</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/19/%E5%BC%80%E5%A7%8B%E6%8A%95%E7%AE%80%E5%8E%86%E8%BE%A3%EF%BC%81/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c325a682492fccee1bc4.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%A2%A6/">
+                    梦
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/19/%E5%BC%80%E5%A7%8B%E6%8A%95%E7%AE%80%E5%8E%86%E8%BE%A3%EF%BC%81/" class="trm-anima-link">
+                    开始投简历辣！
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/19</li>
+                <li>15:06</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2023- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">旺财</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.3
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
+        </div>
+     
+
+     
+</footer>
+
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("3/18/2023 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.0.3"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.0.3"></script>
+
+</body>
+
+</html>
