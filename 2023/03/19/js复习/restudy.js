@@ -1,13 +1,14 @@
-var str = "abcoefodgpop";
+/* var str = "abcoefodgpop";
 var index = str.indexOf('o');
-/* var num = 0;
+var num = 0;
 while (index != -1){
   console.log(index);
   num++;
   index = str.indexOf('o',index + 1);
 } 
 console.log("o出现的次数是" +num); */
-var str = 'aooaooaaabcdo';
+
+/* var str = 'aooaooaaabcdo';
     var n = {};
     for (var i = 0; i <= str.length; i++){
       var char = str.charAt(i);
@@ -31,4 +32,13 @@ var str = 'aooaooaaabcdo';
       }
 }
     console.log(max);
-    console.log('出现次数最多的是' + ch);
+    console.log('出现次数最多的是' + ch); */
+
+/*     var date = new Date()
+    console.log(date);
+    var day = date.getDay()
+    console.log(day);
+    var dates = date.getDate()
+    console.log(dates); */
+
+    
