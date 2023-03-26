@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="Nodejsfs模块fs.readFile()方法 fs.readFile()方法的语法格式fs.readFile(path[,options],callback)   参数1：必选参数，字符串，读取文件的路径 参数2：可选参数，表示以什么编码格式来读取文件 参数3：必选参数，文件读取完成后，通过回调函数拿到读取结果 12345678判断读取是否成功const fs &#x3D; require(&amp;#x27">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/26/nodejs/index.html">
+<meta property="og:site_name" content="下午会有太阳">
+<meta property="og:description" content="Nodejsfs模块fs.readFile()方法 fs.readFile()方法的语法格式fs.readFile(path[,options],callback)   参数1：必选参数，字符串，读取文件的路径 参数2：可选参数，表示以什么编码格式来读取文件 参数3：必选参数，文件读取完成后，通过回调函数拿到读取结果 12345678判断读取是否成功const fs &#x3D; require(&amp;#x27">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-03-26T03:30:22.000Z">
+<meta property="article:modified_time" content="2023-03-26T03:56:09.714Z">
+<meta property="article:author" content="wangcai">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+
+    <meta name="keywords" content="node">
+
+
+<title >nodejs</title>
+
+<!-- Favicon -->
+
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-26 11:56:09"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+    
+    
+        <div class="trm-logo-text">
+            嘿，<span>好久不见！</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友情链接
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/641fbccba682492fcc2122b9.jpg">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Nodejs
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            nodejs
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        旺财
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                RESIDENCE:
+            </div>
+            <div class="trm-label trm-label-light">
+                M78 Nebula
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                age:
+            </div>
+            <div class="trm-label trm-label-light">
+                22
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                CITY:
+            </div>
+            <div class="trm-label trm-label-light">
+                MIANYANG
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:1836523160@qq.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#Nodejs"  data-scroll-to="#Nodejs"><span class="toc-number">1.</span> <span class="toc-text">Nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#fs模块"  data-scroll-to="#fs模块"><span class="toc-number">1.1.</span> <span class="toc-text">fs模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#fs-readFile-方法"  data-scroll-to="#fs-readFile-方法"><span class="toc-number">1.1.1.</span> <span class="toc-text">fs.readFile()方法</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#fs-writeFile-向指定文件写入内容-语法格式"  data-scroll-to="#fs-writeFile-向指定文件写入内容-语法格式"><span class="toc-number">1.1.2.</span> <span class="toc-text">fs.writeFile()向指定文件写入内容 语法格式</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#dirname表示当前文件所在路径"  data-scroll-to="#dirname表示当前文件所在路径"><span class="toc-number">1.1.3.</span> <span class="toc-text">__dirname表示当前文件所在路径</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#path-join-动态拼接路径"  data-scroll-to="#path-join-动态拼接路径"><span class="toc-number">1.1.4.</span> <span class="toc-text">path.join()动态拼接路径</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#path-basename-方法，从路径字符串中解析出文件名"  data-scroll-to="#path-basename-方法，从路径字符串中解析出文件名"><span class="toc-number">1.1.5.</span> <span class="toc-text">path.basename()方法，从路径字符串中解析出文件名</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#path-extname-可以获取路径中的扩展名部分"  data-scroll-to="#path-extname-可以获取路径中的扩展名部分"><span class="toc-number">1.1.6.</span> <span class="toc-text">path.extname()可以获取路径中的扩展名部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#http模块"  data-scroll-to="#http模块"><span class="toc-number">1.2.</span> <span class="toc-text">http模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#创建Web服务器"  data-scroll-to="#创建Web服务器"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建Web服务器</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#req请求对象"  data-scroll-to="#req请求对象"><span class="toc-number">1.2.2.</span> <span class="toc-text">req请求对象</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#res响应对象"  data-scroll-to="#res响应对象"><span class="toc-number">1.2.3.</span> <span class="toc-text">res响应对象</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#实现服务器案例"  data-scroll-to="#实现服务器案例"><span class="toc-number">1.2.4.</span> <span class="toc-text">实现服务器案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#express"  data-scroll-to="#express"><span class="toc-number">1.3.</span> <span class="toc-text">express</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#express创建基本Web服务器"  data-scroll-to="#express创建基本Web服务器"><span class="toc-number">1.3.1.</span> <span class="toc-text">express创建基本Web服务器</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#静态资源托管函数"  data-scroll-to="#静态资源托管函数"><span class="toc-number">1.3.2.</span> <span class="toc-text">静态资源托管函数</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#express路由"  data-scroll-to="#express路由"><span class="toc-number">1.3.3.</span> <span class="toc-text">express路由</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#router"  data-scroll-to="#router"><span class="toc-number">1.3.4.</span> <span class="toc-text">router</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#中间件"  data-scroll-to="#中间件"><span class="toc-number">1.3.5.</span> <span class="toc-text">中间件</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#局部生效中间件"  data-scroll-to="#局部生效中间件"><span class="toc-number">1.3.6.</span> <span class="toc-text">局部生效中间件</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#错误级别中间件"  data-scroll-to="#错误级别中间件"><span class="toc-number">1.3.7.</span> <span class="toc-text">错误级别中间件</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#express编写接口"  data-scroll-to="#express编写接口"><span class="toc-number">1.3.8.</span> <span class="toc-text">express编写接口</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#apiRouter"  data-scroll-to="#apiRouter"><span class="toc-number">1.3.9.</span> <span class="toc-text">apiRouter</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#cors解决跨域"  data-scroll-to="#cors解决跨域"><span class="toc-number">1.3.10.</span> <span class="toc-text">cors解决跨域</span></a></li></ol></li></ol></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/26
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            11:30
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h1><h2 id="fs模块"><a href="#fs模块" class="headerlink" title="fs模块"></a>fs模块</h2><h3 id="fs-readFile-方法"><a href="#fs-readFile-方法" class="headerlink" title="fs.readFile()方法"></a>fs.readFile()方法</h3><ul>
+<li>fs.readFile()方法的语法格式<br><code>fs.readFile(path[,options],callback)</code></li>
+</ul>
+<p> 参数1：必选参数，字符串，读取文件的路径<br> 参数2：可选参数，表示以什么编码格式来读取文件<br> 参数3：必选参数，文件读取完成后，通过回调函数拿到读取结果<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">判断读取是否成功</span><br><span class="line">const fs = require(&#x27;fs&#x27;);</span><br><span class="line">fs.readFile(&#x27;./test.txt&#x27;,&#x27;utf-8&#x27;,function(err,result)&#123;</span><br><span class="line">    if(err)&#123;</span><br><span class="line">       return console.log(&#x27;读取失败&#x27; + err.message);</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(&#x27;读取完成：&#x27; + result);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="fs-writeFile-向指定文件写入内容-语法格式"><a href="#fs-writeFile-向指定文件写入内容-语法格式" class="headerlink" title="fs.writeFile()向指定文件写入内容 语法格式"></a>fs.writeFile()向指定文件写入内容 语法格式</h3><p><code> fs.writeFlie(file,data[,options],callback)</code><br>参数1：必选参数，指定文件路径<br>参数2：必选参数，要写入的内容<br>参数3：可选参数，以什么格式写入，默认utf-8<br>参数4：必选参数，文件写入完成后的回调函数</p>
+<h3 id="dirname表示当前文件所在路径"><a href="#dirname表示当前文件所在路径" class="headerlink" title="__dirname表示当前文件所在路径"></a>__dirname表示当前文件所在路径</h3><h3 id="path-join-动态拼接路径"><a href="#path-join-动态拼接路径" class="headerlink" title="path.join()动态拼接路径"></a>path.join()动态拼接路径</h3><p>path.join()方法将多个路劲片段拼接成一个路径字符串<br>path.join([…paths]) 片段中’..&#x2F;‘会抵消前一个路径</p>
+<h3 id="path-basename-方法，从路径字符串中解析出文件名"><a href="#path-basename-方法，从路径字符串中解析出文件名" class="headerlink" title="path.basename()方法，从路径字符串中解析出文件名"></a>path.basename()方法，从路径字符串中解析出文件名</h3><p>path.basenmae()方法可以获取路径中的最后一个部分<br>path.basenanme(path[,ext]) 第一个参数是必选参数，表示一个路径 第二个参数是可选参数，表示文件扩展名</p>
+<h3 id="path-extname-可以获取路径中的扩展名部分"><a href="#path-extname-可以获取路径中的扩展名部分" class="headerlink" title="path.extname()可以获取路径中的扩展名部分"></a>path.extname()可以获取路径中的扩展名部分</h3><h2 id="http模块"><a href="#http模块" class="headerlink" title="http模块"></a>http模块</h2><h3 id="创建Web服务器"><a href="#创建Web服务器" class="headerlink" title="创建Web服务器"></a>创建Web服务器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line"></span><br><span class="line">// 创建web服务器实例</span><br><span class="line">const server = http.createServer();</span><br><span class="line">// 为web服务器实例绑定request对象，监听客户端的请求</span><br><span class="line">server.on(&#x27;request&#x27;,function(req,res)&#123;</span><br><span class="line">    console.log(&#x27;有人访问服务端了&#x27;);</span><br><span class="line">&#125;)</span><br><span class="line">// 启动服务器</span><br><span class="line">server.listen(8080,function()&#123;</span><br><span class="line">    console.log(&#x27;服务已启动 服务器：127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="req请求对象"><a href="#req请求对象" class="headerlink" title="req请求对象"></a>req请求对象</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line"></span><br><span class="line">const server = http.createServer();</span><br><span class="line">server.on(&#x27;request&#x27;,(req) =&gt; &#123;</span><br><span class="line">// req是请求对象，包含了与客户端相关的数据和属性</span><br><span class="line">// req.url 是客户端请求的URL地址</span><br><span class="line">const url = req.url;</span><br><span class="line">// req.method 是客户端请求的method类型</span><br><span class="line">const method = req.method;</span><br><span class="line">const str = `你的客户端请求地址是$&#123;url&#125;,你的请求类型是$&#123;method&#125;`;</span><br><span class="line">console.log(str);</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(80,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;服务启动在127.0.0.1:80&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="res响应对象"><a href="#res响应对象" class="headerlink" title="res响应对象"></a>res响应对象</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line">const server = http.createServer();</span><br><span class="line">server.on(&#x27;request&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">    const url = req.url;</span><br><span class="line">    const method = req.method;</span><br><span class="line">    const str = `客户端请求地址是$&#123;url&#125;,请求方法是$&#123;method&#125;`;</span><br><span class="line">    // res.end()方法，向客户端响应一些内容</span><br><span class="line">    // 当调用res.end()方法向客户端发送中文内容时会出现乱码，需要手动设置内容的格式编码</span><br><span class="line">    // 为防止中文乱码，需设置响应头Content-Type的值为text/html;charset=utf-8</span><br><span class="line">    res.setHeader(&#x27;Content-Type&#x27;,&#x27;text/html;charset=utf-8&#x27;);</span><br><span class="line">    res.end(str)</span><br><span class="line">    console.log(&#x27;有人发起了请求&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(80,() =&gt; &#123;</span><br><span class="line">console.log(&#x27;服务已经启动 http://127.0.0.1:80&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="实现服务器案例"><a href="#实现服务器案例" class="headerlink" title="实现服务器案例"></a>实现服务器案例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line">const fs = require(&#x27;fs&#x27;);</span><br><span class="line">const path = require(&#x27;path&#x27;);</span><br><span class="line"></span><br><span class="line">const server = http.createServer();</span><br><span class="line">server.on(&#x27;request&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    const url = req.url;</span><br><span class="line">    let fpath = &#x27;&#x27;</span><br><span class="line">    if(url === &#x27;/&#x27;)&#123;</span><br><span class="line">        fpath = path.join(__dirname,&#x27;./clock/index.html&#x27;)</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        fpath = path.join(__dirname, &#x27;/clock&#x27;, url);</span><br><span class="line">    &#125;</span><br><span class="line">    // const fpath = path.join(__dirname, &#x27;/clock&#x27;, url);</span><br><span class="line"></span><br><span class="line">    fs.readFile(fpath, (err, dataStr) =&gt; &#123;</span><br><span class="line">        if (err) return res.end(&#x27;404 not found&#x27; + err.message)</span><br><span class="line">        res.end(dataStr);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(&#x27;8080&#x27;, () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;服务已启动：http://127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><h3 id="express创建基本Web服务器"><a href="#express创建基本Web服务器" class="headerlink" title="express创建基本Web服务器"></a>express创建基本Web服务器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">// 导入express</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">// 创建web服务器</span><br><span class="line">const app = express();</span><br><span class="line">// 监听客户端的get和post请求，并响应客户端具体内容</span><br><span class="line">app.get(&#x27;/user&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">// 调用express提供的res.send()方法，向客户端响应一个JSON对象</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        name: &#x27;zangsan&#x27;,</span><br><span class="line">        age:&#x27;17&#x27;,</span><br><span class="line">        gender:&#x27;20&#x27;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">app.post(&#x27;/user&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">    res.send(&#x27;请求成功！&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(&#x27;/&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">// 通过req.query可以获取到客户端发送过来的查询参数，默认情况下，req.query是一个空对象</span><br><span class="line">    res.send(req.query)</span><br><span class="line">&#125;)</span><br><span class="line">app.get(&#x27;/user/:id&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">// req.params 是动态匹配到的URL参数，默认是一个空对象</span><br><span class="line">    res.send(req.params);</span><br><span class="line">&#125;)</span><br><span class="line">// 启动服务器</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;服务已启动：http://127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="静态资源托管函数"><a href="#静态资源托管函数" class="headerlink" title="静态资源托管函数"></a>静态资源托管函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 使用express.static()函数，对外提供静态资源</span><br><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const app = express();</span><br><span class="line">// 调用express.static(),对外提供静态资源</span><br><span class="line">app.use(express.static(&#x27;./clock&#x27;));</span><br><span class="line">// 需要托管多个静态文件时，要多次调用express.static()函数</span><br><span class="line">// 如果希望托管的静态资源访问路径之前，挂载路径前缀：</span><br><span class="line">app.use(&#x27;/clock&#x27;,express.static(&#x27;./clock&#x27;));</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;http://127.0.0.1&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="express路由"><a href="#express路由" class="headerlink" title="express路由"></a>express路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const app = express();</span><br><span class="line">app.get(&#x27;/&#x27;,(req,res) =&gt; &#123;res.send(&#x27;hello&#x27;)&#125;);</span><br><span class="line">app.post(&#x27;/&#x27;,(req,res) =&gt; &#123;res.send(&#x27;Post Requset&#x27;)&#125;);</span><br><span class="line">app.listen(80,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;服务启动：http://127.0.0.1:80&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="router"><a href="#router" class="headerlink" title="router"></a>router</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const router = express.Router();</span><br><span class="line"></span><br><span class="line">router.get(&#x27;/user&#x27;,(req,res) =&gt; &#123;res.send(&#x27;get user&#x27;)&#125;);</span><br><span class="line">router.post(&#x27;/user/add&#x27;,(req,res) =&gt; &#123;res.send(&#x27;add new user&#x27;)&#125;);</span><br><span class="line"></span><br><span class="line">module.exports = router;</span><br></pre></td></tr></table></figure>
+<h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><p>客户端发送的任何请求，到达服务器之后都会触发的中间件，叫做全局生效的中间件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const app = express();</span><br><span class="line"></span><br><span class="line">// 定义一个中间件</span><br><span class="line">/* const mw = function (req,res,next) &#123;</span><br><span class="line">    console.log(&#x27;这是一个最简单的中间件函数&#x27;);</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line">// 客户端发送的任何请求，到达服务器之后都会触发的中间件，叫做全局生效的中间件。</span><br><span class="line">// 将mw注册为全局生效的中间件</span><br><span class="line">app.use(mw); */</span><br><span class="line"></span><br><span class="line">// 中间件简化写法</span><br><span class="line">app.use((req,res,next) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;这是一个简单的中间件函数&#x27;);</span><br><span class="line">    next();</span><br><span class="line">&#125;)</span><br><span class="line">app.get(&#x27;/&#x27;,(req,res) =&gt; &#123;res.send(&#x27;home page&#x27;);&#125;)</span><br><span class="line">app.get(&#x27;/user&#x27;,(req,res) =&gt; &#123;res.send(&#x27;user page&#x27;);&#125;)</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;listen@ http://127.0.0.1&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="局部生效中间件"><a href="#局部生效中间件" class="headerlink" title="局部生效中间件"></a>局部生效中间件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const app = express();</span><br><span class="line">const mw = function (req,res,next) &#123;</span><br><span class="line">    console.log(&#x27;这是局部生效的中间件&#x27;);</span><br><span class="line">    next();</span><br><span class="line">&#125;;</span><br><span class="line">app.get(&#x27;/&#x27;,mw,(req,res) =&gt; &#123;</span><br><span class="line">    res.send(&#x27;局部生效&#x27;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(80,() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;服务已启动&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="错误级别中间件"><a href="#错误级别中间件" class="headerlink" title="错误级别中间件"></a>错误级别中间件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 导入express</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">// 创建web服务器</span><br><span class="line">const app = express();</span><br><span class="line">app.get(&#x27;/&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">   throw new Error(&#x27;服务器内部发生异常&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">// 错误级别中间件,捕获整个项目异常，防止项目崩溃</span><br><span class="line">app.use((err,req,res,next) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;发生了错误：&#x27;+ err.message);</span><br><span class="line">    res.send(err.message)</span><br><span class="line">&#125;)</span><br><span class="line">// 启动服务器</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">console.log(&#x27;服务已启动：http://127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="express编写接口"><a href="#express编写接口" class="headerlink" title="express编写接口"></a>express编写接口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 导入express</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">// 创建web服务器</span><br><span class="line">const app = express();</span><br><span class="line">// 配置解析表单数据的中间件</span><br><span class="line">app.use(express.urlencoded(&#123;extended : false&#125;));</span><br><span class="line">// 导入路由模块</span><br><span class="line">const router = require(&#x27;./11apiRouter&#x27;);</span><br><span class="line">// 注册路由</span><br><span class="line">app.use(&#x27;/user&#x27;,router)</span><br><span class="line"></span><br><span class="line">// 启动服务器</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">console.log(&#x27;服务已启动：http://127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="apiRouter"><a href="#apiRouter" class="headerlink" title="apiRouter"></a>apiRouter</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const router = express.Router();</span><br><span class="line"></span><br><span class="line">router.get(&#x27;/get&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">    // 通过req.query获取客户端发送的查询字符串数据</span><br><span class="line">    const query = req.query;</span><br><span class="line">    // 调用res.send()方法，向客户端响应处理结果</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        status:0,</span><br><span class="line">        mag:&#x27;请求成功&#x27;,</span><br><span class="line">        data:query</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">router.post(&#x27;/post&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">    // 通过req.body获取请求体中的URL-encode格式数据</span><br><span class="line">    const body = req.body;</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        sattus:0,</span><br><span class="line">        msg:&#x27;请求成功&#x27;,</span><br><span class="line">        data:body</span><br><span class="line">&#125;)&#125;)</span><br><span class="line">module.exports = router;</span><br></pre></td></tr></table></figure>
+<h3 id="cors解决跨域"><a href="#cors解决跨域" class="headerlink" title="cors解决跨域"></a>cors解决跨域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// 导入express</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line">// 创建web服务器</span><br><span class="line">const app = express();</span><br><span class="line"></span><br><span class="line">// 配置解析表单数据的中间件</span><br><span class="line">app.use(express.urlencoded(&#123;extended : false&#125;));</span><br><span class="line"></span><br><span class="line">// 在cors之前配置jsonp接口</span><br><span class="line">app.get(&#x27;/api/jsonp&#x27;,(req,res) =&gt; &#123;</span><br><span class="line">    const fncName = req.query.callback;</span><br><span class="line">    const data = &#123;name:&#x27;zs&#x27;,age:&#x27;8&#x27;&#125;;</span><br><span class="line">    const scriptStr = `$&#123;fncName&#125;($&#123;JSON.stringify(data)&#125;)`;</span><br><span class="line">    res.send(scriptStr);</span><br><span class="line">&#125;)</span><br><span class="line">// 在路由模块之前，导入cors中间件，解决跨域问题</span><br><span class="line">const cors = require(&#x27;cors&#x27;);</span><br><span class="line">app.use(cors());</span><br><span class="line"></span><br><span class="line">// 导入路由模块</span><br><span class="line">const router = require(&#x27;./11apiRouter&#x27;);</span><br><span class="line">// 注册路由</span><br><span class="line">app.use(&#x27;/user&#x27;,router);</span><br><span class="line">// 启动服务器</span><br><span class="line">app.listen(8080,() =&gt; &#123;</span><br><span class="line">console.log(&#x27;服务已启动：http://127.0.0.1:8080&#x27;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/20/CSGO%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/641811f1a682492fccbe8c39.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%A2%A6/">
+                    梦
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/20/CSGO%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" class="trm-anima-link">
+                    CSGO核心系统分析
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/20</li>
+                <li>15:56</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2023- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">旺财</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.3
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
+        </div>
+     
+
+     
+</footer>
+
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("3/18/2023 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.0.3"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.0.3"></script>
+
+</body>
+
+</html>
