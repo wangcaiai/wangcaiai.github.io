@@ -2,744 +2,885 @@
 <html lang="zh-Hans">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="x5-fullscreen" content="true">
-<meta name="full-screen" content="yes">
-<meta name="theme-color" content="#317EFB" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
-<meta property="og:type" content="article">
-<meta property="og:title" content="css遗漏">
-<meta property="og:url" content="http://www.wangcai.club/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
-<meta property="og:site_name" content="下午会有太阳">
-<meta property="og:description" content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
-<meta property="og:locale">
-<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-<meta property="article:published_time" content="2023-03-18T10:57:56.000Z">
-<meta property="article:modified_time" content="2023-03-19T02:07:11.082Z">
-<meta property="article:author" content="wangcai">
-<meta property="article:tag" content="css">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="theme-color" content="#317EFB" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+    <meta name="description"
+        content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="css遗漏">
+    <meta property="og:url"
+        content="http://www.wangcai.club/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+    <meta property="og:site_name" content="下午会有太阳">
+    <meta property="og:description"
+        content="margin  只跟一个参数时表示上下左右的外边距 跟两个参数时表示 上下 左右的外边距 跟三个参数时表示 上 左右 下 的外边距 跟四个参数时表示从上开始顺时针的外边距   ​	border-radius 只跟一个参数时表示四个圆角的弧度 跟两个参数时表示按上左下右 上右下左作用圆角 跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角 跟四个参数时表示按照左上 右上 右下 左下的顺序作用">
+    <meta property="og:locale">
+    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+    <meta property="article:published_time" content="2023-03-18T10:57:56.000Z">
+    <meta property="article:modified_time" content="2023-03-19T02:07:11.082Z">
+    <meta property="article:author" content="wangcai">
+    <meta property="article:tag" content="css">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
 
     <meta name="keywords" content="css">
 
 
-<title >css遗漏</title>
+    <title>css遗漏</title>
 
-<!-- Favicon -->
+    <!-- Favicon -->
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
-
-
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
-
-
-    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
+        sizes='16x16'>
+    </link>
 
 
-    <link href='/site.webmanifest' rel='manifest' ></link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
+        sizes='32x32'>
+    </link>
 
 
-<!-- Plugin -->
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180'>
+    </link>
 
 
+    <link href='/site.webmanifest' rel='manifest'>
+    </link>
 
 
-    
-<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
-
-    
-<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
-    
-<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
-
-    
-    
+    <!-- Plugin -->
 
 
 
 
-<!-- Icon -->
 
-    
-<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
 
+    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
 
-<!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-19 10:07:11"};</script>
-
-<!-- Theme mode css -->
-<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
-<script>
-    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-    let type = catchMode === 'style-dark' ? 'add' : 'remove';
-    document.documentElement.classList[type]('dark')
-</script>
-
-<!-- CDN -->
-
-
-    
-    
+    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
 
 
-<!-- Site Analytics -->
- 
-<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+
+
+    <!-- Icon -->
+
+
+    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+    <!-- Variable -->
+    <script>
+        window.ASYNC_CONFIG = {
+            "hostname": "www.wangcai.club",
+            "author": "wangcai",
+            "root": "/",
+            "typed_text": ["Web Developer", "仙人"],
+            "theme_version": "2.0.3",
+            "theme": {
+                "switch": true,
+                "default": "style-light"
+            },
+            "favicon": {
+                "logo": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
+                "icon16": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
+                "icon32": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
+                "appleTouchIcon": "apple-touch-icon.png",
+                "webmanifest": "/site.webmanifest",
+                "visibilitychange": true,
+                "hidden": "https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png",
+                "showText": "旺财の死亡笔记",
+                "hideText": "下午会有太阳，一切会有转机。",
+                "assets": null,
+                "internal_provider": "unpkg",
+                "third_party_provider": "unpkg"
+            },
+            "i18n": {
+                "placeholder": "搜索...",
+                "empty": "找不到您查询的内容: ${query}",
+                "hits": "找到 ${hits} 条结果",
+                "hits_time": "找到 ${hits} 条结果（用时 ${time} 毫秒）",
+                "author": "本文作者：",
+                "copyright_link": "本文链接：",
+                "copyright_license_title": "版权声明：",
+                "copyright_license_content": "本博客所有文章除特别声明外，均默认采用 undefined 许可协议。",
+                "copy_success": "复制成功",
+                "copy_failure": "复制失败",
+                "open_read_mode": "进入阅读模式",
+                "exit_read_mode": "退出阅读模式",
+                "notice_outdate_message": "距离上次更新已经 undefined 天了, 文章内容可能已经过时。",
+                "just": "刚刚",
+                "min": "分钟前",
+                "hour": "小时前",
+                "day": "天前",
+                "month": "个月前"
+            },
+            "swup": false,
+            "plugin": {
+                "flickr_justified_gallery": "https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"
+            },
+            "icons": {
+                "sun": "far fa-sun",
+                "moon": "far fa-moon",
+                "play": "fas fa-play",
+                "email": "far fa-envelope",
+                "next": "fas fa-arrow-right",
+                "calendar": "far fa-calendar-alt",
+                "clock": "far fa-clock",
+                "user": "far fa-user",
+                "back_top": "fas fa-arrow-up",
+                "close": "fas fa-times",
+                "search": "fas fa-search",
+                "reward": "fas fa-hand-holding-usd",
+                "user_tag": "fas fa-user-alt",
+                "toc_tag": "fas fa-th-list",
+                "read": "fas fa-book-reader",
+                "arrows": "fas fa-arrows-alt-h",
+                "double_arrows": "fas fa-angle-double-down",
+                "copy": "fas fa-copy"
+            },
+            "icontype": "font",
+            "highlight": {
+                "plugin": "highlighjs",
+                "theme": true,
+                "copy": true,
+                "lang": true,
+                "title": "default",
+                "height_limit": 200
+            },
+            "creative_commons": {
+                "license": "by-nc-sa",
+                "language": "deed.zh"
+            }
+        };
+    </script>
+    <script id="async-page-config">
+        window.PAGE_CONFIG = {
+            "isPost": true,
+            "isHome": false,
+            "postUpdate": "2023-03-19 10:07:11"
+        };
+    </script>
+
+    <!-- Theme mode css -->
+    <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+    <script>
+        let defaultMode = ASYNC_CONFIG.theme.default !== 'auto' ? ASYNC_CONFIG.theme.default : (window.matchMedia(
+            "(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+        let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+        let type = catchMode === 'style-dark' ? 'add' : 'remove';
+        document.documentElement.classList[type]('dark')
+    </script>
+
+    <!-- CDN -->
+
+
+
+
+
+
+
+    <!-- Site Analytics -->
+
+    <meta name="generator" content="Hexo 6.3.0">
+</head>
 
 <body>
 
-  <!-- app wrapper -->
-  <div class="trm-app-frame">
+    <!-- app wrapper -->
+    <div class="trm-app-frame">
 
-    <!-- page preloader -->
-    <div class="trm-preloader">
-    <div class="trm-holder">
-        <div class="preloader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <!-- page preloader -->
+        <div class="trm-preloader">
+            <div class="trm-holder">
+                <div class="preloader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-    <!-- page preloader end -->
+        <!-- page preloader end -->
 
-    <!-- change mode preloader -->
-    <div class="trm-mode-swich-animation-frame">
-    <div class="trm-mode-swich-animation">
-        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
-        <div class="trm-horizon"></div>
-        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
-    </div>
-</div>
-    <!-- change mode preloader end -->
-
-      <!-- scroll container -->
-      <div id="trm-dynamic-content" class="trm-swup-animation">
-        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
-          <div data-scroll-section id="content" class="trm-scroll-section">
-
-            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
-
-            <!-- top bar -->
-            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-	<div class="container">
-		<div class="trm-left-side">
-			<!-- logo -->
-<a href="/" class="trm-logo-frame trm-anima-link">
-    
-        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
-    
-    
-        <div class="trm-logo-text">
-            嘿，<span>好久不见！</span>
+        <!-- change mode preloader -->
+        <div class="trm-mode-swich-animation-frame">
+            <div class="trm-mode-swich-animation">
+                <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+                <div class="trm-horizon"></div>
+                <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+            </div>
         </div>
-    
-</a>
-<!-- logo end -->
-		</div>
-		<div class="trm-right-side">
-			<!-- menu -->
-<div class="trm-menu">
-    <nav>
-        <ul>
-            
-            <li class="menu-item-has-children ">
-                <a  href="/" target="">
-                    首页
-                </a>
-                
-                <ul>
-                    
-                    <li>
-                        <a  href="/archives2/" target="">
-                            archives2
-                        </a>
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li class="menu-item-has-children ">
-                <a  href="/archives/" target="">
-                    归档
-                </a>
-                
-            </li>
-            
-            <li class="menu-item-has-children ">
-                <a  href="/about/" target="">
-                    关于
-                </a>
-                
-            </li>
-            
-            <li class="menu-item-has-children ">
-                <a  href="/links/" target="">
-                    友情链接
-                </a>
-                
-            </li>
-            
-        </ul>
-    </nav>
-</div>
-<!-- menu end -->
-			
-    <!-- mode switcher place -->
-    <div class="trm-mode-switcher-place">
-        <div class="trm-mode-switcher">
-            <i class="iconfont far fa-sun"></i>
-            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
-            <label class="trm-swich" for="trm-swich"></label>
-            <i class="iconfont far fa-moon"></i>
-        </div>
-    </div>
-    <!-- mode switcher place end -->
+        <!-- change mode preloader end -->
 
-			
-		</div>
-		<div class="trm-menu-btn">
-			<span></span>
-		</div>
-	</div>
-</header>
-            <!-- top bar end -->
+        <!-- scroll container -->
+        <div id="trm-dynamic-content" class="trm-swup-animation">
+            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+                <div data-scroll-section id="content" class="trm-scroll-section">
 
-            <!-- body -->
-            
-<div class="trm-content-start">
-    <!-- banner -->
-    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
-    
-    <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
-    <!-- banner cover end -->
-    
+                    <div class="locomotive-scroll__sticky-target"
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
 
-    <!-- banner content -->
-    <div class="trm-banner-content trm-overlay">
-        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
-            <div class="row">
-                
-                <div class="col-lg-4"></div>
-                
-                <div class="col-lg-8">
+                    <!-- top bar -->
+                    <header class="trm-top-bar" data-scroll data-scroll-sticky
+                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+                        <div class="container">
+                            <div class="trm-left-side">
+                                <!-- logo -->
+                                <a href="/" class="trm-logo-frame trm-anima-link">
 
-                    <!-- banner title -->
-                    <div class="trm-banner-text ">
-                        <div class="trm-label trm-mb-20">
-                            CSS遗漏知识点
+                                    <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+
+
+                                    <div class="trm-logo-text">
+                                        嘿，<span>好久不见！</span>
+                                    </div>
+
+                                </a>
+                                <!-- logo end -->
+                            </div>
+                            <div class="trm-right-side">
+                                <!-- menu -->
+                                <div class="trm-menu">
+                                    <nav>
+                                        <ul>
+
+                                            <li class="menu-item-has-children ">
+                                                <a href="/" target="">
+                                                    首页
+                                                </a>
+
+                                                <ul>
+
+                                                    <li>
+                                                        <a href="/archives2/" target="">
+                                                            archives2
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+
+                                            <li class="menu-item-has-children ">
+                                                <a href="/archives/" target="">
+                                                    归档
+                                                </a>
+
+                                            </li>
+
+                                            <li class="menu-item-has-children ">
+                                                <a href="/about/" target="">
+                                                    关于
+                                                </a>
+
+                                            </li>
+
+                                            <li class="menu-item-has-children ">
+                                                <a href="/links/" target="">
+                                                    友情链接
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- menu end -->
+
+                                <!-- mode switcher place -->
+                                <div class="trm-mode-switcher-place">
+                                    <div class="trm-mode-switcher">
+                                        <i class="iconfont far fa-sun"></i>
+                                        <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+                                        <label class="trm-swich" for="trm-swich"></label>
+                                        <i class="iconfont far fa-moon"></i>
+                                    </div>
+                                </div>
+                                <!-- mode switcher place end -->
+
+
+                            </div>
+                            <div class="trm-menu-btn">
+                                <span></span>
+                            </div>
                         </div>
-                        <h1 class="trm-mb-30 trm-hsmb-font">
-                            css遗漏
-                        </h1>
+                    </header>
+                    <!-- top bar end -->
 
-                        
-                            <ul class="trm-breadcrumbs trm-label">
-                                <li>
-                                    <a href="/" class="trm-anima-link">Home</a>
-                                </li>
-                                <li>
-                                    <span>
-                                        2023
-                                    </span
-                                ></li>
-                            </ul>
-                        
+                    <!-- body -->
+
+                    <div class="trm-content-start">
+                        <!-- banner -->
+                        <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+
+                            <!-- banner cover -->
+                            <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover"
+                                data-scroll data-scroll-direction="vertical" data-scroll-speed="-3"
+                                src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
+                            <!-- banner cover end -->
+
+
+                            <!-- banner content -->
+                            <div class="trm-banner-content trm-overlay">
+                                <div class="container" data-scroll data-scroll-direction="vertical"
+                                    data-scroll-speed="0">
+                                    <div class="row">
+
+                                        <div class="col-lg-4"></div>
+
+                                        <div class="col-lg-8">
+
+                                            <!-- banner title -->
+                                            <div class="trm-banner-text ">
+                                                <div class="trm-label trm-mb-20">
+                                                    CSS遗漏知识点
+                                                </div>
+                                                <h1 class="trm-mb-30 trm-hsmb-font">
+                                                    css遗漏
+                                                </h1>
+
+
+                                                <ul class="trm-breadcrumbs trm-label">
+                                                    <li>
+                                                        <a href="/" class="trm-anima-link">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <span>
+                                                            2023
+                                                        </span></li>
+                                                </ul>
+
+                                            </div>
+                                            <!-- banner title end -->
+
+                                            <!-- scroll hint -->
+                                            <a href="#about-triger" data-scroll-to="#about-triger"
+                                                data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                                                <div class="trm-scroll-hint"></div>
+                                                <span class="trm-label">Scroll down</span>
+                                            </a>
+                                            <!-- scroll hint end -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- banner content end -->
+                        </div>
+                        <!-- banner end -->
+                        <div class="container">
+                            <div class="row">
+
+                                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                                    <!-- main card -->
+
+
+                                    <div class="trm-main-card-frame trm-sidebar">
+                                        <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky
+                                            data-scroll-target=".locomotive-scroll__sticky-target"
+                                            data-scroll-offset="60">
+
+                                            <!-- card header -->
+                                            <div class="trm-mc-header">
+                                                <div class="trm-avatar-frame trm-mb-20">
+                                                    <img alt="Avatar" class="trm-avatar"
+                                                        src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+                                                </div>
+                                                <h5 class="trm-name trm-mb-15">
+                                                    旺财
+                                                </h5>
+
+                                                <div class="trm-label">
+                                                    I`m
+                                                    <span class="trm-typed-text">
+                                                        <!-- Words for theme.user.typedText -->
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                            <!-- card header end -->
+                                            <!-- sidebar social -->
+
+                                            <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+                                            <div class="trm-social">
+
+                                                <a href="https://github.com/wangcaiai" title="github" rel="nofollow"
+                                                    target="_blank">
+                                                    <i class="iconfont fab fa-github"></i>
+                                                </a>
+
+                                            </div>
+
+                                            <!-- sidebar social end -->
+                                            <!-- info -->
+                                            <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+                                            <ul class="trm-table trm-mb-20">
+
+                                                <li>
+                                                    <div class="trm-label">
+                                                        RESIDENCE:
+                                                    </div>
+                                                    <div class="trm-label trm-label-light">
+                                                        M78 Nebula
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="trm-label">
+                                                        age:
+                                                    </div>
+                                                    <div class="trm-label trm-label-light">
+                                                        22
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="trm-label">
+                                                        CITY:
+                                                    </div>
+                                                    <div class="trm-label trm-label-light">
+                                                        MIANYANG
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <!-- info end -->
+
+
+                                            <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+                                            <!-- action button -->
+                                            <div class="text-center">
+                                                <a href="mailto:1836523160@qq.com" class="trm-btn">
+                                                    联系我
+                                                    <i class="iconfont far fa-envelope"></i>
+                                                </a>
+                                            </div>
+                                            <!-- action button end -->
+
+
+                                        </div>
+                                    </div>
+                                    <!-- main card end -->
+                                </div>
+
+                                <div id="page-content" class="col-lg-8">
+                                    <div class="trm-content" id="trm-content">
+                                        <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger">
+                                        </div>
+
+                                        <div id="post-info" class="row hidden-sm">
+                                            <div class="col-sm-4">
+                                                <div class="trm-card trm-label trm-label-light text-center">
+                                                    <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+                                                    03/18
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="trm-card trm-label trm-label-light text-center">
+                                                    <i class="iconfont far fa-clock trm-icon"></i><br>
+                                                    18:57
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div id="post-author"
+                                                    class="trm-card trm-label trm-label-light text-center">
+                                                    <i class="iconfont far fa-user trm-icon"></i><br>
+                                                    wangcai
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="trm-card ">
+                                            <article id="article-container" class="trm-publication">
+                                                <blockquote>
+                                                    <p><strong>margin</strong> </p>
+                                                    <p>只跟一个参数时表示上下左右的外边距</p>
+                                                    <p>跟两个参数时表示 上下 左右的外边距</p>
+                                                    <p>跟三个参数时表示 上 左右 下 的外边距</p>
+                                                    <p>跟四个参数时表示从上开始顺时针的外边距</p>
+                                                </blockquote>
+                                                <blockquote>
+                                                    <p>​ <strong>border-radius</strong></p>
+                                                    <p>只跟一个参数时表示四个圆角的弧度</p>
+                                                    <p>跟两个参数时表示按上左下右 上右下左作用圆角</p>
+                                                    <p>跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角</p>
+                                                    <p>跟四个参数时表示按照左上 右上 右下 左下的顺序作用圆角</p>
+                                                </blockquote>
+                                                <p><strong>block</strong></p>
+                                                <blockquote>
+                                                    <p>块级元素的默认值，独占一行，可以修改元素的宽高</p>
+                                                    <p>块级元素包括div h1-h6 p </p>
+                                                </blockquote>
+                                                <p><strong>inline</strong></p>
+                                                <blockquote>
+                                                    <p>行内元素的默认值，同占一行，不可以更改元素的宽高</p>
+                                                    <p>行内元素包括span b i s u a</p>
+                                                </blockquote>
+                                                <p><strong>inline-block</strong></p>
+                                                <blockquote>
+                                                    <p>行内块元素的默认值，同占一行，可以修改宽高</p>
+                                                    <p>行内块元素包括img input</p>
+                                                </blockquote>
+                                                <p><strong>定位</strong></p>
+                                                <blockquote>
+                                                    <blockquote>
+                                                        <p><strong>static</strong></p>
+                                                        <p>静态定位，会影响其他元素，调整方式：margin</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>relative</strong></p>
+                                                        <p>相对定位，参考系是原来的自己，不影响其他元素，可以显示层叠效果，元素不脱离文档流</p>
+                                                        <p>relative永远是参考自己没有定位前的坐标为原点进行位移</p>
+                                                        <p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>absolute</strong></p>
+                                                        <p>绝对定位，可以实现层叠效果，默认以body为参照物（如果要更改参照物，则将父元素添加定位：position：relative
+                                                            子绝父相），元素脱离文档流（不占用原来的位置），absolute是参考离自己最近的参考系点进行定位</p>
+                                                        <p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>fixed</strong><br>
+                                                            固定定位，元素固定在窗口的某个位置，元素脱离文档流（不占用原来位置），left&#x2F;top&#x2F;right&#x2F;bottom
+                                                            控制元素位置</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>float</strong><br> 浮动定位</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>具有脱离文档流特性的标签</strong><br> absolute<br> fixed<br>
+                                                            float</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>层叠</strong></p>
+                                                        <p>标准流中的元素不存在层叠关系</p>
+                                                        <p>后来居上排列书写的时候, 后面的元素会覆盖前边元素之上</p>
+                                                        <ul>
+                                                            <li>定位元素：定位元素会层叠在标准流元素上面<ul>
+                                                                    <li>定位元素间可以使用z-index设置优先级</li>
+                                                                    <li>必须是定位元素，非static</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>浮动元素：float为left或right</li>
+                                                            <li>标准元素 –&gt; 浮动元素 –&gt; 定位元素</li>
+                                                        </ul>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p><strong>z-index</strong></p>
+                                                        <p><img src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png"
+                                                                loading="lazy"
+                                                                onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+                                                    </blockquote>
+                                                </blockquote>
+                                                <p><strong>弹性布局</strong></p>
+                                                <blockquote>
+                                                    <p><code>display: flex;</code></p>
+                                                    <blockquote>
+                                                        <p>如果其中一个div确定了宽度，则剩下的宽度由其他div按比分</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <p>更改布局排列方向</p>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <blockquote>
+                                                            <figure class="highlight html">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td class="gutter">
+                                                                            <pre><span class="line">1</span><br></pre>
+                                                                        </td>
+                                                                        <td class="code">
+                                                                            <pre><span class="line">flex-direction: column</span><br></pre>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </figure>
+                                                        </blockquote>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <blockquote>
+                                                            <p>justify-content横向调整</p>
+                                                            <p>&#x2F; 居中 &#x2F;<br>justify-content: center;<br>&#x2F; 靠右
+                                                                &#x2F;<br>justify-content: flex-end;<br>&#x2F; 靠左
+                                                                &#x2F;<br>justify-content: flex-start;</p>
+                                                        </blockquote>
+                                                    </blockquote>
+                                                    <blockquote>
+                                                        <blockquote>
+                                                            <p>align-items纵向调整</p>
+                                                            <p>&#x2F; 居中 &#x2F;<br>align-items: center;<br>&#x2F; 靠下
+                                                                &#x2F;<br>align-items: flex-end;<br> &#x2F; 靠上
+                                                                &#x2F;<br>align-items: flex-start;</p>
+                                                        </blockquote>
+                                                    </blockquote>
+                                                </blockquote>
+                                                <p><strong>单位</strong></p>
+                                                <blockquote>
+                                                    <p><strong>px</strong></p>
+                                                    <blockquote>
+                                                        <p>像素，固定单位，会随着页面缩放而改变</p>
+                                                    </blockquote>
+                                                    <p><strong>%</strong></p>
+                                                    <blockquote>
+                                                        <p>百分比，相对长度，上级元素的百分比</p>
+                                                    </blockquote>
+                                                    <p><strong>vm</strong></p>
+                                                    <blockquote>
+                                                        <p>view width,页面百分比宽度</p>
+                                                    </blockquote>
+                                                    <p><strong>vh</strong></p>
+                                                    <blockquote>
+                                                        <p>view height,页面百分比高度</p>
+                                                    </blockquote>
+                                                </blockquote>
+                                                <p><strong>字体单位</strong></p>
+                                                <blockquote>
+                                                    <p><strong>em</strong></p>
+                                                    <blockquote>
+                                                        <p>会根据上级元素改变大小</p>
+                                                    </blockquote>
+                                                    <p><strong>rem</strong></p>
+                                                    <blockquote>
+                                                        <p>只会根据页面改变大小</p>
+                                                    </blockquote>
+                                                </blockquote>
+
+                                            </article>
+
+
+                                        </div>
+                                        <div id="post-next-prev" class="row">
+                                            <div class="col-lg-12">
+                                                <!-- title -->
+                                                <h5 class="trm-title-with-divider">
+                                                    其他文章
+                                                    <span data-number="02"></span>
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
+                                                    data-scroll-offset="40">
+                                                    <a href="/2023/03/18/great-vue/"
+                                                        class="trm-cover-frame trm-anima-link">
+
+
+                                                        <img alt="cover" class="no-fancybox"
+                                                            src="https://pic.imgdb.cn/item/641677e5a682492fcc17c703.jpg">
+
+                                                    </a>
+
+                                                    <div class="trm-card-descr">
+                                                        <div class="trm-label trm-category trm-mb-20">
+                                                            <a href=" /categories/%E8%BF%BD/">
+                                                                追
+                                                            </a>
+                                                        </div>
+                                                        <h5>
+                                                            <a href="/2023/03/18/great-vue/" class="trm-anima-link">
+                                                                Vue2大事件项目
+                                                            </a>
+                                                        </h5>
+                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+                                                        <ul class="trm-card-data trm-label">
+                                                            <li>23/03/18</li>
+                                                            <li>22:44</li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
+                                                    data-scroll-offset="40">
+                                                    <a href="/2023/03/18/vue2-sph/"
+                                                        class="trm-cover-frame trm-anima-link">
+
+
+                                                        <img alt="cover" class="no-fancybox"
+                                                            src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp">
+
+                                                    </a>
+
+                                                    <div class="trm-card-descr">
+                                                        <div class="trm-label trm-category trm-mb-20">
+                                                            <a href=" /categories/%E8%BF%BD/">
+                                                                追
+                                                            </a>
+                                                        </div>
+                                                        <h5>
+                                                            <a href="/2023/03/18/vue2-sph/" class="trm-anima-link">
+                                                                Vue2_尚品汇项目
+                                                            </a>
+                                                        </h5>
+                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+                                                        <ul class="trm-card-data trm-label">
+                                                            <li>23/03/18</li>
+                                                            <li>18:35</li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <div class="trm-divider footer-divider"></div>
+
+                                        <!-- footer -->
+                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+
+
+
+                                            <div class="trm-footer-item">
+                                                <span>© 2023- 2023</span>
+                                                <span class="footer-separator" data-separator=" · "></span>
+                                                <span class="trm-accent-color">旺财</span>
+                                            </div>
+
+
+
+                                            <div class="trm-footer-item">
+                                                <span>
+                                                    由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                                                    驱动 v6.3.0
+                                                </span>
+                                                <span class="footer-separator" data-separator=" | "></span>
+                                                <span>
+                                                    主题 -
+                                                    <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async'
+                                                        target='_blank'>Async</a>
+                                                    v2.0.3
+                                                </span>
+                                            </div>
+
+
+
+                                            <div class="trm-footer-item">
+                                                笔记残篇已存世 <span id="since" class="trm-accent-color"></span> 天
+                                            </div>
+
+
+
+                                        </footer>
+
+                                        <script>
+                                            function show_date_time() {
+                                                var BirthDay = new Date("3/18/2023 17:00:00");
+                                                var today = new Date();
+                                                var timeold = (today.getTime() - BirthDay.getTime());
+                                                var msPerDay = 24 * 60 * 60 * 1000
+                                                var day = Math.floor(timeold / msPerDay)
+                                                since.innerHTML = day
+                                            }
+                                            show_date_time()
+                                        </script>
+
+                                        <!-- footer end -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- banner title end -->
+                    <!-- body end -->
 
-                    <!-- scroll hint -->
-                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
-                        <div class="trm-scroll-hint"></div>
-                        <span class="trm-label">Scroll down</span>
-                    </a>
-                    <!-- scroll hint end -->
+                    <div class="trm-fixed-container" data-scroll data-scroll-sticky
+                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
 
+                        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+                            <i class="iconfont fas fa-book-reader"></i>
+                        </div>
+
+
+                        <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+                            <i class="iconfont fas fa-arrow-up"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- scroll container end -->
+
     </div>
-    <!-- banner content end -->
-</div>
-    <!-- banner end -->
-    <div class="container">
-        <div class="row">
-            
-                <div id="page-sidebar" class="col-lg-4 hidden-sm">
-                    <!-- main card -->
-                    
-
-<div class="trm-main-card-frame trm-sidebar">
-    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
-    
-        <!-- card header -->
-<div class="trm-mc-header">
-    <div class="trm-avatar-frame trm-mb-20">
-        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
-    </div>
-    <h5 class="trm-name trm-mb-15">
-        旺财
-    </h5>
-    
-        <div class="trm-label">
-            I`m
-            <span class="trm-typed-text">
-                <!-- Words for theme.user.typedText -->
-            </span>
-        </div>
-    
-</div>
-<!-- card header end -->
-        <!-- sidebar social -->
-
-<div class="trm-divider trm-mb-40 trm-mt-40"></div>
-<div class="trm-social">
-    
-        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
-            <i class="iconfont fab fa-github"></i>
-        </a>
-    
-</div>
-
-<!-- sidebar social end -->
-        <!-- info -->
-<div class="trm-divider trm-mb-40 trm-mt-40"></div>
-<ul class="trm-table trm-mb-20">
-    
-        <li>
-            <div class="trm-label">
-                RESIDENCE:
-            </div>
-            <div class="trm-label trm-label-light">
-                M78 Nebula
-            </div>
-        </li>
-    
-        <li>
-            <div class="trm-label">
-                age:
-            </div>
-            <div class="trm-label trm-label-light">
-                22
-            </div>
-        </li>
-    
-        <li>
-            <div class="trm-label">
-                CITY:
-            </div>
-            <div class="trm-label trm-label-light">
-                MIANYANG
-            </div>
-        </li>
-    
-</ul>
-<!-- info end -->
-
-        
-    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-    <!-- action button -->
-    <div class="text-center">
-        <a href="mailto:1836523160@qq.com" class="trm-btn">
-            联系我
-            <i class="iconfont far fa-envelope"></i>
-        </a>
-    </div>
-    <!-- action button end -->
-
-    
-    </div>
-</div>
-                    <!-- main card end -->
-                </div>
-            
-            <div id="page-content" class="col-lg-8">
-                <div class="trm-content" id="trm-content">
-                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
-
-                    <div id="post-info" class="row hidden-sm">
-    <div class="col-sm-4">
-        <div class="trm-card trm-label trm-label-light text-center">
-            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            03/18
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="trm-card trm-label trm-label-light text-center">
-            <i class="iconfont far fa-clock trm-icon"></i><br>
-            18:57
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
-            <i class="iconfont far fa-user trm-icon"></i><br>
-            wangcai
-        </div>
-    </div>
-</div>
-<div class="trm-card ">
-    <article id="article-container" class="trm-publication">
-    <blockquote>
-<p><strong>margin</strong> </p>
-<p>只跟一个参数时表示上下左右的外边距</p>
-<p>跟两个参数时表示 上下 左右的外边距</p>
-<p>跟三个参数时表示 上 左右 下 的外边距</p>
-<p>跟四个参数时表示从上开始顺时针的外边距</p>
-</blockquote>
-<blockquote>
-<p>​	<strong>border-radius</strong></p>
-<p>只跟一个参数时表示四个圆角的弧度</p>
-<p>跟两个参数时表示按上左下右 上右下左作用圆角</p>
-<p>跟三个参数时表示按照左上 右上和左下 右下的顺序作用圆角</p>
-<p>跟四个参数时表示按照左上 右上 右下 左下的顺序作用圆角</p>
-</blockquote>
-<p><strong>block</strong></p>
-<blockquote>
-<p>块级元素的默认值，独占一行，可以修改元素的宽高</p>
-<p>块级元素包括div h1-h6 p </p>
-</blockquote>
-<p><strong>inline</strong></p>
-<blockquote>
-<p>行内元素的默认值，同占一行，不可以更改元素的宽高</p>
-<p>行内元素包括span b i s u a</p>
-</blockquote>
-<p><strong>inline-block</strong></p>
-<blockquote>
-<p>行内块元素的默认值，同占一行，可以修改宽高</p>
-<p>行内块元素包括img input</p>
-</blockquote>
-<p><strong>定位</strong></p>
-<blockquote>
-<blockquote>
-<p><strong>static</strong></p>
-<p>静态定位，会影响其他元素，调整方式：margin</p>
-</blockquote>
-<blockquote>
-<p><strong>relative</strong></p>
-<p>相对定位，参考系是原来的自己，不影响其他元素，可以显示层叠效果，元素不脱离文档流</p>
-<p>relative永远是参考自己没有定位前的坐标为原点进行位移</p>
-<p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>absolute</strong></p>
-<p>绝对定位，可以实现层叠效果，默认以body为参照物（如果要更改参照物，则将父元素添加定位：position：relative 子绝父相），元素脱离文档流（不占用原来的位置），absolute是参考离自己最近的参考系点进行定位</p>
-<p>left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>fixed</strong><br>    固定定位，元素固定在窗口的某个位置，元素脱离文档流（不占用原来位置），left&#x2F;top&#x2F;right&#x2F;bottom 控制元素位置</p>
-</blockquote>
-<blockquote>
-<p><strong>float</strong><br>    浮动定位</p>
-</blockquote>
-<blockquote>
-<p><strong>具有脱离文档流特性的标签</strong><br>    absolute<br>    fixed<br>    float</p>
-</blockquote>
-<blockquote>
-<p><strong>层叠</strong></p>
-<p>标准流中的元素不存在层叠关系</p>
-<p>后来居上排列书写的时候, 后面的元素会覆盖前边元素之上</p>
-<ul>
-<li>定位元素：定位元素会层叠在标准流元素上面<ul>
-<li>定位元素间可以使用z-index设置优先级</li>
-<li>必须是定位元素，非static</li>
-</ul>
-</li>
-<li>浮动元素：float为left或right</li>
-<li>标准元素 –&gt; 浮动元素 –&gt; 定位元素</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>z-index</strong></p>
-<p><img src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-</blockquote>
-</blockquote>
-<p><strong>弹性布局</strong></p>
-<blockquote>
-<p><code>display: flex;</code></p>
-<blockquote>
-<p>如果其中一个div确定了宽度，则剩下的宽度由其他div按比分</p>
-</blockquote>
-<blockquote>
-<p>更改布局排列方向</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-direction: column</span><br></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>justify-content横向调整</p>
-<p>&#x2F;  居中   &#x2F;<br>justify-content: center;<br>&#x2F;  靠右  &#x2F;<br>justify-content: flex-end;<br>&#x2F;  靠左  &#x2F;<br>justify-content: flex-start;</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>align-items纵向调整</p>
-<p>&#x2F;   居中     &#x2F;<br>align-items: center;<br>&#x2F;	靠下	&#x2F;<br>align-items: flex-end;<br>    &#x2F;	靠上	&#x2F;<br>align-items: flex-start;</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><strong>单位</strong></p>
-<blockquote>
-<p><strong>px</strong></p>
-<blockquote>
-<p>像素，固定单位，会随着页面缩放而改变</p>
-</blockquote>
-<p><strong>%</strong></p>
-<blockquote>
-<p>百分比，相对长度，上级元素的百分比</p>
-</blockquote>
-<p><strong>vm</strong></p>
-<blockquote>
-<p>view width,页面百分比宽度</p>
-</blockquote>
-<p><strong>vh</strong></p>
-<blockquote>
-<p>view height,页面百分比高度</p>
-</blockquote>
-</blockquote>
-<p><strong>字体单位</strong></p>
-<blockquote>
-<p><strong>em</strong></p>
-<blockquote>
-<p>会根据上级元素改变大小</p>
-</blockquote>
-<p><strong>rem</strong></p>
-<blockquote>
-<p>只会根据页面改变大小</p>
-</blockquote>
-</blockquote>
-
-</article>
-    
-    
-</div>
-<div id="post-next-prev" class="row">
-    <div class="col-lg-12">
-        <!-- title -->
-        <h5 class="trm-title-with-divider">
-            其他文章
-            <span data-number="02"></span>
-        </h5>
-    </div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/03/18/great-vue/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/641677e5a682492fcc17c703.jpg">
-            
-        </a>
-        
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E8%BF%BD/">
-                    追
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/03/18/great-vue/" class="trm-anima-link">
-                    Vue2大事件项目
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/03/18</li>
-                <li>22:44</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/03/18/vue2-sph/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp">
-            
-        </a>
-        
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E8%BF%BD/">
-                    追
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/03/18/vue2-sph/" class="trm-anima-link">
-                    Vue2_尚品汇项目
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/03/18</li>
-                <li>18:35</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-</div>
-
-    
+    <!-- app wrapper end -->
 
 
-
-                    <div class="trm-divider footer-divider"></div>
-
-                    <!-- footer -->
-                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
-
-    
-
-    
-        <div class="trm-footer-item">
-            <span>© 2023- 2023</span>
-            <span class="footer-separator"data-separator=" · "></span>
-            <span class="trm-accent-color">旺财</span>
-        </div>
-    
-
-    
-        <div class="trm-footer-item">
-            <span>
-                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
-            </span>
-            <span class="footer-separator" data-separator=" | "></span>
-            <span> 
-                主题 - 
-                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
-                v2.0.3
-            </span>
-        </div>
-      
-
-    
-        <div class="trm-footer-item">
-            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
-        </div>
-     
-
-     
-</footer>
-
-<script>
-    function show_date_time () {
-        var BirthDay = new Date("3/18/2023 17:00:00");
-        var today = new Date();
-        var timeold = (today.getTime() - BirthDay.getTime());
-        var msPerDay = 24 * 60 * 60 * 1000
-        var day = Math.floor(timeold / msPerDay)
-        since.innerHTML = day
-    }
-    show_date_time()
-</script>
- 
-                    <!-- footer end -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <!-- body end -->
-
-            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-    
-        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
-            <i class="iconfont fas fa-book-reader"></i>
-        </div>
-    
-    
-    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
-        <i class="iconfont fas fa-arrow-up"></i>
-    </div>
-</div>
-          </div>
-        </div>
-      </div>
-      <!-- scroll container end -->
-
-  </div>
-  <!-- app wrapper end -->
-
-  
-  <!-- Plugin -->
+    <!-- Plugin -->
 
 
 
 
-    
-    
-<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    
-<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
-    
+    <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    
-        <script src="/js/plugins/typing.js?v=2.0.3"></script>
-    
 
-    
+    <script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+
+
+
+    <script src="/js/plugins/typing.js?v=2.0.3"></script>
+
+
+
 
     <!-- 数学公式 -->
-    
+
 
     <!-- 评论插件 -->
-    
-        
-
-        
-    
 
 
 
-<!-- CDN -->
 
 
-    
 
-    
 
-    
+
+    <!-- CDN -->
+
+
+
+
+
+
+
 
 
 
 
     <!-- Service Worker -->
-    
+
     <!-- baidu push -->
-    
 
 
-<script id="async-script" src="/js/main.js?v=2.0.3"></script>
+
+    <script id="async-script" src="/js/main.js?v=2.0.3"></script>
 
 </body>
 
