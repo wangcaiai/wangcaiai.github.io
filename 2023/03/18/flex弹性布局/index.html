@@ -2,837 +2,651 @@
 <html lang="zh-Hans">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="full-screen" content="yes">
-    <meta name="theme-color" content="#317EFB" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-    <meta name="description"
-        content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="flex弹性布局">
-    <meta property="og:url"
-        content="http://www.wangcai.club/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/index.html">
-    <meta property="og:site_name" content="下午会有太阳">
-    <meta property="og:description"
-        content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
-    <meta property="og:locale">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="article:published_time" content="2023-03-18T09:41:29.000Z">
-    <meta property="article:modified_time" content="2023-03-19T05:21:13.488Z">
-    <meta property="article:author" content="wangcai">
-    <meta property="article:tag" content="flex布局">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex弹性布局">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:site_name" content="笔记百分百">
+<meta property="og:description" content="display：flex弹性布局 在不同方向排列元素        重新排列元素的显示顺序        更改元素的对齐方式        动态地将元素装入容器  flex-direction: row（默认值）：主轴为水平方向，起点在左端。  row-reverse：主轴为水平方向，起点在右端。  column：主轴为垂直方向，起点在上沿。  column-reverse：主轴为垂直方向，起点在">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-03-18T09:41:29.000Z">
+<meta property="article:modified_time" content="2023-03-19T05:21:13.488Z">
+<meta property="article:author" content="wangcai">
+<meta property="article:tag" content="flex布局">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
 
     <meta name="keywords" content="弹性布局">
 
 
-    <title>flex弹性布局</title>
+<title >flex弹性布局</title>
 
-    <!-- Favicon -->
+<!-- Favicon -->
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='16x16'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
 
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='32x32'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
 
 
-    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180'>
-    </link>
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
 
 
-    <link href='/site.webmanifest' rel='manifest'>
-    </link>
+    <link href='/site.webmanifest' rel='manifest' ></link>
 
 
-    <!-- Plugin -->
+<!-- Plugin -->
 
 
 
 
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
-    <link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
-
-    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
-
-
-
-
-
-
-
-    <!-- Icon -->
-
-
-    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    
+    
 
 
 
 
-    <!-- Variable -->
-    <script>
-        window.ASYNC_CONFIG = {
-            "hostname": "www.wangcai.club",
-            "author": "wangcai",
-            "root": "/",
-            "typed_text": ["Web Developer", "仙人"],
-            "theme_version": "2.0.3",
-            "theme": {
-                "switch": true,
-                "default": "style-light"
-            },
-            "favicon": {
-                "logo": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon16": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon32": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "appleTouchIcon": "apple-touch-icon.png",
-                "webmanifest": "/site.webmanifest",
-                "visibilitychange": true,
-                "hidden": "https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png",
-                "showText": "旺财の死亡笔记",
-                "hideText": "下午会有太阳，一切会有转机。",
-                "assets": null,
-                "internal_provider": "unpkg",
-                "third_party_provider": "unpkg"
-            },
-            "i18n": {
-                "placeholder": "搜索...",
-                "empty": "找不到您查询的内容: ${query}",
-                "hits": "找到 ${hits} 条结果",
-                "hits_time": "找到 ${hits} 条结果（用时 ${time} 毫秒）",
-                "author": "本文作者：",
-                "copyright_link": "本文链接：",
-                "copyright_license_title": "版权声明：",
-                "copyright_license_content": "本博客所有文章除特别声明外，均默认采用 undefined 许可协议。",
-                "copy_success": "复制成功",
-                "copy_failure": "复制失败",
-                "open_read_mode": "进入阅读模式",
-                "exit_read_mode": "退出阅读模式",
-                "notice_outdate_message": "距离上次更新已经 undefined 天了, 文章内容可能已经过时。",
-                "just": "刚刚",
-                "min": "分钟前",
-                "hour": "小时前",
-                "day": "天前",
-                "month": "个月前"
-            },
-            "swup": false,
-            "plugin": {
-                "flickr_justified_gallery": "https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"
-            },
-            "icons": {
-                "sun": "far fa-sun",
-                "moon": "far fa-moon",
-                "play": "fas fa-play",
-                "email": "far fa-envelope",
-                "next": "fas fa-arrow-right",
-                "calendar": "far fa-calendar-alt",
-                "clock": "far fa-clock",
-                "user": "far fa-user",
-                "back_top": "fas fa-arrow-up",
-                "close": "fas fa-times",
-                "search": "fas fa-search",
-                "reward": "fas fa-hand-holding-usd",
-                "user_tag": "fas fa-user-alt",
-                "toc_tag": "fas fa-th-list",
-                "read": "fas fa-book-reader",
-                "arrows": "fas fa-arrows-alt-h",
-                "double_arrows": "fas fa-angle-double-down",
-                "copy": "fas fa-copy"
-            },
-            "icontype": "font",
-            "highlight": {
-                "plugin": "highlighjs",
-                "theme": true,
-                "copy": true,
-                "lang": true,
-                "title": "default",
-                "height_limit": 200
-            },
-            "creative_commons": {
-                "license": "by-nc-sa",
-                "language": "deed.zh"
-            }
-        };
-    </script>
-    <script id="async-page-config">
-        window.PAGE_CONFIG = {
-            "isPost": true,
-            "isHome": false,
-            "postUpdate": "2023-03-19 13:21:13"
-        };
-    </script>
+<!-- Icon -->
 
-    <!-- Theme mode css -->
-    <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
-    <script>
-        let defaultMode = ASYNC_CONFIG.theme.default !== 'auto' ? ASYNC_CONFIG.theme.default : (window.matchMedia(
-            "(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-        let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-        let type = catchMode === 'style-dark' ? 'add' : 'remove';
-        document.documentElement.classList[type]('dark')
-    </script>
-
-    <!-- CDN -->
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
 
 
 
 
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-19 13:21:13"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
 
 
 
-    <!-- Site Analytics -->
-
-    <meta name="generator" content="Hexo 6.3.0">
-</head>
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
 
-    <!-- app wrapper -->
-    <div class="trm-app-frame">
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-        <!-- page preloader -->
-        <div class="trm-preloader">
-            <div class="trm-holder">
-                <div class="preloader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <!-- page preloader end -->
-
-        <!-- change mode preloader -->
-        <div class="trm-mode-swich-animation-frame">
-            <div class="trm-mode-swich-animation">
-                <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
-                <div class="trm-horizon"></div>
-                <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
-            </div>
-        </div>
-        <!-- change mode preloader end -->
-
-        <!-- scroll container -->
-        <div id="trm-dynamic-content" class="trm-swup-animation">
-            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
-                <div data-scroll-section id="content" class="trm-scroll-section">
-
-                    <div class="locomotive-scroll__sticky-target"
-                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
-
-                    <!-- top bar -->
-                    <header class="trm-top-bar" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-                        <div class="container">
-                            <div class="trm-left-side">
-                                <!-- logo -->
-                                <a href="/" class="trm-logo-frame trm-anima-link">
-
-                                    <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
-
-
-                                    <div class="trm-logo-text">
-                                        嘿，<span>好久不见！</span>
-                                    </div>
-
-                                </a>
-                                <!-- logo end -->
-                            </div>
-                            <div class="trm-right-side">
-                                <!-- menu -->
-                                <div class="trm-menu">
-                                    <nav>
-                                        <ul>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/" target="">
-                                                    首页
-                                                </a>
-
-                                                <ul>
-
-                                                    <li>
-                                                        <a href="/archives2/" target="">
-                                                            archives2
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/archives/" target="">
-                                                    归档
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/about/" target="">
-                                                    关于
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/links/" target="">
-                                                    友情链接
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- menu end -->
-
-                                <!-- mode switcher place -->
-                                <div class="trm-mode-switcher-place">
-                                    <div class="trm-mode-switcher">
-                                        <i class="iconfont far fa-sun"></i>
-                                        <input class="tgl tgl-light" id="trm-swich" type="checkbox">
-                                        <label class="trm-swich" for="trm-swich"></label>
-                                        <i class="iconfont far fa-moon"></i>
-                                    </div>
-                                </div>
-                                <!-- mode switcher place end -->
-
-
-                            </div>
-                            <div class="trm-menu-btn">
-                                <span></span>
-                            </div>
-                        </div>
-                    </header>
-                    <!-- top bar end -->
-
-                    <!-- body -->
-
-                    <div class="trm-content-start">
-                        <!-- banner -->
-                        <div class="trm-banner" data-scroll data-scroll-direction="vertical">
-
-                            <!-- banner cover -->
-                            <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover"
-                                data-scroll data-scroll-direction="vertical" data-scroll-speed="-3"
-                                src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png">
-                            <!-- banner cover end -->
-
-
-                            <!-- banner content -->
-                            <div class="trm-banner-content trm-overlay">
-                                <div class="container" data-scroll data-scroll-direction="vertical"
-                                    data-scroll-speed="0">
-                                    <div class="row">
-
-                                        <div class="col-lg-4"></div>
-
-                                        <div class="col-lg-8">
-
-                                            <!-- banner title -->
-                                            <div class="trm-banner-text ">
-                                                <div class="trm-label trm-mb-20">
-                                                    flex!
-                                                </div>
-                                                <h1 class="trm-mb-30 trm-hsmb-font">
-                                                    flex弹性布局
-                                                </h1>
-
-
-                                                <ul class="trm-breadcrumbs trm-label">
-                                                    <li>
-                                                        <a href="/" class="trm-anima-link">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            2023
-                                                        </span></li>
-                                                </ul>
-
-                                            </div>
-                                            <!-- banner title end -->
-
-                                            <!-- scroll hint -->
-                                            <a href="#about-triger" data-scroll-to="#about-triger"
-                                                data-scroll-offset="-130" class="trm-scroll-hint-frame">
-                                                <div class="trm-scroll-hint"></div>
-                                                <span class="trm-label">Scroll down</span>
-                                            </a>
-                                            <!-- scroll hint end -->
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- banner content end -->
-                        </div>
-                        <!-- banner end -->
-                        <div class="container">
-                            <div class="row">
-
-                                <div id="page-sidebar" class="col-lg-4 hidden-sm">
-                                    <!-- main card -->
-
-
-                                    <div class="trm-main-card-frame trm-sidebar">
-                                        <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky
-                                            data-scroll-target=".locomotive-scroll__sticky-target"
-                                            data-scroll-offset="60">
-
-                                            <div class="trm-user-tabs" id="sidebar-tabs">
-                                                <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
-                                                    <div data-to="tabs-user" class="trm-tabs-nav-item">
-                                                        <i class="iconfont fas fa-user-alt"></i>
-                                                    </div>
-                                                    <div data-to="tabs-toc" class="trm-tabs-nav-item active">
-                                                        <i class="iconfont fas fa-th-list"></i>
-                                                    </div>
-                                                </div>
-                                                <div name="tabs-user" class="trm-tabs-item">
-                                                    <!-- card header -->
-                                                    <div class="trm-mc-header">
-                                                        <div class="trm-avatar-frame trm-mb-20">
-                                                            <img alt="Avatar" class="trm-avatar"
-                                                                src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
-                                                        </div>
-                                                        <h5 class="trm-name trm-mb-15">
-                                                            旺财
-                                                        </h5>
-
-                                                        <div class="trm-label">
-                                                            I`m
-                                                            <span class="trm-typed-text">
-                                                                <!-- Words for theme.user.typedText -->
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- card header end -->
-                                                    <!-- sidebar social -->
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <div class="trm-social">
-
-                                                        <a href="https://github.com/wangcaiai" title="github"
-                                                            rel="nofollow" target="_blank">
-                                                            <i class="iconfont fab fa-github"></i>
-                                                        </a>
-
-                                                    </div>
-
-                                                    <!-- sidebar social end -->
-                                                    <!-- info -->
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <ul class="trm-table trm-mb-20">
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                RESIDENCE:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                M78 Nebula
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                age:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                22
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                CITY:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                MIANYANG
-                                                            </div>
-                                                        </li>
-
-                                                    </ul>
-                                                    <!-- info end -->
-
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <!-- action button -->
-                                                    <div class="text-center">
-                                                        <a href="mailto:1836523160@qq.com" class="trm-btn">
-                                                            联系我
-                                                            <i class="iconfont far fa-envelope"></i>
-                                                        </a>
-                                                    </div>
-                                                    <!-- action button end -->
-
-                                                </div>
-                                                <div name="tabs-toc" class="trm-tabs-item active">
-                                                    <div class="post-toc">
-                                                        <ol class="toc">
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#display：flex弹性布局"
-                                                                    data-scroll-to="#display：flex弹性布局"><span
-                                                                        class="toc-number">1.</span> <span
-                                                                        class="toc-text">display：flex弹性布局</span></a>
-                                                                <ol class="toc-child">
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#flex-direction"
-                                                                            data-scroll-to="#flex-direction"><span
-                                                                                class="toc-number">1.1.</span> <span
-                                                                                class="toc-text">flex-direction:</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#flex-wrap"
-                                                                            data-scroll-to="#flex-wrap"><span
-                                                                                class="toc-number">1.2.</span> <span
-                                                                                class="toc-text">flex-wrap:</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#justify-content"
-                                                                            data-scroll-to="#justify-content"><span
-                                                                                class="toc-number">1.3.</span> <span
-                                                                                class="toc-text">justify-content:</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#align-items"
-                                                                            data-scroll-to="#align-items"><span
-                                                                                class="toc-number">1.4.</span> <span
-                                                                                class="toc-text">align-items:</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#align-content"
-                                                                            data-scroll-to="#align-content"><span
-                                                                                class="toc-number">1.5.</span> <span
-                                                                                class="toc-text">align-content:</span></a>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-                                                        </ol>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- main card end -->
-                                </div>
-
-                                <div id="page-content" class="col-lg-8">
-                                    <div class="trm-content" id="trm-content">
-                                        <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger">
-                                        </div>
-
-                                        <div id="post-info" class="row hidden-sm">
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-                                                    03/18
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-clock trm-icon"></i><br>
-                                                    17:41
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div id="post-author"
-                                                    class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-user trm-icon"></i><br>
-                                                    wangcai
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="trm-card ">
-                                            <article id="article-container" class="trm-publication">
-                                                <h2 id="display：flex弹性布局"><a href="#display：flex弹性布局" class="headerlink"
-                                                        title="display：flex弹性布局"></a>display：flex弹性布局</h2>
-                                                <p> 在不同方向排列元素<br> 重新排列元素的显示顺序<br> 更改元素的对齐方式<br> 动态地将元素装入容器</p>
-                                                <p><img src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <h3 id="flex-direction"><a href="#flex-direction" class="headerlink"
-                                                        title="flex-direction:"></a>flex-direction:</h3>
-                                                <ul>
-                                                    <li>
-                                                        <p>row（默认值）：主轴为水平方向，起点在左端。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>row-reverse：主轴为水平方向，起点在右端。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>column：主轴为垂直方向，起点在上沿。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>column-reverse：主轴为垂直方向，起点在下沿。</p>
-                                                        <h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink"
-                                                                title="flex-wrap:"></a>flex-wrap:</h3>
-                                                        <ul>
-                                                            <li>nowrap（默认）：不换行。</li>
-                                                            <li>wrap：换行，第一行在上方。</li>
-                                                            <li>wrap-reverse：换行，第一行在下方。</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <h3 id="justify-content"><a href="#justify-content" class="headerlink"
-                                                        title="justify-content:"></a>justify-content:</h3>
-                                                <ul>
-                                                    <li>flex-start（默认值）：左对齐</li>
-                                                    <li>flex-end：右对齐</li>
-                                                    <li>center： 居中</li>
-                                                    <li>space-between：两端对齐，项目之间的间隔都相等。</li>
-                                                    <li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</li>
-                                                </ul>
-                                                <p><img src="https://pic.imgdb.cn/item/6415c45ea682492fccf0badc.gif"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <h3 id="align-items"><a href="#align-items" class="headerlink"
-                                                        title="align-items:"></a>align-items:</h3>
-                                                <ul>
-                                                    <li>flex-start：交叉轴的起点对齐。</li>
-                                                    <li>flex-end：交叉轴的终点对齐。</li>
-                                                    <li>center：交叉轴的中点对齐。</li>
-                                                    <li>baseline: 项目的第一行文字的基线对齐。</li>
-                                                    <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
-                                                </ul>
-                                                <p><img src="https://pic.imgdb.cn/item/6415c465a682492fccf0c8ed.gif"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <h3 id="align-content"><a href="#align-content" class="headerlink"
-                                                        title="align-content:"></a>align-content:</h3>
-                                                <p>定义了多根轴线的对齐方式，如果项目只有一根轴线，那么该属性将不起作用</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>flex-start：与交叉轴的起点对齐。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>flex-end：与交叉轴的终点对齐。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>center：与交叉轴的中点对齐。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>stretch（默认值）：轴线占满整个交叉轴。</p>
-                                                        <p><img src="https://pic.imgdb.cn/item/6415c46ea682492fccf0dc29.gif"
-                                                                loading="lazy"
-                                                                onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                    </li>
-                                                </ul>
-
-                                            </article>
-
-
-                                        </div>
-                                        <div id="post-next-prev" class="row">
-                                            <div class="col-lg-12">
-                                                <!-- title -->
-                                                <h5 class="trm-title-with-divider">
-                                                    其他文章
-                                                    <span data-number="02"></span>
-                                                </h5>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
-                                                    data-scroll-offset="40">
-                                                    <a href="/2023/03/18/vue2-sph/"
-                                                        class="trm-cover-frame trm-anima-link">
-
-
-                                                        <img alt="cover" class="no-fancybox"
-                                                            src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp">
-
-                                                    </a>
-
-                                                    <div class="trm-card-descr">
-                                                        <div class="trm-label trm-category trm-mb-20">
-                                                            <a href=" /categories/%E8%BF%BD/">
-                                                                追
-                                                            </a>
-                                                        </div>
-                                                        <h5>
-                                                            <a href="/2023/03/18/vue2-sph/" class="trm-anima-link">
-                                                                Vue2_尚品汇项目
-                                                            </a>
-                                                        </h5>
-                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-                                                        <ul class="trm-card-data trm-label">
-                                                            <li>23/03/18</li>
-                                                            <li>18:35</li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-
-
-
-
-                                        <div class="trm-divider footer-divider"></div>
-
-                                        <!-- footer -->
-                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
-
-
-
-
-                                            <div class="trm-footer-item">
-                                                <span>© 2023- 2023</span>
-                                                <span class="footer-separator" data-separator=" · "></span>
-                                                <span class="trm-accent-color">旺财</span>
-                                            </div>
-
-
-
-                                            <div class="trm-footer-item">
-                                                <span>
-                                                    由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-                                                    驱动 v6.3.0
-                                                </span>
-                                                <span class="footer-separator" data-separator=" | "></span>
-                                                <span>
-                                                    主题 -
-                                                    <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async'
-                                                        target='_blank'>Async</a>
-                                                    v2.0.3
-                                                </span>
-                                            </div>
-
-
-
-                                            <div class="trm-footer-item">
-                                                笔记残篇已存世 <span id="since" class="trm-accent-color"></span> 天
-                                            </div>
-
-
-
-                                        </footer>
-
-                                        <script>
-                                            function show_date_time() {
-                                                var BirthDay = new Date("3/18/2023 17:00:00");
-                                                var today = new Date();
-                                                var timeold = (today.getTime() - BirthDay.getTime());
-                                                var msPerDay = 24 * 60 * 60 * 1000
-                                                var day = Math.floor(timeold / msPerDay)
-                                                since.innerHTML = day
-                                            }
-                                            show_date_time()
-                                        </script>
-
-                                        <!-- footer end -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- body end -->
-
-                    <div class="trm-fixed-container" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-
-                        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
-                            <i class="iconfont fas fa-book-reader"></i>
-                        </div>
-
-
-                        <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
-                            <i class="iconfont fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- scroll container end -->
-
     </div>
-    <!-- app wrapper end -->
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+    
+    
+        <div class="trm-logo-text">
+            嘿，<span>好久不见！</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友情链接
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            flex!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            flex弹性布局
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        旺财
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                RESIDENCE:
+            </div>
+            <div class="trm-label trm-label-light">
+                M78 Nebula
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                age:
+            </div>
+            <div class="trm-label trm-label-light">
+                22
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                CITY:
+            </div>
+            <div class="trm-label trm-label-light">
+                MIANYANG
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:1836523160@qq.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#display：flex弹性布局"  data-scroll-to="#display：flex弹性布局"><span class="toc-number">1.</span> <span class="toc-text">display：flex弹性布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#flex-direction"  data-scroll-to="#flex-direction"><span class="toc-number">1.1.</span> <span class="toc-text">flex-direction:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#flex-wrap"  data-scroll-to="#flex-wrap"><span class="toc-number">1.2.</span> <span class="toc-text">flex-wrap:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#justify-content"  data-scroll-to="#justify-content"><span class="toc-number">1.3.</span> <span class="toc-text">justify-content:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#align-items"  data-scroll-to="#align-items"><span class="toc-number">1.4.</span> <span class="toc-text">align-items:</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#align-content"  data-scroll-to="#align-content"><span class="toc-number">1.5.</span> <span class="toc-text">align-content:</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            17:41
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="display：flex弹性布局"><a href="#display：flex弹性布局" class="headerlink" title="display：flex弹性布局"></a>display：flex弹性布局</h2><p> 在不同方向排列元素<br>        重新排列元素的显示顺序<br>        更改元素的对齐方式<br>        动态地将元素装入容器</p>
+<p><img src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction:"></a>flex-direction:</h3><ul>
+<li><p>row（默认值）：主轴为水平方向，起点在左端。</p>
+</li>
+<li><p>row-reverse：主轴为水平方向，起点在右端。</p>
+</li>
+<li><p>column：主轴为垂直方向，起点在上沿。</p>
+</li>
+<li><p>column-reverse：主轴为垂直方向，起点在下沿。</p>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap:"></a>flex-wrap:</h3><ul>
+<li>nowrap（默认）：不换行。</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
+</ul>
+</li>
+</ul>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content:"></a>justify-content:</h3><ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6415c45ea682492fccf0badc.gif" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items:"></a>align-items:</h3><ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6415c465a682492fccf0c8ed.gif" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content:"></a>align-content:</h3><p>定义了多根轴线的对齐方式，如果项目只有一根轴线，那么该属性将不起作用</p>
+<ul>
+<li><p>flex-start：与交叉轴的起点对齐。</p>
+</li>
+<li><p>flex-end：与交叉轴的终点对齐。</p>
+</li>
+<li><p>center：与交叉轴的中点对齐。</p>
+</li>
+<li><p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
+</li>
+<li><p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</p>
+</li>
+<li><p>stretch（默认值）：轴线占满整个交叉轴。</p>
+<p><img src="https://pic.imgdb.cn/item/6415c46ea682492fccf0dc29.gif" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+</li>
+</ul>
+
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/18/vue2-sph/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%BF%BD/">
+                    追
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/18/vue2-sph/" class="trm-anima-link">
+                    Vue2_尚品汇项目
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/18</li>
+                <li>18:35</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+    
 
 
-    <!-- Plugin -->
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2023- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">旺财</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.3
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
+        </div>
+     
+
+     
+</footer>
+
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("3/18/2023 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
 
 
 
 
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
-    <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
 
+    
+        <script src="/js/plugins/typing.js?v=2.0.3"></script>
+    
 
-    <script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
-
-
-
-    <script src="/js/plugins/typing.js?v=2.0.3"></script>
-
-
-
+    
 
     <!-- 数学公式 -->
-
+    
 
     <!-- 评论插件 -->
+    
+        
+
+        
+    
 
 
 
+<!-- CDN -->
 
 
+    
 
+    
 
-
-    <!-- CDN -->
-
-
-
-
-
-
-
+    
 
 
 
 
     <!-- Service Worker -->
-
+    
     <!-- baidu push -->
+    
 
 
-
-    <script id="async-script" src="/js/main.js?v=2.0.3"></script>
+<script id="async-script" src="/js/main.js?v=2.0.3"></script>
 
 </body>
 

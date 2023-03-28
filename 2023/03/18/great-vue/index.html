@@ -2,1111 +2,690 @@
 <html lang="zh-Hans">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="full-screen" content="yes">
-    <meta name="theme-color" content="#317EFB" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-    <meta name="description"
-        content="项目演示地址：大事件项目技术栈： Vue2 Element-ui echarts项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码登录注册功能：如图：   水平垂直居中布局： 这是最基本的一种  1234position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); f">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Vue2大事件项目">
-    <meta property="og:url" content="http://www.wangcai.club/2023/03/18/great-vue/index.html">
-    <meta property="og:site_name" content="下午会有太阳">
-    <meta property="og:description"
-        content="项目演示地址：大事件项目技术栈： Vue2 Element-ui echarts项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码登录注册功能：如图：   水平垂直居中布局： 这是最基本的一种  1234position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); f">
-    <meta property="og:locale">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="article:published_time" content="2023-03-18T14:44:06.000Z">
-    <meta property="article:modified_time" content="2023-03-19T15:42:58.507Z">
-    <meta property="article:author" content="wangcai">
-    <meta property="article:tag" content="项目">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="项目演示地址：大事件项目技术栈： Vue2 Element-ui echarts项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码登录注册功能：如图：   水平垂直居中布局： 这是最基本的一种  1234position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2大事件项目">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/18/great-vue/index.html">
+<meta property="og:site_name" content="笔记百分百">
+<meta property="og:description" content="项目演示地址：大事件项目技术栈： Vue2 Element-ui echarts项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码登录注册功能：如图：   水平垂直居中布局： 这是最基本的一种  1234position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); f">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-03-18T14:44:06.000Z">
+<meta property="article:modified_time" content="2023-03-19T15:42:58.507Z">
+<meta property="article:author" content="wangcai">
+<meta property="article:tag" content="项目">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
 
     <meta name="keywords" content="项目">
 
 
-    <title>Vue2大事件项目</title>
+<title >Vue2大事件项目</title>
 
-    <!-- Favicon -->
+<!-- Favicon -->
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='16x16'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
 
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='32x32'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
 
 
-    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180'>
-    </link>
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
 
 
-    <link href='/site.webmanifest' rel='manifest'>
-    </link>
+    <link href='/site.webmanifest' rel='manifest' ></link>
 
 
-    <!-- Plugin -->
+<!-- Plugin -->
 
 
 
 
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
-    <link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
-
-    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
-
-
-
-
-
-
-
-    <!-- Icon -->
-
-
-    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    
+    
 
 
 
 
-    <!-- Variable -->
-    <script>
-        window.ASYNC_CONFIG = {
-            "hostname": "www.wangcai.club",
-            "author": "wangcai",
-            "root": "/",
-            "typed_text": ["Web Developer", "仙人"],
-            "theme_version": "2.0.3",
-            "theme": {
-                "switch": true,
-                "default": "style-light"
-            },
-            "favicon": {
-                "logo": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon16": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon32": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "appleTouchIcon": "apple-touch-icon.png",
-                "webmanifest": "/site.webmanifest",
-                "visibilitychange": true,
-                "hidden": "https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png",
-                "showText": "旺财の死亡笔记",
-                "hideText": "下午会有太阳，一切会有转机。",
-                "assets": null,
-                "internal_provider": "unpkg",
-                "third_party_provider": "unpkg"
-            },
-            "i18n": {
-                "placeholder": "搜索...",
-                "empty": "找不到您查询的内容: ${query}",
-                "hits": "找到 ${hits} 条结果",
-                "hits_time": "找到 ${hits} 条结果（用时 ${time} 毫秒）",
-                "author": "本文作者：",
-                "copyright_link": "本文链接：",
-                "copyright_license_title": "版权声明：",
-                "copyright_license_content": "本博客所有文章除特别声明外，均默认采用 undefined 许可协议。",
-                "copy_success": "复制成功",
-                "copy_failure": "复制失败",
-                "open_read_mode": "进入阅读模式",
-                "exit_read_mode": "退出阅读模式",
-                "notice_outdate_message": "距离上次更新已经 undefined 天了, 文章内容可能已经过时。",
-                "just": "刚刚",
-                "min": "分钟前",
-                "hour": "小时前",
-                "day": "天前",
-                "month": "个月前"
-            },
-            "swup": false,
-            "plugin": {
-                "flickr_justified_gallery": "https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"
-            },
-            "icons": {
-                "sun": "far fa-sun",
-                "moon": "far fa-moon",
-                "play": "fas fa-play",
-                "email": "far fa-envelope",
-                "next": "fas fa-arrow-right",
-                "calendar": "far fa-calendar-alt",
-                "clock": "far fa-clock",
-                "user": "far fa-user",
-                "back_top": "fas fa-arrow-up",
-                "close": "fas fa-times",
-                "search": "fas fa-search",
-                "reward": "fas fa-hand-holding-usd",
-                "user_tag": "fas fa-user-alt",
-                "toc_tag": "fas fa-th-list",
-                "read": "fas fa-book-reader",
-                "arrows": "fas fa-arrows-alt-h",
-                "double_arrows": "fas fa-angle-double-down",
-                "copy": "fas fa-copy"
-            },
-            "icontype": "font",
-            "highlight": {
-                "plugin": "highlighjs",
-                "theme": true,
-                "copy": true,
-                "lang": true,
-                "title": "default",
-                "height_limit": 200
-            },
-            "creative_commons": {
-                "license": "by-nc-sa",
-                "language": "deed.zh"
-            }
-        };
-    </script>
-    <script id="async-page-config">
-        window.PAGE_CONFIG = {
-            "isPost": true,
-            "isHome": false,
-            "postUpdate": "2023-03-19 23:42:58"
-        };
-    </script>
+<!-- Icon -->
 
-    <!-- Theme mode css -->
-    <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
-    <script>
-        let defaultMode = ASYNC_CONFIG.theme.default !== 'auto' ? ASYNC_CONFIG.theme.default : (window.matchMedia(
-            "(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-        let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-        let type = catchMode === 'style-dark' ? 'add' : 'remove';
-        document.documentElement.classList[type]('dark')
-    </script>
-
-    <!-- CDN -->
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
 
 
 
 
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-19 23:42:58"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
 
 
 
-    <!-- Site Analytics -->
-
-    <meta name="generator" content="Hexo 6.3.0">
-</head>
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
 
-    <!-- app wrapper -->
-    <div class="trm-app-frame">
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-        <!-- page preloader -->
-        <div class="trm-preloader">
-            <div class="trm-holder">
-                <div class="preloader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <!-- page preloader end -->
-
-        <!-- change mode preloader -->
-        <div class="trm-mode-swich-animation-frame">
-            <div class="trm-mode-swich-animation">
-                <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
-                <div class="trm-horizon"></div>
-                <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
-            </div>
-        </div>
-        <!-- change mode preloader end -->
-
-        <!-- scroll container -->
-        <div id="trm-dynamic-content" class="trm-swup-animation">
-            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
-                <div data-scroll-section id="content" class="trm-scroll-section">
-
-                    <div class="locomotive-scroll__sticky-target"
-                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
-
-                    <!-- top bar -->
-                    <header class="trm-top-bar" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-                        <div class="container">
-                            <div class="trm-left-side">
-                                <!-- logo -->
-                                <a href="/" class="trm-logo-frame trm-anima-link">
-
-                                    <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
-
-
-                                    <div class="trm-logo-text">
-                                        嘿，<span>好久不见！</span>
-                                    </div>
-
-                                </a>
-                                <!-- logo end -->
-                            </div>
-                            <div class="trm-right-side">
-                                <!-- menu -->
-                                <div class="trm-menu">
-                                    <nav>
-                                        <ul>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/" target="">
-                                                    首页
-                                                </a>
-
-                                                <ul>
-
-                                                    <li>
-                                                        <a href="/archives2/" target="">
-                                                            archives2
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/archives/" target="">
-                                                    归档
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/about/" target="">
-                                                    关于
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/links/" target="">
-                                                    友情链接
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- menu end -->
-
-                                <!-- mode switcher place -->
-                                <div class="trm-mode-switcher-place">
-                                    <div class="trm-mode-switcher">
-                                        <i class="iconfont far fa-sun"></i>
-                                        <input class="tgl tgl-light" id="trm-swich" type="checkbox">
-                                        <label class="trm-swich" for="trm-swich"></label>
-                                        <i class="iconfont far fa-moon"></i>
-                                    </div>
-                                </div>
-                                <!-- mode switcher place end -->
-
-
-                            </div>
-                            <div class="trm-menu-btn">
-                                <span></span>
-                            </div>
-                        </div>
-                    </header>
-                    <!-- top bar end -->
-
-                    <!-- body -->
-
-                    <div class="trm-content-start">
-                        <!-- banner -->
-                        <div class="trm-banner" data-scroll data-scroll-direction="vertical">
-
-                            <!-- banner cover -->
-                            <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover"
-                                data-scroll data-scroll-direction="vertical" data-scroll-speed="-3"
-                                src="https://pic.imgdb.cn/item/6415cf3ea682492fcc084885.png">
-                            <!-- banner cover end -->
-
-
-                            <!-- banner content -->
-                            <div class="trm-banner-content trm-overlay">
-                                <div class="container" data-scroll data-scroll-direction="vertical"
-                                    data-scroll-speed="0">
-                                    <div class="row">
-
-                                        <div class="col-lg-4"></div>
-
-                                        <div class="col-lg-8">
-
-                                            <!-- banner title -->
-                                            <div class="trm-banner-text ">
-                                                <div class="trm-label trm-mb-20">
-                                                    大事件项目
-                                                </div>
-                                                <h1 class="trm-mb-30 trm-hsmb-font">
-                                                    Vue2大事件项目
-                                                </h1>
-
-
-                                                <ul class="trm-breadcrumbs trm-label">
-                                                    <li>
-                                                        <a href="/" class="trm-anima-link">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            2023
-                                                        </span></li>
-                                                </ul>
-
-                                            </div>
-                                            <!-- banner title end -->
-
-                                            <!-- scroll hint -->
-                                            <a href="#about-triger" data-scroll-to="#about-triger"
-                                                data-scroll-offset="-130" class="trm-scroll-hint-frame">
-                                                <div class="trm-scroll-hint"></div>
-                                                <span class="trm-label">Scroll down</span>
-                                            </a>
-                                            <!-- scroll hint end -->
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- banner content end -->
-                        </div>
-                        <!-- banner end -->
-                        <div class="container">
-                            <div class="row">
-
-                                <div id="page-sidebar" class="col-lg-4 hidden-sm">
-                                    <!-- main card -->
-
-
-                                    <div class="trm-main-card-frame trm-sidebar">
-                                        <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky
-                                            data-scroll-target=".locomotive-scroll__sticky-target"
-                                            data-scroll-offset="60">
-
-                                            <div class="trm-user-tabs" id="sidebar-tabs">
-                                                <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
-                                                    <div data-to="tabs-user" class="trm-tabs-nav-item">
-                                                        <i class="iconfont fas fa-user-alt"></i>
-                                                    </div>
-                                                    <div data-to="tabs-toc" class="trm-tabs-nav-item active">
-                                                        <i class="iconfont fas fa-th-list"></i>
-                                                    </div>
-                                                </div>
-                                                <div name="tabs-user" class="trm-tabs-item">
-                                                    <!-- card header -->
-                                                    <div class="trm-mc-header">
-                                                        <div class="trm-avatar-frame trm-mb-20">
-                                                            <img alt="Avatar" class="trm-avatar"
-                                                                src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
-                                                        </div>
-                                                        <h5 class="trm-name trm-mb-15">
-                                                            旺财
-                                                        </h5>
-
-                                                        <div class="trm-label">
-                                                            I`m
-                                                            <span class="trm-typed-text">
-                                                                <!-- Words for theme.user.typedText -->
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- card header end -->
-                                                    <!-- sidebar social -->
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <div class="trm-social">
-
-                                                        <a href="https://github.com/wangcaiai" title="github"
-                                                            rel="nofollow" target="_blank">
-                                                            <i class="iconfont fab fa-github"></i>
-                                                        </a>
-
-                                                    </div>
-
-                                                    <!-- sidebar social end -->
-                                                    <!-- info -->
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <ul class="trm-table trm-mb-20">
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                RESIDENCE:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                M78 Nebula
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                age:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                22
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                CITY:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                MIANYANG
-                                                            </div>
-                                                        </li>
-
-                                                    </ul>
-                                                    <!-- info end -->
-
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <!-- action button -->
-                                                    <div class="text-center">
-                                                        <a href="mailto:1836523160@qq.com" class="trm-btn">
-                                                            联系我
-                                                            <i class="iconfont far fa-envelope"></i>
-                                                        </a>
-                                                    </div>
-                                                    <!-- action button end -->
-
-                                                </div>
-                                                <div name="tabs-toc" class="trm-tabs-item active">
-                                                    <div class="post-toc">
-                                                        <ol class="toc">
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#项目演示地址："
-                                                                    data-scroll-to="#项目演示地址："><span
-                                                                        class="toc-number">1.</span> <span
-                                                                        class="toc-text">项目演示地址：</span></a>
-                                                                <ol class="toc-child">
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#大事件"
-                                                                            data-scroll-to="#大事件"><span
-                                                                                class="toc-number">1.1.</span> <span
-                                                                                class="toc-text">大事件</span></a></li>
-                                                                </ol>
-                                                            </li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link"
-                                                                    href="#项目技术栈：-Vue2-Element-ui-echarts"
-                                                                    data-scroll-to="#项目技术栈：-Vue2-Element-ui-echarts"><span
-                                                                        class="toc-number">2.</span> <span
-                                                                        class="toc-text">项目技术栈： Vue2 Element-ui
-                                                                        echarts</span></a></li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link"
-                                                                    href="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"
-                                                                    data-scroll-to="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"><span
-                                                                        class="toc-number">3.</span> <span
-                                                                        class="toc-text">项目架构： 登录注册 首页 文章管理—文章分类、文章列表
-                                                                        个人中心-基本资料、更换头像、重置密码</span></a></li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#登录注册功能："
-                                                                    data-scroll-to="#登录注册功能："><span
-                                                                        class="toc-number">4.</span> <span
-                                                                        class="toc-text">登录注册功能：</span></a>
-                                                                <ol class="toc-child">
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#水平垂直居中布局："
-                                                                            data-scroll-to="#水平垂直居中布局："><span
-                                                                                class="toc-number">4.1.</span> <span
-                                                                                class="toc-text">水平垂直居中布局：</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link"
-                                                                            href="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："
-                                                                            data-scroll-to="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："><span
-                                                                                class="toc-number">4.2.</span> <span
-                                                                                class="toc-text">注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行async
-                                                                                valid如果用户通过校验则进行await返回拿到的接口数据：</span></a>
-                                                                    </li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#数据绑定"
-                                                                            data-scroll-to="#数据绑定"><span
-                                                                                class="toc-number">4.3.</span> <span
-                                                                                class="toc-text">数据绑定</span></a></li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#token校验"
-                                                                            data-scroll-to="#token校验"><span
-                                                                                class="toc-number">4.4.</span> <span
-                                                                                class="toc-text">token校验</span></a></li>
-                                                                    <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                            class="toc-link" href="#vuex的5个属性"
-                                                                            data-scroll-to="#vuex的5个属性"><span
-                                                                                class="toc-number">4.5.</span> <span
-                                                                                class="toc-text">vuex的5个属性</span></a>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#首页"
-                                                                    data-scroll-to="#首页"><span
-                                                                        class="toc-number">5.</span> <span
-                                                                        class="toc-text">首页</span></a></li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#文章管理"
-                                                                    data-scroll-to="#文章管理"><span
-                                                                        class="toc-number">6.</span> <span
-                                                                        class="toc-text">文章管理</span></a></li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#项目部署！！"
-                                                                    data-scroll-to="#项目部署！！"><span
-                                                                        class="toc-number">7.</span> <span
-                                                                        class="toc-text">项目部署！！</span></a></li>
-                                                            <li class="toc-item toc-level-2"><a rel="nofollow"
-                                                                    class="toc-link" href="#大事件项目在线演示"
-                                                                    data-scroll-to="#大事件项目在线演示"><span
-                                                                        class="toc-number">8.</span> <span
-                                                                        class="toc-text">大事件项目在线演示</span></a></li>
-                                                        </ol>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- main card end -->
-                                </div>
-
-                                <div id="page-content" class="col-lg-8">
-                                    <div class="trm-content" id="trm-content">
-                                        <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger">
-                                        </div>
-
-                                        <div id="post-info" class="row hidden-sm">
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-                                                    03/18
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-clock trm-icon"></i><br>
-                                                    22:44
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div id="post-author"
-                                                    class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-user trm-icon"></i><br>
-                                                    wangcai
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="trm-card ">
-                                            <article id="article-container" class="trm-publication">
-                                                <h2 id="项目演示地址："><a href="#项目演示地址：" class="headerlink"
-                                                        title="项目演示地址："></a>项目演示地址：</h2>
-                                                <h3 id="大事件"><a href="#大事件" class="headerlink" title="大事件"></a><a
-                                                        target="_blank" rel="noopener"
-                                                        href="http://47.115.222.132/#/login">大事件</a></h3>
-                                                <h2 id="项目技术栈：-Vue2-Element-ui-echarts"><a
-                                                        href="#项目技术栈：-Vue2-Element-ui-echarts" class="headerlink"
-                                                        title="项目技术栈： Vue2 Element-ui echarts"></a>项目技术栈： Vue2
-                                                    Element-ui echarts</h2>
-                                                <h2 id="项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"><a
-                                                        href="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"
-                                                        class="headerlink"
-                                                        title="项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码"></a>项目架构：
-                                                    登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码</h2>
-                                                <h2 id="登录注册功能："><a href="#登录注册功能：" class="headerlink"
-                                                        title="登录注册功能："></a>登录注册功能：</h2>
-                                                <p>如图：<br> <img
-                                                        src="https://pic.imgdb.cn/item/64167682a682492fcc14ed18.jpg"
-                                                        alt="如图" loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <h3 id="水平垂直居中布局："><a href="#水平垂直居中布局：" class="headerlink"
-                                                        title="水平垂直居中布局："></a>水平垂直居中布局：</h3>
-                                                <ol>
-                                                    <li>这是最基本的一种 <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line">position: absolute;</span><br><span class="line"> left: 50%;</span><br><span class="line"> top: 50%;</span><br><span class="line"> transform: translate(-50%,-50%);</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                    </li>
-                                                    <li>flex弹性布局</li>
-                                                </ol>
-                                                <ul>
-                                                    <li>只设置父元素 <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line">.parent &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                    </li>
-                                                </ul>
-                                                <ul>
-                                                    <li>父子元素一起设置 <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line"> .parent &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                    </li>
-                                                </ul>
-                                                <ol start="3">
-                                                    <li>第三种是设置margin: auto<figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line">  .parent &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.children &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                    </li>
-                                                    <li>绝对定位-margin <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line"> &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  margin-top: -100px;</span><br><span class="line">  margin-left: -100px;</span><br><span class="line">&#125;</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                        贪多嚼不烂，先记住这几个</li>
-                                                </ol>
-                                                <h3
-                                                    id="注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据：">
-                                                    <a href="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："
-                                                        class="headerlink"
-                                                        title="注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行async valid如果用户通过校验则进行await返回拿到的接口数据："></a>注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行<code>async
-                                                        valid</code>如果用户通过校验则进行await返回拿到的接口数据：</h3>
-                                                <figure class="highlight plaintext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="gutter">
-                                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
-                                                            </td>
-                                                            <td class="code">
-                                                                <pre><span class="line">this.$refs.loginRef.validate(async valid =&gt; &#123;</span><br><span class="line">       if (valid) &#123;</span><br><span class="line">         // 通过校验</span><br><span class="line">         const &#123; data: res &#125; = await loginAPI(this.loginForm)</span><br><span class="line">         if (res.code !== 0) return this.$message.error(res.message)</span><br><span class="line">         else &#123;</span><br><span class="line">           this.$message.success(res.message)</span><br><span class="line">           this.updateToken(res.token)</span><br><span class="line">           this.$router.push(&#x27;/&#x27;)</span><br><span class="line">         &#125;</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">         return false</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;)</span><br></pre>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </figure>
-
-                                                <h4 id="对async-await的理解："><a href="#对async-await的理解：" class="headerlink"
-                                                        title="对async await的理解："></a>对<code>async await</code>的理解：</h4>
-                                                <p> async用来修饰函数，表明这是一个异步的函数，会默认返回一个Promise对象的resolve值，await意为等待在async修饰的函数执行到被await修饰的对象这一行时，会获取Promise中返回的内容（resolve或reject的参数），且取到值后语句才会往下执行。
-                                                </p>
-                                                <h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定
-                                                </h3>
-                                                <p>将表单数据<code>：model</code>到data()函数中，这样就拿到了用户输入的数据，可以调用接口传入后台。</p>
-                                                <h3 id="token校验"><a href="#token校验" class="headerlink"
-                                                        title="token校验"></a>token校验</h3>
-                                                <p>用户登录成功后台会颁发token
-                                                    token可以进行身份的识别与验证，比如用户没有登录是不可以通过路由跳转首页的，这时可以使用token+全局前置路由守卫，而token一般保存在localstorage中，一旦需要校验token的页面过多从localstorage拿数据就太麻烦了，可以将token存入Vuex中，但是vuex在刷新时token就会消失，需要做本地化长时间存储，可以使用<code>vuex-persistedstate</code>插件来完成
-                                                </p>
-                                                <h3 id="vuex的5个属性"><a href="#vuex的5个属性" class="headerlink"
-                                                        title="vuex的5个属性"></a>vuex的5个属性</h3>
-                                                <figure class="highlight plaintext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="gutter">
-                                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
-                                                            </td>
-                                                            <td class="code">
-                                                                <pre><span class="line">state: &#123; // 存放数据，和data类似 &#125;</span><br><span class="line">getters: &#123; // 相当于计算属性 &#125;</span><br><span class="line">mutations: &#123; // 修改State和getters的数据 &#125;</span><br><span class="line">actions: &#123; // 发起异步请求 &#125;</span><br><span class="line">modules: &#123; // 模块拆分 &#125;</span><br></pre>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </figure>
-                                                <p>此外还有 plugins: [] 插件</p>
-                                                <h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2>
-                                                <p>如图：<br><img
-                                                        src="https://pic.imgdb.cn/item/641677e5a682492fcc17c703.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'><br>使用echarts：<br><a
-                                                        target="_blank" rel="noopener"
-                                                        href="https://echarts.apache.org/zh/index.html">echarts官网</a>
-                                                </p>
-                                                <h2 id="文章管理"><a href="#文章管理" class="headerlink" title="文章管理"></a>文章管理
-                                                </h2>
-                                                <p>如图：<br><img
-                                                        src="https://pic.imgdb.cn/item/64168371a682492fcc2bb4cf.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img
-                                                        src="https://pic.imgdb.cn/item/6416839aa682492fcc2c2e88.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'><br>发表文章：<br><img
-                                                        src="https://pic.imgdb.cn/item/641683b8a682492fcc2c8391.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <p>几个功能下来感觉并不难，做完项目发现强的不是我是Element-ui这个组件库</p>
-                                                <h2 id="项目部署！！"><a href="#项目部署！！" class="headerlink"
-                                                        title="项目部署！！"></a>项目部署！！</h2>
-                                                <p>真的自己完成一个上线好有成就感，就是那种解决各种问题的感觉！（虽然项目是跟着敲的很捞）</p>
-                                                <ol>
-                                                    <li>
-                                                        <p>首先肯定是搞一个服务器<br>我是学生能不能免费送我 扣1送服务器
-                                                            111哥你是真送啊<br>人生第一次感受到了学生的权益！阿里云高校计划，学生认证免费领取一个月服务器！<a
-                                                                target="_blank" rel="noopener"
-                                                                href="https://developer.aliyun.com/plan/student?spm=5176.student.0.0.661f4bab21Sv7f">https://developer.aliyun.com/plan/student?spm=5176.student.0.0.661f4bab21Sv7f</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>有了服务器就可以开始部署了！<br>首先这里说一下打包，执行 <code>npm run build</code>
-                                                            命令可以使用webpack进行项目打包，但是项目使用的各种依赖包又很大，这就会让打包后的体积十分庞大，这时可以在vue.config.js配置
-                                                            configureWebpack，使用 externals 来提取使用的依赖包，告诉 webpack
-                                                            这些依赖是外部环境提供的，在打包时可以忽略它们，但是在开发时我们可以继续使用导入的依赖包</p>
-                                                        <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line">configureWebpack: &#123;</span><br><span class="line">    externals: &#123;</span><br><span class="line">      echarts: &#x27;echarts&#x27;,</span><br><span class="line">      vue: &#x27;Vue&#x27;,</span><br><span class="line">      &#x27;vue-router&#x27;: &#x27;VueRouter&#x27;,</span><br><span class="line">      vuex: &#x27;Vuex&#x27;,</span><br><span class="line">      axios: &#x27;axios&#x27;,</span><br><span class="line">      dayjs: &#x27;dayjs&#x27;,</span><br><span class="line">      &#x27;element-ui&#x27;: &#x27;ELEMENT&#x27;,</span><br><span class="line">      &#x27;vue-quill-editor&#x27;: &#x27;VueQuillEditor&#x27;,</span><br><span class="line">      &#x27;vuex-persistedstate&#x27;: &#x27;createPersistedState&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                        <p>这样webpack在打包时就会忽略掉externals内的包，而没有导入依赖包项目肯定是没法运行的，我们则需要在<code>public/index.html</code>
-                                                            文件中使用CDN引入依赖<br><img
-                                                                src="https://pic.imgdb.cn/item/6416894da682492fcc36bc37.jpg"
-                                                                loading="lazy"
-                                                                onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                    </li>
-                                                </ol>
-                                                <p>言归正传，项目打包好了，就可以上传到服务器了<br>3. 上传服务器<br>我使用的是<img
-                                                        src="https://pic.imgdb.cn/item/641689eba682492fcc37aa53.jpg"
-                                                        alt="xftp" loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'>xftp,只需要拖拽就可以上传文件！<br><a
-                                                        target="_blank" rel="noopener"
-                                                        href="https://www.xshell.com/zh/free-for-home-school/">xftp家庭学生版官网下载</a><br>建立连接：<br><img
-                                                        src="https://pic.imgdb.cn/item/64168eeba682492fcc3fa6f7.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'><br>在主机栏输入你服务器的公网地址，然后输入用户名密码，在阿里云第一次购买服务器后密码需要自己重置才有！然后xftp就连接上你的服务器了，选择打包好的dist文件将它上传吧！<br>！<a
-                                                        target="_blank" rel="noopener"
-                                                        href="https://pic.imgdb.cn/item/64169082a682492fcc42c6a3.jpg"></a><br>4.
-                                                    现在服务器有了，执行文件有了，怎么才能让浏览器在输入我们的服务器地址后就能进入项目页面呢！<br><em>设置nginx代理</em>
-                                                </p>
-                                                <p>回到阿里云服务器控制台，选择自己的云服务器输入账号密码后进行远程连接！<br><img
-                                                        src="https://pic.imgdb.cn/item/64169195a682492fcc454ce7.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <p>首先输入 <code>cd /</code> 回到根目录，发现这其中有etc 和
-                                                    root的文件夹，etc就是我们要配置nginx的地方，而root则是有我们上传的项目文件<br><img
-                                                        src="https://pic.imgdb.cn/item/641691daa682492fcc462c0b.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <p>输入 <code>cd etc</code>
-                                                    来到etc文件夹下，发现并没有nginx，这是因为目前的这台服务器还并没有安装<br><code>yum install nginx
-                                                    </code>
-                                                    下载nginx<br>下载好后就有nginx文件夹了！<br>然后cd到nginx目录下，发现这里的目录有个nginx.conf
-                                                    这就是我们最终要配置的nginx<br><img
-                                                        src="https://pic.imgdb.cn/item/64169376a682492fcc4a410d.jpg"
-                                                        loading="lazy"
-                                                        onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                <p><code>vim nginx.conf</code> 进入编辑 按下 i 进行插入<br>主要修改的配置只有如下两段</p>
-                                                <figure class="highlight plaintext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="gutter">
-                                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre>
-                                                            </td>
-                                                            <td class="code">
-                                                                <pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        listen       [::]:80;</span><br><span class="line">        server_name  _;</span><br><span class="line">        root         /root/greatVue/dist/html; # 默认读取的根目录</span><br><span class="line"></span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                root /root/greatVue/dist; # 根目录</span><br><span class="line">                index index.html index.html; # 文件类型</span><br><span class="line">                &#125;</span><br></pre>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </figure>
-                                                <p><code>:wq</code> 保存后就可以使用 <code>nginx</code>命令启动nginx了</p>
-                                                <ol start="5">
-                                                    <li>解决问题<br>nginx代理配置好了但是浏览器输入公网IP地址还是无法访问？</li>
-                                                </ol>
-                                                <ul>
-                                                    <li>配置安全组 在你的云服务器控制台选择安全组，添加端口为80 表示该端口可以出入放行<br> 还是没有解决？</li>
-                                                    <li>重启防火墙 <figure class="highlight plaintext">
-                                                            <table>
-                                                                <tr>
-                                                                    <td class="gutter">
-                                                                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre>
-                                                                    </td>
-                                                                    <td class="code">
-                                                                        <pre><span class="line">systemctl status firewalld #查看防火墙状态</span><br><span class="line">systemctl stop firewalld # 禁用防火墙</span><br><span class="line">systemctl start firewalld  # 启动防火墙</span><br><span class="line">systemctl enable firewalld # 设置开机启动</span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent # 防火墙放行80端口</span><br><span class="line">firewall-cmd --reload # 重启防火墙</span><br></pre>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </figure>
-                                                    </li>
-                                                </ul>
-                                                <p> 问题解决！浏览器输入公网IP地址可以访问项目！</p>
-                                                <h2 id="大事件项目在线演示"><a href="#大事件项目在线演示" class="headerlink"
-                                                        title="大事件项目在线演示"></a><a target="_blank" rel="noopener"
-                                                        href="http://47.115.222.132/#/login">大事件项目在线演示</a></h2>
-                                            </article>
-
-
-                                        </div>
-                                        <div id="post-next-prev" class="row">
-                                            <div class="col-lg-12">
-                                                <!-- title -->
-                                                <h5 class="trm-title-with-divider">
-                                                    其他文章
-                                                    <span data-number="02"></span>
-                                                </h5>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
-                                                    data-scroll-offset="40">
-                                                    <a href="/2023/03/18/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%9A%84%E5%BA%9F%E7%A8%BF/"
-                                                        class="trm-cover-frame trm-anima-link">
-
-
-                                                        <img alt="cover" class="no-fancybox"
-                                                            src="https://pic.imgdb.cn/item/6415c382a682492fcceec9aa.jpg">
-
-                                                    </a>
-
-                                                    <div class="trm-card-descr">
-                                                        <div class="trm-label trm-category trm-mb-20">
-                                                            <a href=" /categories/%E6%A2%A6/">
-                                                                梦
-                                                            </a>
-                                                        </div>
-                                                        <h5>
-                                                            <a href="/2023/03/18/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%9A%84%E5%BA%9F%E7%A8%BF/"
-                                                                class="trm-anima-link">
-                                                                那些年的废稿
-                                                            </a>
-                                                        </h5>
-                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-                                                        <ul class="trm-card-data trm-label">
-                                                            <li>23/03/18</li>
-                                                            <li>23:37</li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
-                                                    data-scroll-offset="40">
-                                                    <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                                        class="trm-cover-frame trm-anima-link">
-
-
-                                                        <img alt="cover" class="no-fancybox"
-                                                            src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
-
-                                                    </a>
-
-                                                    <div class="trm-card-descr">
-                                                        <div class="trm-label trm-category trm-mb-20">
-                                                            <a href=" /categories/%E8%BF%BD/">
-                                                                追
-                                                            </a>
-                                                        </div>
-                                                        <h5>
-                                                            <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                                                class="trm-anima-link">
-                                                                css遗漏
-                                                            </a>
-                                                        </h5>
-                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-                                                        <ul class="trm-card-data trm-label">
-                                                            <li>23/03/18</li>
-                                                            <li>18:57</li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-
-
-
-                                        <div class="trm-divider footer-divider"></div>
-
-                                        <!-- footer -->
-                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
-
-
-
-
-                                            <div class="trm-footer-item">
-                                                <span>© 2023- 2023</span>
-                                                <span class="footer-separator" data-separator=" · "></span>
-                                                <span class="trm-accent-color">旺财</span>
-                                            </div>
-
-
-
-                                            <div class="trm-footer-item">
-                                                <span>
-                                                    由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-                                                    驱动 v6.3.0
-                                                </span>
-                                                <span class="footer-separator" data-separator=" | "></span>
-                                                <span>
-                                                    主题 -
-                                                    <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async'
-                                                        target='_blank'>Async</a>
-                                                    v2.0.3
-                                                </span>
-                                            </div>
-
-
-
-                                            <div class="trm-footer-item">
-                                                笔记残篇已存世 <span id="since" class="trm-accent-color"></span> 天
-                                            </div>
-
-
-
-                                        </footer>
-
-                                        <script>
-                                            function show_date_time() {
-                                                var BirthDay = new Date("3/18/2023 17:00:00");
-                                                var today = new Date();
-                                                var timeold = (today.getTime() - BirthDay.getTime());
-                                                var msPerDay = 24 * 60 * 60 * 1000
-                                                var day = Math.floor(timeold / msPerDay)
-                                                since.innerHTML = day
-                                            }
-                                            show_date_time()
-                                        </script>
-
-                                        <!-- footer end -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- body end -->
-
-                    <div class="trm-fixed-container" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-
-                        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
-                            <i class="iconfont fas fa-book-reader"></i>
-                        </div>
-
-
-                        <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
-                            <i class="iconfont fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- scroll container end -->
-
     </div>
-    <!-- app wrapper end -->
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+    
+    
+        <div class="trm-logo-text">
+            嘿，<span>好久不见！</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友情链接
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/6415cf3ea682492fcc084885.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            大事件项目
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            Vue2大事件项目
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        旺财
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                RESIDENCE:
+            </div>
+            <div class="trm-label trm-label-light">
+                M78 Nebula
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                age:
+            </div>
+            <div class="trm-label trm-label-light">
+                22
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                CITY:
+            </div>
+            <div class="trm-label trm-label-light">
+                MIANYANG
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:1836523160@qq.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#项目演示地址："  data-scroll-to="#项目演示地址："><span class="toc-number">1.</span> <span class="toc-text">项目演示地址：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#大事件"  data-scroll-to="#大事件"><span class="toc-number">1.1.</span> <span class="toc-text">大事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#项目技术栈：-Vue2-Element-ui-echarts"  data-scroll-to="#项目技术栈：-Vue2-Element-ui-echarts"><span class="toc-number">2.</span> <span class="toc-text">项目技术栈： Vue2 Element-ui echarts</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"  data-scroll-to="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"><span class="toc-number">3.</span> <span class="toc-text">项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#登录注册功能："  data-scroll-to="#登录注册功能："><span class="toc-number">4.</span> <span class="toc-text">登录注册功能：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#水平垂直居中布局："  data-scroll-to="#水平垂直居中布局："><span class="toc-number">4.1.</span> <span class="toc-text">水平垂直居中布局：</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："  data-scroll-to="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："><span class="toc-number">4.2.</span> <span class="toc-text">注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行async valid如果用户通过校验则进行await返回拿到的接口数据：</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#数据绑定"  data-scroll-to="#数据绑定"><span class="toc-number">4.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#token校验"  data-scroll-to="#token校验"><span class="toc-number">4.4.</span> <span class="toc-text">token校验</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#vuex的5个属性"  data-scroll-to="#vuex的5个属性"><span class="toc-number">4.5.</span> <span class="toc-text">vuex的5个属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#首页"  data-scroll-to="#首页"><span class="toc-number">5.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#文章管理"  data-scroll-to="#文章管理"><span class="toc-number">6.</span> <span class="toc-text">文章管理</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#项目部署！！"  data-scroll-to="#项目部署！！"><span class="toc-number">7.</span> <span class="toc-text">项目部署！！</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#大事件项目在线演示"  data-scroll-to="#大事件项目在线演示"><span class="toc-number">8.</span> <span class="toc-text">大事件项目在线演示</span></a></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:44
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="项目演示地址："><a href="#项目演示地址：" class="headerlink" title="项目演示地址："></a>项目演示地址：</h2><h3 id="大事件"><a href="#大事件" class="headerlink" title="大事件"></a><a target="_blank" rel="noopener" href="http://47.115.222.132/#/login">大事件</a></h3><h2 id="项目技术栈：-Vue2-Element-ui-echarts"><a href="#项目技术栈：-Vue2-Element-ui-echarts" class="headerlink" title="项目技术栈： Vue2 Element-ui echarts"></a>项目技术栈： Vue2 Element-ui echarts</h2><h2 id="项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码"><a href="#项目架构：-登录注册-首页-文章管理—文章分类、文章列表-个人中心-基本资料、更换头像、重置密码" class="headerlink" title="项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码"></a>项目架构： 登录注册 首页 文章管理—文章分类、文章列表 个人中心-基本资料、更换头像、重置密码</h2><h2 id="登录注册功能："><a href="#登录注册功能：" class="headerlink" title="登录注册功能："></a>登录注册功能：</h2><p>如图：<br>  <img src="https://pic.imgdb.cn/item/64167682a682492fcc14ed18.jpg" alt="如图" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="水平垂直居中布局："><a href="#水平垂直居中布局：" class="headerlink" title="水平垂直居中布局："></a>水平垂直居中布局：</h3><ol>
+<li>这是最基本的一种  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">position: absolute;</span><br><span class="line"> left: 50%;</span><br><span class="line"> top: 50%;</span><br><span class="line"> transform: translate(-50%,-50%);</span><br></pre></td></tr></table></figure></li>
+<li>flex弹性布局</li>
+</ol>
+<ul>
+<li>只设置父元素  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li>父子元素一起设置  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> .parent &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>第三种是设置margin: auto<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  .parent &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.children &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>绝对定位-margin  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  margin-top: -100px;</span><br><span class="line">  margin-left: -100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 贪多嚼不烂，先记住这几个</li>
+</ol>
+<h3 id="注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据："><a href="#注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate-方法进行一次兜底校验，执行async-valid如果用户通过校验则进行await返回拿到的接口数据：" class="headerlink" title="注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行async valid如果用户通过校验则进行await返回拿到的接口数据："></a>注册和登录页主要采用element-ui的表单，使用el-form的表单校验规则。注意，在用户点击注册和登录时需要采用表单提供的validate()方法进行一次兜底校验，执行<code>async valid</code>如果用户通过校验则进行await返回拿到的接口数据：</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">this.$refs.loginRef.validate(async valid =&gt; &#123;</span><br><span class="line">       if (valid) &#123;</span><br><span class="line">         // 通过校验</span><br><span class="line">         const &#123; data: res &#125; = await loginAPI(this.loginForm)</span><br><span class="line">         if (res.code !== 0) return this.$message.error(res.message)</span><br><span class="line">         else &#123;</span><br><span class="line">           this.$message.success(res.message)</span><br><span class="line">           this.updateToken(res.token)</span><br><span class="line">           this.$router.push(&#x27;/&#x27;)</span><br><span class="line">         &#125;</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">         return false</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="对async-await的理解："><a href="#对async-await的理解：" class="headerlink" title="对async await的理解："></a>对<code>async await</code>的理解：</h4><p> async用来修饰函数，表明这是一个异步的函数，会默认返回一个Promise对象的resolve值，await意为等待在async修饰的函数执行到被await修饰的对象这一行时，会获取Promise中返回的内容（resolve或reject的参数），且取到值后语句才会往下执行。</p>
+<h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><p>将表单数据<code>：model</code>到data()函数中，这样就拿到了用户输入的数据，可以调用接口传入后台。</p>
+<h3 id="token校验"><a href="#token校验" class="headerlink" title="token校验"></a>token校验</h3><p>用户登录成功后台会颁发token token可以进行身份的识别与验证，比如用户没有登录是不可以通过路由跳转首页的，这时可以使用token+全局前置路由守卫，而token一般保存在localstorage中，一旦需要校验token的页面过多从localstorage拿数据就太麻烦了，可以将token存入Vuex中，但是vuex在刷新时token就会消失，需要做本地化长时间存储，可以使用<code>vuex-persistedstate</code>插件来完成</p>
+<h3 id="vuex的5个属性"><a href="#vuex的5个属性" class="headerlink" title="vuex的5个属性"></a>vuex的5个属性</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">state: &#123; // 存放数据，和data类似 &#125;</span><br><span class="line">getters: &#123; // 相当于计算属性 &#125;</span><br><span class="line">mutations: &#123; // 修改State和getters的数据 &#125;</span><br><span class="line">actions: &#123; // 发起异步请求 &#125;</span><br><span class="line">modules: &#123; // 模块拆分 &#125;</span><br></pre></td></tr></table></figure>
+<p>此外还有 plugins: [] 插件</p>
+<h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><p>如图：<br><img src="https://pic.imgdb.cn/item/641677e5a682492fcc17c703.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>使用echarts：<br><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/index.html">echarts官网</a></p>
+<h2 id="文章管理"><a href="#文章管理" class="headerlink" title="文章管理"></a>文章管理</h2><p>如图：<br><img src="https://pic.imgdb.cn/item/64168371a682492fcc2bb4cf.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="https://pic.imgdb.cn/item/6416839aa682492fcc2c2e88.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>发表文章：<br><img src="https://pic.imgdb.cn/item/641683b8a682492fcc2c8391.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>几个功能下来感觉并不难，做完项目发现强的不是我是Element-ui这个组件库</p>
+<h2 id="项目部署！！"><a href="#项目部署！！" class="headerlink" title="项目部署！！"></a>项目部署！！</h2><p>真的自己完成一个上线好有成就感，就是那种解决各种问题的感觉！（虽然项目是跟着敲的很捞）</p>
+<ol>
+<li><p>首先肯定是搞一个服务器<br>我是学生能不能免费送我 扣1送服务器 111哥你是真送啊<br>人生第一次感受到了学生的权益！阿里云高校计划，学生认证免费领取一个月服务器！<a target="_blank" rel="noopener" href="https://developer.aliyun.com/plan/student?spm=5176.student.0.0.661f4bab21Sv7f">https://developer.aliyun.com/plan/student?spm=5176.student.0.0.661f4bab21Sv7f</a></p>
+</li>
+<li><p>有了服务器就可以开始部署了！<br>首先这里说一下打包，执行 <code>npm run build</code> 命令可以使用webpack进行项目打包，但是项目使用的各种依赖包又很大，这就会让打包后的体积十分庞大，这时可以在vue.config.js配置 configureWebpack，使用 externals 来提取使用的依赖包，告诉 webpack 这些依赖是外部环境提供的，在打包时可以忽略它们，但是在开发时我们可以继续使用导入的依赖包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">configureWebpack: &#123;</span><br><span class="line">    externals: &#123;</span><br><span class="line">      echarts: &#x27;echarts&#x27;,</span><br><span class="line">      vue: &#x27;Vue&#x27;,</span><br><span class="line">      &#x27;vue-router&#x27;: &#x27;VueRouter&#x27;,</span><br><span class="line">      vuex: &#x27;Vuex&#x27;,</span><br><span class="line">      axios: &#x27;axios&#x27;,</span><br><span class="line">      dayjs: &#x27;dayjs&#x27;,</span><br><span class="line">      &#x27;element-ui&#x27;: &#x27;ELEMENT&#x27;,</span><br><span class="line">      &#x27;vue-quill-editor&#x27;: &#x27;VueQuillEditor&#x27;,</span><br><span class="line">      &#x27;vuex-persistedstate&#x27;: &#x27;createPersistedState&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这样webpack在打包时就会忽略掉externals内的包，而没有导入依赖包项目肯定是没法运行的，我们则需要在<code>public/index.html</code> 文件中使用CDN引入依赖<br><img src="https://pic.imgdb.cn/item/6416894da682492fcc36bc37.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+</li>
+</ol>
+<p>言归正传，项目打包好了，就可以上传到服务器了<br>3. 上传服务器<br>我使用的是<img src="https://pic.imgdb.cn/item/641689eba682492fcc37aa53.jpg" alt="xftp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'>xftp,只需要拖拽就可以上传文件！<br><a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/">xftp家庭学生版官网下载</a><br>建立连接：<br><img src="https://pic.imgdb.cn/item/64168eeba682492fcc3fa6f7.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>在主机栏输入你服务器的公网地址，然后输入用户名密码，在阿里云第一次购买服务器后密码需要自己重置才有！然后xftp就连接上你的服务器了，选择打包好的dist文件将它上传吧！<br>！<a target="_blank" rel="noopener" href="https://pic.imgdb.cn/item/64169082a682492fcc42c6a3.jpg"></a><br>4. 现在服务器有了，执行文件有了，怎么才能让浏览器在输入我们的服务器地址后就能进入项目页面呢！<br><em>设置nginx代理</em></p>
+<p>回到阿里云服务器控制台，选择自己的云服务器输入账号密码后进行远程连接！<br><img src="https://pic.imgdb.cn/item/64169195a682492fcc454ce7.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>首先输入 <code>cd /</code> 回到根目录，发现这其中有etc 和 root的文件夹，etc就是我们要配置nginx的地方，而root则是有我们上传的项目文件<br><img src="https://pic.imgdb.cn/item/641691daa682492fcc462c0b.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>输入 <code>cd etc</code> 来到etc文件夹下，发现并没有nginx，这是因为目前的这台服务器还并没有安装<br><code>yum install nginx </code> 下载nginx<br>下载好后就有nginx文件夹了！<br>然后cd到nginx目录下，发现这里的目录有个nginx.conf 这就是我们最终要配置的nginx<br><img src="https://pic.imgdb.cn/item/64169376a682492fcc4a410d.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><code>vim nginx.conf</code> 进入编辑 按下 i 进行插入<br>主要修改的配置只有如下两段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        listen       [::]:80;</span><br><span class="line">        server_name  _;</span><br><span class="line">        root         /root/greatVue/dist/html; # 默认读取的根目录</span><br><span class="line"></span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                root /root/greatVue/dist; # 根目录</span><br><span class="line">                index index.html index.html; # 文件类型</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
+<p><code>:wq</code> 保存后就可以使用 <code>nginx</code>命令启动nginx了</p>
+<ol start="5">
+<li>解决问题<br>nginx代理配置好了但是浏览器输入公网IP地址还是无法访问？</li>
+</ol>
+<ul>
+<li>配置安全组 在你的云服务器控制台选择安全组，添加端口为80 表示该端口可以出入放行<br> 还是没有解决？</li>
+<li>重启防火墙 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld #查看防火墙状态</span><br><span class="line">systemctl stop firewalld # 禁用防火墙</span><br><span class="line">systemctl start firewalld  # 启动防火墙</span><br><span class="line">systemctl enable firewalld # 设置开机启动</span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent # 防火墙放行80端口</span><br><span class="line">firewall-cmd --reload # 重启防火墙</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p> 问题解决！浏览器输入公网IP地址可以访问项目！</p>
+<h2 id="大事件项目在线演示"><a href="#大事件项目在线演示" class="headerlink" title="大事件项目在线演示"></a><a target="_blank" rel="noopener" href="http://47.115.222.132/#/login">大事件项目在线演示</a></h2>
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/18/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%9A%84%E5%BA%9F%E7%A8%BF/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c382a682492fcceec9aa.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%A2%A6/">
+                    梦
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/18/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%9A%84%E5%BA%9F%E7%A8%BF/" class="trm-anima-link">
+                    那些年的废稿
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/18</li>
+                <li>23:37</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%BF%BD/">
+                    追
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="trm-anima-link">
+                    css遗漏
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/18</li>
+                <li>18:57</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
 
 
-    <!-- Plugin -->
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2023- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">旺财</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.3
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
+        </div>
+     
+
+     
+</footer>
+
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("3/18/2023 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
 
 
 
 
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
-    <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
 
+    
+        <script src="/js/plugins/typing.js?v=2.0.3"></script>
+    
 
-    <script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
-
-
-
-    <script src="/js/plugins/typing.js?v=2.0.3"></script>
-
-
-
+    
 
     <!-- 数学公式 -->
-
+    
 
     <!-- 评论插件 -->
+    
+        
+
+        
+    
 
 
 
+<!-- CDN -->
 
 
+    
 
+    
 
-
-    <!-- CDN -->
-
-
-
-
-
-
-
+    
 
 
 
 
     <!-- Service Worker -->
-
+    
     <!-- baidu push -->
+    
 
 
-
-    <script id="async-script" src="/js/main.js?v=2.0.3"></script>
+<script id="async-script" src="/js/main.js?v=2.0.3"></script>
 
 </body>
 
