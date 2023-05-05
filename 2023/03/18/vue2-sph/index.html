@@ -2,1158 +2,916 @@
 <html lang="zh-Hans">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="full-screen" content="yes">
-    <meta name="theme-color" content="#317EFB" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-    <meta name="description"
-        content="一、初始化vue-clivue create app(项目名) 卸载脚手架：npm uninstall @vue&#x2F;cli -g 二、项目结构node_modules文件夹：项目依赖 public文件夹：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。 src文件夹（程序员源代码文件夹）： ​	assets文件夹：一">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Vue2_尚品汇项目">
-    <meta property="og:url" content="http://www.wangcai.club/2023/03/18/vue2-sph/index.html">
-    <meta property="og:site_name" content="笔记百分百">
-    <meta property="og:description"
-        content="一、初始化vue-clivue create app(项目名) 卸载脚手架：npm uninstall @vue&#x2F;cli -g 二、项目结构node_modules文件夹：项目依赖 public文件夹：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。 src文件夹（程序员源代码文件夹）： ​	assets文件夹：一">
-    <meta property="og:locale">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
-    <meta property="article:published_time" content="2023-03-18T10:35:46.000Z">
-    <meta property="article:modified_time" content="2023-03-19T07:38:35.916Z">
-    <meta property="article:author" content="wangcai">
-    <meta property="article:tag" content="项目">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="一、初始化vue-clivue create app(项目名) 卸载脚手架：npm uninstall @vue&#x2F;cli -g 二、项目结构node_modules文件夹：项目依赖 public文件夹：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。 src文件夹（程序员源代码文件夹）： ​	assets文件夹：一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2_尚品汇项目">
+<meta property="og:url" content="http://www.wangcai.club/2023/03/18/vue2-sph/index.html">
+<meta property="og:site_name" content="笔记百分百">
+<meta property="og:description" content="一、初始化vue-clivue create app(项目名) 卸载脚手架：npm uninstall @vue&#x2F;cli -g 二、项目结构node_modules文件夹：项目依赖 public文件夹：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。 src文件夹（程序员源代码文件夹）： ​	assets文件夹：一">
+<meta property="og:locale">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-03-18T10:35:46.000Z">
+<meta property="article:modified_time" content="2023-03-19T07:38:35.916Z">
+<meta property="article:author" content="wangcai">
+<meta property="article:tag" content="项目">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
 
     <meta name="keywords" content="项目 vue2">
 
 
-    <title>Vue2_尚品汇项目</title>
+<title >Vue2_尚品汇项目</title>
 
-    <!-- Favicon -->
+<!-- Favicon -->
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='16x16'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='16x16' ></link>
 
 
-    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png'
-        sizes='32x32'>
-    </link>
+    <link href='https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png?v=2.0.3' rel='icon' type='image/png' sizes='32x32' ></link>
 
 
-    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180'>
-    </link>
+    <link href='/apple-touch-icon.png?v=2.0.3' rel='apple-touch-icon' sizes='180x180' ></link>
 
 
-    <link href='/site.webmanifest' rel='manifest'>
-    </link>
+    <link href='/site.webmanifest' rel='manifest' ></link>
 
 
-    <!-- Plugin -->
+<!-- Plugin -->
 
 
 
 
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
-    <link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
-
-    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
-
-
-
-
-
-
-
-    <!-- Icon -->
-
-
-    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    
+    
 
 
 
 
-    <!-- Variable -->
-    <script>
-        window.ASYNC_CONFIG = {
-            "hostname": "www.wangcai.club",
-            "author": "wangcai",
-            "root": "/",
-            "typed_text": ["Web Developer", "仙人"],
-            "theme_version": "2.0.3",
-            "theme": {
-                "switch": true,
-                "default": "style-light"
-            },
-            "favicon": {
-                "logo": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon16": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "icon32": "https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png",
-                "appleTouchIcon": "apple-touch-icon.png",
-                "webmanifest": "/site.webmanifest",
-                "visibilitychange": true,
-                "hidden": "https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png",
-                "showText": "旺财の死亡笔记",
-                "hideText": "下午会有太阳，一切会有转机。",
-                "assets": null,
-                "internal_provider": "unpkg",
-                "third_party_provider": "unpkg"
-            },
-            "i18n": {
-                "placeholder": "搜索...",
-                "empty": "找不到您查询的内容: ${query}",
-                "hits": "找到 ${hits} 条结果",
-                "hits_time": "找到 ${hits} 条结果（用时 ${time} 毫秒）",
-                "author": "本文作者：",
-                "copyright_link": "本文链接：",
-                "copyright_license_title": "版权声明：",
-                "copyright_license_content": "本博客所有文章除特别声明外，均默认采用 undefined 许可协议。",
-                "copy_success": "复制成功",
-                "copy_failure": "复制失败",
-                "open_read_mode": "进入阅读模式",
-                "exit_read_mode": "退出阅读模式",
-                "notice_outdate_message": "距离上次更新已经 undefined 天了, 文章内容可能已经过时。",
-                "just": "刚刚",
-                "min": "分钟前",
-                "hour": "小时前",
-                "day": "天前",
-                "month": "个月前"
-            },
-            "swup": false,
-            "plugin": {
-                "flickr_justified_gallery": "https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"
-            },
-            "icons": {
-                "sun": "far fa-sun",
-                "moon": "far fa-moon",
-                "play": "fas fa-play",
-                "email": "far fa-envelope",
-                "next": "fas fa-arrow-right",
-                "calendar": "far fa-calendar-alt",
-                "clock": "far fa-clock",
-                "user": "far fa-user",
-                "back_top": "fas fa-arrow-up",
-                "close": "fas fa-times",
-                "search": "fas fa-search",
-                "reward": "fas fa-hand-holding-usd",
-                "user_tag": "fas fa-user-alt",
-                "toc_tag": "fas fa-th-list",
-                "read": "fas fa-book-reader",
-                "arrows": "fas fa-arrows-alt-h",
-                "double_arrows": "fas fa-angle-double-down",
-                "copy": "fas fa-copy"
-            },
-            "icontype": "font",
-            "highlight": {
-                "plugin": "highlighjs",
-                "theme": true,
-                "copy": true,
-                "lang": true,
-                "title": "default",
-                "height_limit": 200
-            },
-            "creative_commons": {
-                "license": "by-nc-sa",
-                "language": "deed.zh"
-            }
-        };
-    </script>
-    <script id="async-page-config">
-        window.PAGE_CONFIG = {
-            "isPost": true,
-            "isHome": false,
-            "postUpdate": "2023-03-19 15:38:35"
-        };
-    </script>
+<!-- Icon -->
 
-    <!-- Theme mode css -->
-    <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
-    <script>
-        let defaultMode = ASYNC_CONFIG.theme.default !== 'auto' ? ASYNC_CONFIG.theme.default : (window.matchMedia(
-            "(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-        let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-        let type = catchMode === 'style-dark' ? 'add' : 'remove';
-        document.documentElement.classList[type]('dark')
-    </script>
-
-    <!-- CDN -->
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
 
 
 
 
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"下午会有太阳，一切会有转机。","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-03-19 15:38:35"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
 
 
 
-    <!-- Site Analytics -->
-
-    <meta name="generator" content="Hexo 6.3.0">
-</head>
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
 
-    <!-- app wrapper -->
-    <div class="trm-app-frame">
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-        <!-- page preloader -->
-        <div class="trm-preloader">
-            <div class="trm-holder">
-                <div class="preloader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
+    
+    
+        <div class="trm-logo-text">
+            嘿，<span>好久不见！</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友情链接
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/6416bbc7a682492fcc96884d.jpg">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Vue2_尚品汇项目
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            Vue2_尚品汇项目
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
                 </div>
             </div>
         </div>
-        <!-- page preloader end -->
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
 
-        <!-- change mode preloader -->
-        <div class="trm-mode-swich-animation-frame">
-            <div class="trm-mode-swich-animation">
-                <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
-                <div class="trm-horizon"></div>
-                <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        旺财
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wangcaiai" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                RESIDENCE:
+            </div>
+            <div class="trm-label trm-label-light">
+                M78 Nebula
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                age:
+            </div>
+            <div class="trm-label trm-label-light">
+                22
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                CITY:
+            </div>
+            <div class="trm-label trm-label-light">
+                MIANYANG
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:1836523160@qq.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#一、初始化vue-cli"  data-scroll-to="#一、初始化vue-cli"><span class="toc-number">1.</span> <span class="toc-text">一、初始化vue-cli</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#二、项目结构"  data-scroll-to="#二、项目结构"><span class="toc-number">2.</span> <span class="toc-text">二、项目结构</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#三、其他配置"  data-scroll-to="#三、其他配置"><span class="toc-number">3.</span> <span class="toc-text">三、其他配置</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#四、项目路由分析"  data-scroll-to="#四、项目路由分析"><span class="toc-number">4.</span> <span class="toc-text">四、项目路由分析</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#五、路由组件"  data-scroll-to="#五、路由组件"><span class="toc-number">5.</span> <span class="toc-text">五、路由组件</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#六、组件显示与隐藏"  data-scroll-to="#六、组件显示与隐藏"><span class="toc-number">6.</span> <span class="toc-text">六、组件显示与隐藏</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#七、"  data-scroll-to="#七、"><span class="toc-number">7.</span> <span class="toc-text">七、</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#八、"  data-scroll-to="#八、"><span class="toc-number">8.</span> <span class="toc-text">八、</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#九"  data-scroll-to="#九"><span class="toc-number">9.</span> <span class="toc-text">九</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#十"  data-scroll-to="#十"><span class="toc-number">10.</span> <span class="toc-text">十</span></a></li></ol>
+</div>
             </div>
         </div>
-        <!-- change mode preloader end -->
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-        <!-- scroll container -->
-        <div id="trm-dynamic-content" class="trm-swup-animation">
-            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
-                <div data-scroll-section id="content" class="trm-scroll-section">
-
-                    <div class="locomotive-scroll__sticky-target"
-                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
-
-                    <!-- top bar -->
-                    <header class="trm-top-bar" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-                        <div class="container">
-                            <div class="trm-left-side">
-                                <!-- logo -->
-                                <a href="/" class="trm-logo-frame trm-anima-link">
-
-                                    <img alt="logo" src="https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png">
-
-
-                                    <div class="trm-logo-text">
-                                        嘿，<span>好久不见！</span>
-                                    </div>
-
-                                </a>
-                                <!-- logo end -->
-                            </div>
-                            <div class="trm-right-side">
-                                <!-- menu -->
-                                <div class="trm-menu">
-                                    <nav>
-                                        <ul>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/" target="">
-                                                    首页
-                                                </a>
-
-                                                <ul>
-
-                                                    <li>
-                                                        <a href="/archives2/" target="">
-                                                            archives2
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/archives/" target="">
-                                                    归档
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/about/" target="">
-                                                    关于
-                                                </a>
-
-                                            </li>
-
-                                            <li class="menu-item-has-children ">
-                                                <a href="/links/" target="">
-                                                    友情链接
-                                                </a>
-
-                                            </li>
-
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- menu end -->
-
-                                <!-- mode switcher place -->
-                                <div class="trm-mode-switcher-place">
-                                    <div class="trm-mode-switcher">
-                                        <i class="iconfont far fa-sun"></i>
-                                        <input class="tgl tgl-light" id="trm-swich" type="checkbox">
-                                        <label class="trm-swich" for="trm-swich"></label>
-                                        <i class="iconfont far fa-moon"></i>
-                                    </div>
-                                </div>
-                                <!-- mode switcher place end -->
-
-
-                            </div>
-                            <div class="trm-menu-btn">
-                                <span></span>
-                            </div>
-                        </div>
-                    </header>
-                    <!-- top bar end -->
-
-                    <!-- body -->
-
-                    <div class="trm-content-start">
-                        <!-- banner -->
-                        <div class="trm-banner" data-scroll data-scroll-direction="vertical">
-
-                            <!-- banner cover -->
-                            <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover"
-                                data-scroll data-scroll-direction="vertical" data-scroll-speed="-3"
-                                src="https://pic.imgdb.cn/item/6416bbc7a682492fcc96884d.jpg">
-                            <!-- banner cover end -->
-
-
-                            <!-- banner content -->
-                            <div class="trm-banner-content trm-overlay">
-                                <div class="container" data-scroll data-scroll-direction="vertical"
-                                    data-scroll-speed="0">
-                                    <div class="row">
-
-                                        <div class="col-lg-4"></div>
-
-                                        <div class="col-lg-8">
-
-                                            <!-- banner title -->
-                                            <div class="trm-banner-text ">
-                                                <div class="trm-label trm-mb-20">
-                                                    Vue2_尚品汇项目
-                                                </div>
-                                                <h1 class="trm-mb-30 trm-hsmb-font">
-                                                    Vue2_尚品汇项目
-                                                </h1>
-
-
-                                                <ul class="trm-breadcrumbs trm-label">
-                                                    <li>
-                                                        <a href="/" class="trm-anima-link">Home</a>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            2023
-                                                        </span></li>
-                                                </ul>
-
-                                            </div>
-                                            <!-- banner title end -->
-
-                                            <!-- scroll hint -->
-                                            <a href="#about-triger" data-scroll-to="#about-triger"
-                                                data-scroll-offset="-130" class="trm-scroll-hint-frame">
-                                                <div class="trm-scroll-hint"></div>
-                                                <span class="trm-label">Scroll down</span>
-                                            </a>
-                                            <!-- scroll hint end -->
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- banner content end -->
-                        </div>
-                        <!-- banner end -->
-                        <div class="container">
-                            <div class="row">
-
-                                <div id="page-sidebar" class="col-lg-4 hidden-sm">
-                                    <!-- main card -->
-
-
-                                    <div class="trm-main-card-frame trm-sidebar">
-                                        <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky
-                                            data-scroll-target=".locomotive-scroll__sticky-target"
-                                            data-scroll-offset="60">
-
-                                            <div class="trm-user-tabs" id="sidebar-tabs">
-                                                <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
-                                                    <div data-to="tabs-user" class="trm-tabs-nav-item">
-                                                        <i class="iconfont fas fa-user-alt"></i>
-                                                    </div>
-                                                    <div data-to="tabs-toc" class="trm-tabs-nav-item active">
-                                                        <i class="iconfont fas fa-th-list"></i>
-                                                    </div>
-                                                </div>
-                                                <div name="tabs-user" class="trm-tabs-item">
-                                                    <!-- card header -->
-                                                    <div class="trm-mc-header">
-                                                        <div class="trm-avatar-frame trm-mb-20">
-                                                            <img alt="Avatar" class="trm-avatar"
-                                                                src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
-                                                        </div>
-                                                        <h5 class="trm-name trm-mb-15">
-                                                            旺财
-                                                        </h5>
-
-                                                        <div class="trm-label">
-                                                            I`m
-                                                            <span class="trm-typed-text">
-                                                                <!-- Words for theme.user.typedText -->
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- card header end -->
-                                                    <!-- sidebar social -->
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <div class="trm-social">
-
-                                                        <a href="https://github.com/wangcaiai" title="github"
-                                                            rel="nofollow" target="_blank">
-                                                            <i class="iconfont fab fa-github"></i>
-                                                        </a>
-
-                                                    </div>
-
-                                                    <!-- sidebar social end -->
-                                                    <!-- info -->
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <ul class="trm-table trm-mb-20">
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                RESIDENCE:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                M78 Nebula
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                age:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                22
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="trm-label">
-                                                                CITY:
-                                                            </div>
-                                                            <div class="trm-label trm-label-light">
-                                                                MIANYANG
-                                                            </div>
-                                                        </li>
-
-                                                    </ul>
-                                                    <!-- info end -->
-
-
-                                                    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
-                                                    <!-- action button -->
-                                                    <div class="text-center">
-                                                        <a href="mailto:1836523160@qq.com" class="trm-btn">
-                                                            联系我
-                                                            <i class="iconfont far fa-envelope"></i>
-                                                        </a>
-                                                    </div>
-                                                    <!-- action button end -->
-
-                                                </div>
-                                                <div name="tabs-toc" class="trm-tabs-item active">
-                                                    <div class="post-toc">
-                                                        <ol class="toc">
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#一、初始化vue-cli"
-                                                                    data-scroll-to="#一、初始化vue-cli"><span
-                                                                        class="toc-number">1.</span> <span
-                                                                        class="toc-text">一、初始化vue-cli</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#二、项目结构"
-                                                                    data-scroll-to="#二、项目结构"><span
-                                                                        class="toc-number">2.</span> <span
-                                                                        class="toc-text">二、项目结构</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#三、其他配置"
-                                                                    data-scroll-to="#三、其他配置"><span
-                                                                        class="toc-number">3.</span> <span
-                                                                        class="toc-text">三、其他配置</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#四、项目路由分析"
-                                                                    data-scroll-to="#四、项目路由分析"><span
-                                                                        class="toc-number">4.</span> <span
-                                                                        class="toc-text">四、项目路由分析</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#五、路由组件"
-                                                                    data-scroll-to="#五、路由组件"><span
-                                                                        class="toc-number">5.</span> <span
-                                                                        class="toc-text">五、路由组件</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#六、组件显示与隐藏"
-                                                                    data-scroll-to="#六、组件显示与隐藏"><span
-                                                                        class="toc-number">6.</span> <span
-                                                                        class="toc-text">六、组件显示与隐藏</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#七、"
-                                                                    data-scroll-to="#七、"><span
-                                                                        class="toc-number">7.</span> <span
-                                                                        class="toc-text">七、</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#八、"
-                                                                    data-scroll-to="#八、"><span
-                                                                        class="toc-number">8.</span> <span
-                                                                        class="toc-text">八、</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#九" data-scroll-to="#九"><span
-                                                                        class="toc-number">9.</span> <span
-                                                                        class="toc-text">九</span></a></li>
-                                                            <li class="toc-item toc-level-3"><a rel="nofollow"
-                                                                    class="toc-link" href="#十" data-scroll-to="#十"><span
-                                                                        class="toc-number">10.</span> <span
-                                                                        class="toc-text">十</span></a></li>
-                                                        </ol>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- main card end -->
-                                </div>
-
-                                <div id="page-content" class="col-lg-8">
-                                    <div class="trm-content" id="trm-content">
-                                        <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger">
-                                        </div>
-
-                                        <div id="post-info" class="row hidden-sm">
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-                                                    03/18
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-clock trm-icon"></i><br>
-                                                    18:35
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div id="post-author"
-                                                    class="trm-card trm-label trm-label-light text-center">
-                                                    <i class="iconfont far fa-user trm-icon"></i><br>
-                                                    wangcai
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="trm-card ">
-                                            <article id="article-container" class="trm-publication">
-                                                <h3 id="一、初始化vue-cli"><a href="#一、初始化vue-cli" class="headerlink"
-                                                        title="一、初始化vue-cli"></a>一、初始化vue-cli</h3>
-                                                <p><strong><code>vue create app(项目名)</code></strong></p>
-                                                <p><em>卸载脚手架：</em><code>npm uninstall @vue/cli -g</code></p>
-                                                <h3 id="二、项目结构"><a href="#二、项目结构" class="headerlink"
-                                                        title="二、项目结构"></a>二、项目结构</h3>
-                                                <p><em><strong>node_modules文件夹</strong></em>：项目依赖</p>
-                                                <p><em><strong>public文件夹</strong></em>：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。
-                                                </p>
-                                                <p><em><strong>src文件夹（程序员源代码文件夹）</strong></em>：</p>
-                                                <p>​ <em>assets文件夹</em>：一般也是放置静态资源（一般放置多个组件公用的静态资源），注意，放置在assets文件夹中的静态资源，在webpack打包的时候，webpack会把静态资源当做一个模块，打包JS文件里面。
-                                                </p>
-                                                <p>​ <em>components文件夹</em>：一般放置的是非路由组件（全局组件）</p>
-                                                <p>​ <em>App.vue</em>: 唯一的根组件</p>
-                                                <p>​ <em>main.js</em>: 程序入口文件，也是整个程序当中最先执行的文件</p>
-                                                <p><em><strong>babel.config.js</strong></em>: 配置文件（babel相关）</p>
-                                                <p><em><strong>package.json文件</strong></em>：记录项目信息</p>
-                                                <p><em><strong>package-lock.json</strong></em>：缓存性文件</p>
-                                                <p>README.md: 说明性文件</p>
-                                                <h3 id="三、其他配置"><a href="#三、其他配置" class="headerlink"
-                                                        title="三、其他配置"></a>三、其他配置</h3>
-                                                <ol>
-                                                    <li>
-                                                        <p>项目运行时，浏览器自动打开</p>
-                                                        <blockquote>
-                                                            <p>—package.json</p>
-                                                            <p>“scripts”: {</p>
-                                                            <p>“serve”: “vue-cli-service serve –open”,</p>
-                                                            <p>“build”: “vue-cli-service build”,</p>
-                                                            <p>“lint”: “vue-cli-service lint”</p>
-                                                            <p>},</p>
-                                                        </blockquote>
-                                                    </li>
-                                                    <li>
-                                                        <p>eslint校验功能关闭</p>
-                                                        <blockquote>
-                                                            <p>–vue.config.js</p>
-                                                            <p><em>&#x2F;&#x2F;关闭eslint校验</em></p>
-                                                            <p>lintOnSave:false</p>
-                                                        </blockquote>
-                                                    </li>
-                                                    <li>
-                                                        <p>src文件夹简写方法，配置别名。@【@代表的是src文件夹】</p>
-                                                        <blockquote>
-                                                            <p>jsconfig.json 配置别名@提示</p>
-                                                            <p>“compilerOptions”: {</p>
-                                                            <p>“target”: “es5”,</p>
-                                                            <p>“module”: “esnext”,</p>
-                                                            <p>“baseUrl”: “.&#x2F;“,</p>
-                                                            <p>“moduleResolution”: “node”,</p>
-                                                            <p>“paths”: {</p>
-                                                            <p>“@&#x2F;*”: [</p>
-                                                            <p>​ “src&#x2F;*”</p>
-                                                            <p>]</p>
-                                                            <p>},</p>
-                                                        </blockquote>
-                                                    </li>
-                                                </ol>
-                                                <h3 id="四、项目路由分析"><a href="#四、项目路由分析" class="headerlink"
-                                                        title="四、项目路由分析"></a>四、项目路由分析</h3>
-                                                <p>vue-router</p>
-                                                <p>前端路由：kv键值对</p>
-                                                <p>key: URL(地址栏中的路径)</p>
-                                                <p>value：相应的路由组件</p>
-                                                <p>开发项目时：</p>
-                                                <ol>
-                                                    <li>
-                                                        <p>书写静态页面</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>拆分组件</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>获取服务器的数据动态展示</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>完成相应的动态业务逻辑</p>
-                                                    </li>
-                                                </ol>
-                                                <p><strong>less样式</strong>：浏览器不识别less样式，需要通过less、less-loader进行处理，把less样式变为css样式，浏览器才可以识别。想让组件识别less样式，需要在style标签上添加
-                                                    <strong><code>lang=&#39;less&#39;</code></strong></p>
-                                                <p><strong>安装less与less-loader:</strong><code>npm install --save less
-                                                        less-loader</code></p>
-                                                <p><em><strong>使用组件步骤</strong></em></p>
-                                                <ul>
-                                                    <li>创建或者定义</li>
-                                                    <li>引入</li>
-                                                    <li>注册</li>
-                                                    <li>使用</li>
-                                                </ul>
-                                                <p><code>&lt;%= BASE_URL %&gt;</code>当前根目录</p>
-                                                <h3 id="五、路由组件"><a href="#五、路由组件" class="headerlink"
-                                                        title="五、路由组件"></a>五、路由组件</h3>
-                                                <p>安装路由<code>npm install --save vue-router@3</code></p>
-                                                <p><strong>vue 2 对应 vue-router 3 版本</strong></p>
-                                                <h4 id="npm-i与npm-install-的区别："><a href="#npm-i与npm-install-的区别："
-                                                        class="headerlink"
-                                                        title="*npm i与npm install*的区别："></a>*<code>npm
-                                                        i</code><em>与</em><code>npm install</code>*的区别：</h4>
-                                                <ul>
-                                                    <li>npm i 安装的模块及依赖，使用npm uninstall是没有办法删除的，必须使用npm uninstall i 才可以删除
-                                                    </li>
-                                                    <li>npm i会帮助检测与当前node版本最匹配的npm包版本号，并匹配出来相互依赖的npm包应该提升的版本号</li>
-                                                    <li>部分npm包在当前node版本下无法使用，必须使用建议版本</li>
-                                                    <li>安装报错时install肯定会出现npm-debug.log 文件，npm i不一定</li>
-                                                </ul>
-                                                <h4 id="npm-install、npm-install-–save与npm-install-–save-dev区别"><a
-                                                        href="#npm-install、npm-install-–save与npm-install-–save-dev区别"
-                                                        class="headerlink"
-                                                        title="npm install、npm install –save与npm install –save-dev区别"></a>npm
-                                                    install、npm install –save与npm install –save-dev区别</h4>
-                                                <blockquote>
-                                                    <p><strong><code>npm install X:</code></strong></p>
-                                                    <ul>
-                                                        <li>会把X包安装到node_modules目录中</li>
-                                                        <li>不会修改package.json</li>
-                                                        <li>之后运行npm install命令时，不会自动安装X</li>
-                                                    </ul>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><strong><code>npm install X –save:</code></strong></p>
-                                                    <ul>
-                                                        <li>会把X包安装到node_modules目录中</li>
-                                                        <li>会在package.json的dependencies属性下添加X</li>
-                                                        <li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
-                                                        <li>之后运行npm
-                                                            install<br>–production或者注明NODE_ENV变量值为production时，会自动安装msbuild到node_modules目录中
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><strong><code>npm install X –save-dev:</code></strong></p>
-                                                    <ul>
-                                                        <li>会把X包安装到node_modules目录中</li>
-                                                        <li>会在package.json的devDependencies属性下添加X</li>
-                                                        <li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
-                                                        <li>之后运行npm
-                                                            install<br>–production或者注明NODE_ENV变量值为production时，不会自动安装X到node_modules目录中
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                                <p><em><strong>使用原则：运行时需要用到的包使用–save，否则使用–save-dev。</strong></em></p>
-                                                <blockquote>
-                                                    <p>-pages|views文件夹：放置路由组件</p>
-                                                </blockquote>
-                                                <p> 配置路由一般放置在router文件夹中</p>
-                                                <p><strong>路由</strong></p>
-                                                <blockquote>
-                                                    <p>路由组件与非路由组件的区别：</p>
-                                                    <ul>
-                                                        <li>路由组件一般放置在pages|views文件夹中，非路由组件一般放置components文件夹中</li>
-                                                        <li>路由组件一般需要在router文件夹中进行注册（使用的即为组件的名字），非路由组件在使用的时候，一般都是标签的形式使用
-                                                            <!-- 路由组件出口的地方 -->
-                                                            <router-view></router-view>
-                                                        </li>
-                                                        <li>注册完路由，不管是路由组件还是非路由组件身上都有$route|$router属性</li>
-                                                    </ul>
-                                                </blockquote>
-                                                <p><em><strong>route和router</strong></em></p>
-                                                <blockquote>
-                                                    <p> <code>$router:一般进行编程式导航，进行路由跳转【push、replace】</code></p>
-                                                    <p> $router是VueRouter的一个对象，通过Vue.use(VueRouter)和Vue构造函数得到一个router的实例对象，这个对象中是一个全局的对象，他包含了所有的路由，包含了许多关键的对象和属性。
-                                                    </p>
-                                                    <p> <img src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp"
-                                                            loading="lazy"
-                                                            onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                    <p> 以history对象来举例：<br>
-                                                        $router.push({path:’home’})，本质是向history栈中添加一个路由，在我们看来是切换路由，但本质是在添加一个history记录<br>
-                                                        $router.replace({path:’home’})，&#x2F;&#x2F;替换路由，没有历史记录<br>
-                                                        $router.push(‘&#x2F;login’) ,跳转到指定路由</p>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><code>$route:一般获取路由信息【路径、query、params】 </code></p>
-                                                    <p>$route是一个跳转的路由对象，每一个路由都会有一个$route对象，是一个局部的对象，可以获取对应的name，path，params，query等
-                                                    </p>
-                                                    <p><img src="https://pic.imgdb.cn/item/6415c4cea682492fccf1b310.webp"
-                                                            loading="lazy"
-                                                            onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-                                                    <p>这两者不同的结构可以看出两者的区别，他们的一些属性是不同的。</p>
-                                                    <p>$route.path 字符串，等于当前路由对象的路径，会被解析为绝对路径，如&#x2F;home&#x2F;ews</p>
-                                                    <p>$route.params 对象，含路有种的动态片段和全匹配片段的键值对，不会拼接到路由的url后面</p>
-                                                    <p>$route.query 对象，包含路由中查询参数的键值对。会拼接到路由url后面</p>
-                                                    <p>$route.router 路由规则所属的路由器</p>
-                                                    <p>$route.matchd 数组，包含当前匹配的路径中所包含的所有片段所对象的配置参数对象</p>
-                                                    <p>$route.name 当前路由的名字，如果没有使用具体路径，则名字为空</p>
-                                                </blockquote>
-                                                <p><strong>路由的跳转</strong></p>
-                                                <blockquote>
-                                                    <p>路由的跳转有两种形式：</p>
-                                                    <ul>
-                                                        <li>
-                                                            <p>声明式导航router-link,可以进行路由的跳转【<em>声明式导航,务必要有to属性</em>】</p>
-                                                        </li>
-                                                        <li>
-                                                            <p>编程式导航push | replace,可以进行路由的跳转</p>
-                                                            <blockquote>
-                                                                <p>编程式导航：声明式导航能做的，编程式导航都能做。但是编程式导航除了可以进行路由跳转，还可以做一些其他的业务逻辑
-                                                                </p>
-                                                            </blockquote>
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                                <h3 id="六、组件显示与隐藏"><a href="#六、组件显示与隐藏" class="headerlink"
-                                                        title="六、组件显示与隐藏"></a>六、组件显示与隐藏</h3>
-                                                <p>可以根据组件身上的$route获取当前路由的信息，通过路由路径判断显示与隐藏。</p>
-                                                <p><code>&lt;Footer v-show=&quot;$route.path==&#39;/home&#39; ||
-                                                        $route.path==&#39;/search&#39;&quot;&gt;&lt;/Footer&gt;</code>
-                                                </p>
-                                                <p><em><strong>路由元信息</strong></em></p>
-                                                <p>配置路由时，可以给路由添加路由元信息【meta】，路由的配置对象key是固定的。</p>
-                                                <blockquote>
-                                                    <p> routes:[</p>
-                                                    <p> ​ {</p>
-                                                    <p> ​ path: ‘&#x2F;home’,</p>
-                                                    <p> ​ component:Home,</p>
-                                                    <p> ​ meta:{show:true}</p>
-                                                    <p> ​ },</p>
-                                                    <p> ]</p>
-                                                    <ul>
-                                                        <li>$route.meta.show</li>
-                                                    </ul>
-                                                </blockquote>
-                                                <p><em>路由传参，参数的写法：</em></p>
-                                                <p>params参数：属于路径中的一部分，在配置路由时，需要占位</p>
-                                                <p>query参数：不属于路径中的一部分，类似于Ajax中的queryString
-                                                    &#x2F;home?k&#x3D;v&amp;kv&#x3D;,不需要占位</p>
-                                                <p>当给路由传参，有params参数，并采用对象写法，只能使用name的路由写法。</p>
-                                                <blockquote>
-                                                    <p><strong>路由传递参数有三种写法（字符串写法、模板字符串写法、对象写法），path不可以结合params参数一起使用</strong>
-                                                    </p>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><strong>如何指定params参数可传可不传</strong></p>
-                                                    <p>params参数需要占位，在配置路由的时候，在占位的后面加上一个 ？</p>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><strong>params参数可传递也可不传递，但如果传递是空串，如何解决</strong></p>
-                                                    <p>使用undefined解决：params参数可以传递、不传递（空的字符串）</p>
-                                                    <p><code>
-                                                            this.$router.push(&#123;name:&#39;search&#39;,params:&#123;keyword:&quot;&quot;
-                                                            ||
-                                                            undefined&#125;,query:&#123;k:this.keyword.toUpperCase()&#125;&#125;);</code>
-                                                    </p>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><strong>路由组件能不能传递props数据</strong></p>
-                                                    <p>可以：三种写法</p>
-                                                    <ul>
-                                                        <li>
-                                                            <p>布尔值写法:只能传递params参数</p>
-                                                            <p>props:true</p>
-                                                        </li>
-                                                        <li>
-                                                            <p>对象写法：额外给路由传递一些props</p>
-                                                            <p>props：{a:1,b:2},</p>
-                                                        </li>
-                                                        <li>
-                                                            <p>函数写法：可以把params参数、query参数，通过props传递给路由组件 </p>
-                                                            <figure class="highlight plaintext">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td class="gutter">
-                                                                            <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
-                                                                        </td>
-                                                                        <td class="code">
-                                                                            <pre><span class="line">props:($route) =&gt; &#123;</span><br><span class="line">  return &#123;keyword:$route.params.keyword,k:$route.query.k&#125;	&#125;</span><br></pre>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </figure>
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                                <p>路由跳转有两种形式：声明式导航、编程式导航</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>声明式路由跳转到当前路由（参数不变），多次执行不会抛出NavigationDuplicated的警告错误，这是因为vue-router底层已经处理好了
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>为什么编程式导航进行路由跳转时，就有这种警告错误呢？</p>
-                                                        <blockquote>
-                                                            <p>“vue-router”：“3.5.3版本”，引入promise</p>
-                                                            <ul>
-                                                                <li>
-                                                                    <p>通过给push方法传递相应的成功、失败回调函数，可以捕获到当前错误，可以解决</p>
-                                                                </li>
-                                                                <li>
-                                                                    <pre><code class="js">this.$router.push(&#123;name:&#39;search&#39;,params:&#123;keyword:&quot;&quot; || undefined&#125;,query:&#123;k:this.keyword.toUpperCase()&#125;&#125;,()=&gt;&#123;&#125;,(error)=&gt;&#123;&#125;);
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            18:35
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h3 id="一、初始化vue-cli"><a href="#一、初始化vue-cli" class="headerlink" title="一、初始化vue-cli"></a>一、初始化vue-cli</h3><p><strong><code>vue create app(项目名)</code></strong></p>
+<p><em>卸载脚手架：</em><code>npm uninstall @vue/cli -g</code></p>
+<h3 id="二、项目结构"><a href="#二、项目结构" class="headerlink" title="二、项目结构"></a>二、项目结构</h3><p><em><strong>node_modules文件夹</strong></em>：项目依赖</p>
+<p><em><strong>public文件夹</strong></em>：一般放置一些静态资源（图片），需要注意，放在public中的静态资源，webpack进行打包的时候，会原封不动打包到dist文件中。</p>
+<p><em><strong>src文件夹（程序员源代码文件夹）</strong></em>：</p>
+<p>​	<em>assets文件夹</em>：一般也是放置静态资源（一般放置多个组件公用的静态资源），注意，放置在assets文件夹中的静态资源，在webpack打包的时候，webpack会把静态资源当做一个模块，打包JS文件里面。</p>
+<p>​	<em>components文件夹</em>：一般放置的是非路由组件（全局组件）</p>
+<p>​	<em>App.vue</em>: 唯一的根组件</p>
+<p>​	<em>main.js</em>: 程序入口文件，也是整个程序当中最先执行的文件</p>
+<p><em><strong>babel.config.js</strong></em>: 配置文件（babel相关）</p>
+<p><em><strong>package.json文件</strong></em>：记录项目信息</p>
+<p><em><strong>package-lock.json</strong></em>：缓存性文件</p>
+<p>README.md: 说明性文件</p>
+<h3 id="三、其他配置"><a href="#三、其他配置" class="headerlink" title="三、其他配置"></a>三、其他配置</h3><ol>
+<li><p>项目运行时，浏览器自动打开</p>
+<blockquote>
+<p>—package.json</p>
+<p>“scripts”: {</p>
+<p>“serve”: “vue-cli-service serve –open”,</p>
+<p>“build”: “vue-cli-service build”,</p>
+<p>“lint”: “vue-cli-service lint”</p>
+<p>},</p>
+</blockquote>
+</li>
+<li><p>eslint校验功能关闭</p>
+<blockquote>
+<p>–vue.config.js</p>
+<p><em>&#x2F;&#x2F;关闭eslint校验</em></p>
+<p>lintOnSave:false</p>
+</blockquote>
+</li>
+<li><p>src文件夹简写方法，配置别名。@【@代表的是src文件夹】</p>
+<blockquote>
+<p>jsconfig.json 配置别名@提示</p>
+<p>“compilerOptions”: {</p>
+<p>“target”: “es5”,</p>
+<p>“module”: “esnext”,</p>
+<p>“baseUrl”: “.&#x2F;“,</p>
+<p>“moduleResolution”: “node”,</p>
+<p>“paths”: {</p>
+<p>“@&#x2F;*”: [</p>
+<p>​    “src&#x2F;*”</p>
+<p>]</p>
+<p>},</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="四、项目路由分析"><a href="#四、项目路由分析" class="headerlink" title="四、项目路由分析"></a>四、项目路由分析</h3><p>vue-router</p>
+<p>前端路由：kv键值对</p>
+<p>key: URL(地址栏中的路径)</p>
+<p>value：相应的路由组件</p>
+<p>开发项目时：</p>
+<ol>
+<li><p>书写静态页面</p>
+</li>
+<li><p>拆分组件</p>
+</li>
+<li><p>获取服务器的数据动态展示</p>
+</li>
+<li><p>完成相应的动态业务逻辑</p>
+</li>
+</ol>
+<p><strong>less样式</strong>：浏览器不识别less样式，需要通过less、less-loader进行处理，把less样式变为css样式，浏览器才可以识别。想让组件识别less样式，需要在style标签上添加 <strong><code>lang=&#39;less&#39;</code></strong></p>
+<p><strong>安装less与less-loader:</strong><code>npm install --save less less-loader</code></p>
+<p><em><strong>使用组件步骤</strong></em></p>
+<ul>
+<li>创建或者定义</li>
+<li>引入</li>
+<li>注册</li>
+<li>使用</li>
+</ul>
+<p><code>&lt;%= BASE_URL %&gt;</code>当前根目录</p>
+<h3 id="五、路由组件"><a href="#五、路由组件" class="headerlink" title="五、路由组件"></a>五、路由组件</h3><p>安装路由<code>npm install --save vue-router@3</code></p>
+<p><strong>vue 2 对应 vue-router 3 版本</strong></p>
+<h4 id="npm-i与npm-install-的区别："><a href="#npm-i与npm-install-的区别：" class="headerlink" title="*npm i与npm install*的区别："></a>*<code>npm i</code><em>与</em><code>npm install</code>*的区别：</h4><ul>
+<li>npm i 安装的模块及依赖，使用npm uninstall是没有办法删除的，必须使用npm uninstall i 才可以删除</li>
+<li>npm i会帮助检测与当前node版本最匹配的npm包版本号，并匹配出来相互依赖的npm包应该提升的版本号</li>
+<li>部分npm包在当前node版本下无法使用，必须使用建议版本</li>
+<li>安装报错时install肯定会出现npm-debug.log 文件，npm i不一定</li>
+</ul>
+<h4 id="npm-install、npm-install-–save与npm-install-–save-dev区别"><a href="#npm-install、npm-install-–save与npm-install-–save-dev区别" class="headerlink" title="npm install、npm install –save与npm install –save-dev区别"></a>npm install、npm install –save与npm install –save-dev区别</h4><blockquote>
+<p><strong><code>npm install X:</code></strong></p>
+<ul>
+<li>会把X包安装到node_modules目录中</li>
+<li>不会修改package.json</li>
+<li>之后运行npm install命令时，不会自动安装X</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong><code>npm install X –save:</code></strong></p>
+<ul>
+<li>会把X包安装到node_modules目录中</li>
+<li>会在package.json的dependencies属性下添加X</li>
+<li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
+<li>之后运行npm install<br>–production或者注明NODE_ENV变量值为production时，会自动安装msbuild到node_modules目录中</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong><code>npm install X –save-dev:</code></strong></p>
+<ul>
+<li>会把X包安装到node_modules目录中</li>
+<li>会在package.json的devDependencies属性下添加X</li>
+<li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
+<li>之后运行npm install<br>–production或者注明NODE_ENV变量值为production时，不会自动安装X到node_modules目录中</li>
+</ul>
+</blockquote>
+<p><em><strong>使用原则：运行时需要用到的包使用–save，否则使用–save-dev。</strong></em></p>
+<blockquote>
+<p>-pages|views文件夹：放置路由组件</p>
+</blockquote>
+<p> 配置路由一般放置在router文件夹中</p>
+<p><strong>路由</strong></p>
+<blockquote>
+<p>路由组件与非路由组件的区别：</p>
+<ul>
+<li>路由组件一般放置在pages|views文件夹中，非路由组件一般放置components文件夹中</li>
+<li>路由组件一般需要在router文件夹中进行注册（使用的即为组件的名字），非路由组件在使用的时候，一般都是标签的形式使用<!-- 路由组件出口的地方 -->
+<router-view></router-view></li>
+<li>注册完路由，不管是路由组件还是非路由组件身上都有$route|$router属性</li>
+</ul>
+</blockquote>
+<p><em><strong>route和router</strong></em></p>
+<blockquote>
+<p> <code>$router:一般进行编程式导航，进行路由跳转【push、replace】</code></p>
+<p> $router是VueRouter的一个对象，通过Vue.use(VueRouter)和Vue构造函数得到一个router的实例对象，这个对象中是一个全局的对象，他包含了所有的路由，包含了许多关键的对象和属性。</p>
+<p> <img src="https://pic.imgdb.cn/item/6415c4cca682492fccf1ae63.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p> 以history对象来举例：<br> $router.push({path:’home’})，本质是向history栈中添加一个路由，在我们看来是切换路由，但本质是在添加一个history记录<br> $router.replace({path:’home’})，&#x2F;&#x2F;替换路由，没有历史记录<br> $router.push(‘&#x2F;login’) ,跳转到指定路由</p>
+</blockquote>
+<blockquote>
+<p><code>$route:一般获取路由信息【路径、query、params】 </code></p>
+<p>$route是一个跳转的路由对象，每一个路由都会有一个$route对象，是一个局部的对象，可以获取对应的name，path，params，query等</p>
+<p><img src="https://pic.imgdb.cn/item/6415c4cea682492fccf1b310.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>这两者不同的结构可以看出两者的区别，他们的一些属性是不同的。</p>
+<p>$route.path 字符串，等于当前路由对象的路径，会被解析为绝对路径，如&#x2F;home&#x2F;ews</p>
+<p>$route.params 对象，含路有种的动态片段和全匹配片段的键值对，不会拼接到路由的url后面</p>
+<p>$route.query 对象，包含路由中查询参数的键值对。会拼接到路由url后面</p>
+<p>$route.router 路由规则所属的路由器</p>
+<p>$route.matchd 数组，包含当前匹配的路径中所包含的所有片段所对象的配置参数对象</p>
+<p>$route.name 当前路由的名字，如果没有使用具体路径，则名字为空</p>
+</blockquote>
+<p><strong>路由的跳转</strong></p>
+<blockquote>
+<p>路由的跳转有两种形式：</p>
+<ul>
+<li><p>声明式导航router-link,可以进行路由的跳转【<em>声明式导航,务必要有to属性</em>】</p>
+</li>
+<li><p>编程式导航push | replace,可以进行路由的跳转</p>
+<blockquote>
+<p>编程式导航：声明式导航能做的，编程式导航都能做。但是编程式导航除了可以进行路由跳转，还可以做一些其他的业务逻辑</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h3 id="六、组件显示与隐藏"><a href="#六、组件显示与隐藏" class="headerlink" title="六、组件显示与隐藏"></a>六、组件显示与隐藏</h3><p>可以根据组件身上的$route获取当前路由的信息，通过路由路径判断显示与隐藏。</p>
+<p><code>&lt;Footer v-show=&quot;$route.path==&#39;/home&#39; || $route.path==&#39;/search&#39;&quot;&gt;&lt;/Footer&gt;</code></p>
+<p><em><strong>路由元信息</strong></em></p>
+<p>配置路由时，可以给路由添加路由元信息【meta】，路由的配置对象key是固定的。</p>
+<blockquote>
+<p> routes:[</p>
+<p> ​    {</p>
+<p> ​      path: ‘&#x2F;home’,</p>
+<p> ​      component:Home,</p>
+<p> ​      meta:{show:true}</p>
+<p> ​    },</p>
+<p> ]</p>
+<ul>
+<li>$route.meta.show</li>
+</ul>
+</blockquote>
+<p><em>路由传参，参数的写法：</em></p>
+<p>params参数：属于路径中的一部分，在配置路由时，需要占位</p>
+<p>query参数：不属于路径中的一部分，类似于Ajax中的queryString 	&#x2F;home?k&#x3D;v&amp;kv&#x3D;,不需要占位</p>
+<p>当给路由传参，有params参数，并采用对象写法，只能使用name的路由写法。</p>
+<blockquote>
+<p><strong>路由传递参数有三种写法（字符串写法、模板字符串写法、对象写法），path不可以结合params参数一起使用</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>如何指定params参数可传可不传</strong></p>
+<p>params参数需要占位，在配置路由的时候，在占位的后面加上一个 ？</p>
+</blockquote>
+<blockquote>
+<p><strong>params参数可传递也可不传递，但如果传递是空串，如何解决</strong></p>
+<p>使用undefined解决：params参数可以传递、不传递（空的字符串）</p>
+<p><code>   this.$router.push(&#123;name:&#39;search&#39;,params:&#123;keyword:&quot;&quot; || undefined&#125;,query:&#123;k:this.keyword.toUpperCase()&#125;&#125;);</code></p>
+</blockquote>
+<blockquote>
+<p><strong>路由组件能不能传递props数据</strong></p>
+<p>可以：三种写法</p>
+<ul>
+<li><p>布尔值写法:只能传递params参数</p>
+<p>props:true</p>
+</li>
+<li><p>对象写法：额外给路由传递一些props</p>
+<p>props：{a:1,b:2},</p>
+</li>
+<li><p>函数写法：可以把params参数、query参数，通过props传递给路由组件 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">props:($route) =&gt; &#123;</span><br><span class="line">  return &#123;keyword:$route.params.keyword,k:$route.query.k&#125;	&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+<p>路由跳转有两种形式：声明式导航、编程式导航</p>
+<ul>
+<li><p>声明式路由跳转到当前路由（参数不变），多次执行不会抛出NavigationDuplicated的警告错误，这是因为vue-router底层已经处理好了</p>
+</li>
+<li><p>为什么编程式导航进行路由跳转时，就有这种警告错误呢？</p>
+<blockquote>
+<p>“vue-router”：“3.5.3版本”，引入promise</p>
+<ul>
+<li><p>通过给push方法传递相应的成功、失败回调函数，可以捕获到当前错误，可以解决</p>
+</li>
+<li><pre><code class="js">this.$router.push(&#123;name:&#39;search&#39;,params:&#123;keyword:&quot;&quot; || undefined&#125;,query:&#123;k:this.keyword.toUpperCase()&#125;&#125;,()=&gt;&#123;&#125;,(error)=&gt;&#123;&#125;);
 这种写法，治标不治本.在别的组件当中push|replace，编程式导航还是有类似的错误。
 </code></pre>
-                                                                </li>
-                                                                <li>
-                                                                    <p>this.$router属性：属性值是VueRouter类的一个实例，当在入口文件注册路由的时候，给组件实例添加$router|$route属性
-                                                                    </p>
-                                                                </li>
-                                                                <li>
-                                                                    <p>push：VueRouter类的一个实例</p>
-                                                                </li>
-                                                            </ul>
-                                                        </blockquote>
-                                                    </li>
-                                                </ul>
-                                                <p><strong>call与apply的区别</strong>：</p>
-                                                <p>相同点，都可以调用函数一次，都可以篡改函数的上下文一次。</p>
-                                                <p>不同点：call与apply传递参数：call传递参数用逗号隔开。apply方法执行，传递数组</p>
-                                                <h3 id="七、"><a href="#七、" class="headerlink" title="七、"></a>七、</h3>
-                                                <p><em>vue组件名在使用时不区分大小写</em></p>
-                                                <p>为什么需要进行二次封装axios?</p>
-                                                <blockquote>
-                                                    <ul>
-                                                        <li>请求拦截器：可以在发请求前处理一些业务</li>
-                                                        <li>响应拦截器：当服务器数据返回后，可以处理一些事情</li>
-                                                    </ul>
-                                                </blockquote>
-                                                <p><strong>安装axios</strong></p>
-                                                <blockquote>
-                                                    <p><code>npm install --save axios</code></p>
-                                                </blockquote>
-                                                <p>在项目中，一般在API文件夹中存放【axios】</p>
-                                                <p><strong>接口统一管理</strong></p>
-                                                <p>小项目：完全可以在组件的生命周期函数中发请求</p>
-                                                <p>大项目：<code>axios.get(&#39;xxx&#39;)</code></p>
-                                                <p><strong>跨域问题：</strong></p>
-                                                <blockquote>
-                                                    <p> 什么是跨域？</p>
-                                                    <p> 协议、域名、端口号不同请求，称为跨域</p>
-                                                    <p> 解决跨域：Jsonp、cross、代理</p>
-                                                </blockquote>
-                                                <p><strong>nprogress进度条插件</strong></p>
-                                                <blockquote>
-                                                    <p>安装<code>npm install --save nprogress</code></p>
-                                                </blockquote>
-                                                <h3 id="八、"><a href="#八、" class="headerlink" title="八、"></a>八、</h3>
-                                                <p><strong>vuex</strong></p>
-                                                <blockquote>
-                                                    <p>是官方提供的插件，状态管理库，集中式管理项目中组件公用的数据。</p>
-                                                    <p>安装<code>npm install --save vuex@3</code></p>
-                                                    <p>与vue-router一样，vue2对应vuex 3版本9</p>
-                                                </blockquote>
-                                                <h3 id="九"><a href="#九" class="headerlink" title="九"></a>九</h3>
-                                                <p><strong>防抖与节流</strong></p>
-                                                <blockquote>
-                                                    <p>浏览器卡顿现象：事件触发非常频繁，而且每一次触发，回调函数都要去执行</p>
-                                                    <p><em>节流</em>：在规定的间隔时间范围内不会重复触发回调，只有大于这个时间间隔才会触发回调，把频繁触发改为少量触发</p>
-                                                    <p><em>防抖</em>：前面所有的触发都被取消，最后一次执行在规定的时间内才会触发，也就是说如果连续快速的触发，只会执行一次
-                                                    </p>
-                                                </blockquote>
-                                                <blockquote>
-                                                    <p><em>lodash插件</em></p>
-                                                    <p>封装函数的防抖与节流业务【闭包+延迟器】</p>
-                                                    <p>lodash函数库对外暴露__函数 </p>
-                                                </blockquote>
-                                                <h3 id="十"><a href="#十" class="headerlink" title="十"></a>十</h3>
-                                                <p><strong>mock模拟数据</strong></p>
-                                                <p><strong>webpack默认对外暴露：图片、json数据格式</strong></p>
-                                                <p>mock数据：第一个参数请求地址，第二个参数请求数据</p>
+</li>
+<li><p>this.$router属性：属性值是VueRouter类的一个实例，当在入口文件注册路由的时候，给组件实例添加$router|$route属性</p>
+</li>
+<li><p>push：VueRouter类的一个实例</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><strong>call与apply的区别</strong>：</p>
+<p>相同点，都可以调用函数一次，都可以篡改函数的上下文一次。</p>
+<p>不同点：call与apply传递参数：call传递参数用逗号隔开。apply方法执行，传递数组</p>
+<h3 id="七、"><a href="#七、" class="headerlink" title="七、"></a>七、</h3><p><em>vue组件名在使用时不区分大小写</em></p>
+<p>为什么需要进行二次封装axios?</p>
+<blockquote>
+<ul>
+<li>请求拦截器：可以在发请求前处理一些业务</li>
+<li>响应拦截器：当服务器数据返回后，可以处理一些事情</li>
+</ul>
+</blockquote>
+<p><strong>安装axios</strong></p>
+<blockquote>
+<p><code>npm install --save axios</code></p>
+</blockquote>
+<p>在项目中，一般在API文件夹中存放【axios】</p>
+<p><strong>接口统一管理</strong></p>
+<p>小项目：完全可以在组件的生命周期函数中发请求</p>
+<p>大项目：<code>axios.get(&#39;xxx&#39;)</code></p>
+<p><strong>跨域问题：</strong></p>
+<blockquote>
+<p> 什么是跨域？</p>
+<p> 协议、域名、端口号不同请求，称为跨域</p>
+<p> 解决跨域：Jsonp、cross、代理</p>
+</blockquote>
+<p><strong>nprogress进度条插件</strong></p>
+<blockquote>
+<p>安装<code>npm install --save nprogress</code></p>
+</blockquote>
+<h3 id="八、"><a href="#八、" class="headerlink" title="八、"></a>八、</h3><p><strong>vuex</strong></p>
+<blockquote>
+<p>是官方提供的插件，状态管理库，集中式管理项目中组件公用的数据。</p>
+<p>安装<code>npm install --save vuex@3</code></p>
+<p>与vue-router一样，vue2对应vuex 3版本9</p>
+</blockquote>
+<h3 id="九"><a href="#九" class="headerlink" title="九"></a>九</h3><p><strong>防抖与节流</strong></p>
+<blockquote>
+<p>浏览器卡顿现象：事件触发非常频繁，而且每一次触发，回调函数都要去执行</p>
+<p><em>节流</em>：在规定的间隔时间范围内不会重复触发回调，只有大于这个时间间隔才会触发回调，把频繁触发改为少量触发</p>
+<p><em>防抖</em>：前面所有的触发都被取消，最后一次执行在规定的时间内才会触发，也就是说如果连续快速的触发，只会执行一次</p>
+</blockquote>
+<blockquote>
+<p><em>lodash插件</em></p>
+<p>封装函数的防抖与节流业务【闭包+延迟器】</p>
+<p>lodash函数库对外暴露__函数	</p>
+</blockquote>
+<h3 id="十"><a href="#十" class="headerlink" title="十"></a>十</h3><p><strong>mock模拟数据</strong></p>
+<p><strong>webpack默认对外暴露：图片、json数据格式</strong></p>
+<p>mock数据：第一个参数请求地址，第二个参数请求数据</p>
 
-                                            </article>
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%BF%BD/">
+                    追
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" class="trm-anima-link">
+                    css遗漏
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/18</li>
+                <li>18:57</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%BF%BD/">
+                    追
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="trm-anima-link">
+                    flex弹性布局
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/03/18</li>
+                <li>17:41</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
 
-
-                                        </div>
-                                        <div id="post-next-prev" class="row">
-                                            <div class="col-lg-12">
-                                                <!-- title -->
-                                                <h5 class="trm-title-with-divider">
-                                                    其他文章
-                                                    <span data-number="02"></span>
-                                                </h5>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
-                                                    data-scroll-offset="40">
-                                                    <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                                        class="trm-cover-frame trm-anima-link">
-
-
-                                                        <img alt="cover" class="no-fancybox"
-                                                            src="https://pic.imgdb.cn/item/6415c3eba682492fccefa8ad.png">
-
-                                                    </a>
-
-                                                    <div class="trm-card-descr">
-                                                        <div class="trm-label trm-category trm-mb-20">
-                                                            <a href=" /categories/%E8%BF%BD/">
-                                                                追
-                                                            </a>
-                                                        </div>
-                                                        <h5>
-                                                            <a href="/2023/03/18/css%E9%81%97%E6%BC%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                                                class="trm-anima-link">
-                                                                css遗漏
-                                                            </a>
-                                                        </h5>
-                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-                                                        <ul class="trm-card-data trm-label">
-                                                            <li>23/03/18</li>
-                                                            <li>18:57</li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="trm-blog-card trm-scroll-animation" data-scroll
-                                                    data-scroll-offset="40">
-                                                    <a href="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/"
-                                                        class="trm-cover-frame trm-anima-link">
-
-
-                                                        <img alt="cover" class="no-fancybox"
-                                                            src="https://pic.imgdb.cn/item/6415c459a682492fccf0ad27.png">
-
-                                                    </a>
-
-                                                    <div class="trm-card-descr">
-                                                        <div class="trm-label trm-category trm-mb-20">
-                                                            <a href=" /categories/%E8%BF%BD/">
-                                                                追
-                                                            </a>
-                                                        </div>
-                                                        <h5>
-                                                            <a href="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/"
-                                                                class="trm-anima-link">
-                                                                flex弹性布局
-                                                            </a>
-                                                        </h5>
-                                                        <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-                                                        <ul class="trm-card-data trm-label">
-                                                            <li>23/03/18</li>
-                                                            <li>17:41</li>
-
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
+    
 
 
 
+                    <div class="trm-divider footer-divider"></div>
 
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
 
-                                        <div class="trm-divider footer-divider"></div>
+    
 
-                                        <!-- footer -->
-                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+    
+        <div class="trm-footer-item">
+            <span>© 2023- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">旺财</span>
+        </div>
+    
 
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.3
+            </span>
+        </div>
+      
 
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
+        </div>
+     
 
+     
+</footer>
 
-                                            <div class="trm-footer-item">
-                                                <span>© 2023- 2023</span>
-                                                <span class="footer-separator" data-separator=" · "></span>
-                                                <span class="trm-accent-color">旺财</span>
-                                            </div>
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("3/18/2023 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
 
-
-
-                                            <div class="trm-footer-item">
-                                                <span>
-                                                    由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-                                                    驱动 v6.3.0
-                                                </span>
-                                                <span class="footer-separator" data-separator=" | "></span>
-                                                <span>
-                                                    主题 -
-                                                    <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async'
-                                                        target='_blank'>Async</a>
-                                                    v2.0.3
-                                                </span>
-                                            </div>
-
-
-
-                                            <div class="trm-footer-item">
-                                                笔记残篇已现世 <span id="since" class="trm-accent-color"></span> 天
-                                            </div>
-
-
-
-                                        </footer>
-
-                                        <script>
-                                            function show_date_time() {
-                                                var BirthDay = new Date("3/18/2023 17:00:00");
-                                                var today = new Date();
-                                                var timeold = (today.getTime() - BirthDay.getTime());
-                                                var msPerDay = 24 * 60 * 60 * 1000
-                                                var day = Math.floor(timeold / msPerDay)
-                                                since.innerHTML = day
-                                            }
-                                            show_date_time()
-                                        </script>
-
-                                        <!-- footer end -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- body end -->
-
-                    <div class="trm-fixed-container" data-scroll data-scroll-sticky
-                        data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-
-                        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
-                            <i class="iconfont fas fa-book-reader"></i>
-                        </div>
-
-
-                        <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
-                            <i class="iconfont fas fa-arrow-up"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- scroll container end -->
-
     </div>
-    <!-- app wrapper end -->
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
 
 
-    <!-- Plugin -->
 
 
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
+    
 
+    
+        <script src="/js/plugins/typing.js?v=2.0.3"></script>
+    
 
-    <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
-
-    <script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
-
-
-
-    <script src="/js/plugins/typing.js?v=2.0.3"></script>
-
-
-
+    
 
     <!-- 数学公式 -->
-
+    
 
     <!-- 评论插件 -->
+    
+        
+
+        
+    
 
 
 
+<!-- CDN -->
 
 
+    
 
+    
 
-
-    <!-- CDN -->
-
-
-
-
-
-
-
+    
 
 
 
 
     <!-- Service Worker -->
-
+    
     <!-- baidu push -->
+    
+    <script data-swup-reload-script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 
 
 
-    <script id="async-script" src="/js/main.js?v=2.0.3"></script>
+<script id="async-script" src="/js/main.js?v=2.0.3"></script>
 
 </body>
 
