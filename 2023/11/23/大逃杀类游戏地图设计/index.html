@@ -7,16 +7,25 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="笔记百分百">
-<meta property="og:url" content="http://www.wangcai.club/tags/flex%E5%B8%83%E5%B1%80/index.html">
+<meta name="description" content="知乎原文：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;442348920在各类大逃杀地图中，地图是通过什么逻辑设计并规划的，POI内部设计是如何组织的. 引入POI的概念：point of interest。POI泛指关卡场景中，玩家的兴趣点。在BR图中，大部分是以城镇的形态存在的。下文中的BR指的是大逃杀模式玩法。 POI的规划： 从游戏体验定位确定地图大小 思考地图整体布局 规划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大逃杀类游戏地图设计">
+<meta property="og:url" content="http://www.wangcai.club/2023/11/23/%E5%A4%A7%E9%80%83%E6%9D%80%E7%B1%BB%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="笔记百分百">
+<meta property="og:description" content="知乎原文：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;442348920在各类大逃杀地图中，地图是通过什么逻辑设计并规划的，POI内部设计是如何组织的. 引入POI的概念：point of interest。POI泛指关卡场景中，玩家的兴趣点。在BR图中，大部分是以城镇的形态存在的。下文中的BR指的是大逃杀模式玩法。 POI的规划： 从游戏体验定位确定地图大小 思考地图整体布局 规划">
 <meta property="og:locale">
+<meta property="og:image" content="http://www.wangcai.club/img/404.jpg">
+<meta property="article:published_time" content="2023-11-23T15:38:58.000Z">
+<meta property="article:modified_time" content="2023-11-24T06:05:06.765Z">
 <meta property="article:author" content="wangcai">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.wangcai.club/img/404.jpg">
+
+    <meta name="keywords" content="BR 地图 关卡">
 
 
-<title >笔记百分百</title>
+<title >大逃杀类游戏地图设计</title>
 
 <!-- Favicon -->
 
@@ -62,7 +71,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"www.wangcai.club","author":"wangcai","root":"/","typed_text":["Web Developer","仙人"],"theme_version":"2.0.3","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon16":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","icon32":"https://pic.imgdb.cn/item/6415c6c4a682492fccf56c5e.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"https://pic.imgdb.cn/item/6415c6b0a682492fccf53e32.png","showText":"旺财の死亡笔记","hideText":"笔记百分百","assets":null,"internal_provider":"unpkg","third_party_provider":"unpkg"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2023-11-24 14:06:56"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-11-24 14:05:06"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.3" id="trm-switch-style">
@@ -213,12 +222,13 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/img/banner.png">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://pic.imgdb.cn/item/655f7ac0c458853aefe61a9c.jpg">
     <!-- banner cover end -->
     
 
@@ -234,10 +244,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            The article archive
+                            摘自知乎
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            云间连下榻，<br>天上接行杯。
+                            大逃杀类游戏地图设计
                         </h1>
 
                         
@@ -247,7 +257,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        tags
+                                        2023
                                     </span
                                 ></li>
                             </ul>
@@ -279,7 +289,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="https://pic.imgdb.cn/item/6415c2b6a682492fcced3e84.jpg">
@@ -297,7 +317,7 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <div class="trm-social">
@@ -309,7 +329,7 @@
 </div>
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -343,7 +363,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -354,6 +374,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#引入POI的概念：point-of-interest。"  data-scroll-to="#引入POI的概念：point-of-interest。"><span class="toc-number">1.</span> <span class="toc-text">引入POI的概念：point of interest。</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#POI的规划："  data-scroll-to="#POI的规划："><span class="toc-number">2.</span> <span class="toc-text">POI的规划：</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#1-地图体验规划，确定地图大小"  data-scroll-to="#1-地图体验规划，确定地图大小"><span class="toc-number">3.</span> <span class="toc-text">1.地图体验规划，确定地图大小</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#2-确定POI布局"  data-scroll-to="#2-确定POI布局"><span class="toc-number">4.</span> <span class="toc-text">2.确定POI布局</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#POI数量规划"  data-scroll-to="#POI数量规划"><span class="toc-number">5.</span> <span class="toc-text">POI数量规划</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#POI距离规划"  data-scroll-to="#POI距离规划"><span class="toc-number">6.</span> <span class="toc-text">POI距离规划</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#POI吸引力规划"  data-scroll-to="#POI吸引力规划"><span class="toc-number">7.</span> <span class="toc-text">POI吸引力规划</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#POI设计"  data-scroll-to="#POI设计"><span class="toc-number">8.</span> <span class="toc-text">POI设计</span></a></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -364,73 +391,102 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-tag-list trm-list" itemprop="keywords"><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a><span class="tag-list-count">2</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/flex%E5%B8%83%E5%B1%80/" rel="tag">flex布局</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%BA%9F%E7%A8%BF/" rel="tag">废稿</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E4%BB%A4/" rel="tag">指令</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AF%95%E9%A2%98/" rel="tag">笔试题</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag">面试题</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a><span class="tag-list-count">2</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            11/23
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            23:38
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            wangcai
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p>知乎原文：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/442348920">https://zhuanlan.zhihu.com/p/442348920</a><br><strong>在各类大逃杀地图中，地图是通过什么逻辑设计并规划的，POI内部设计是如何组织的.</strong><br><br></p>
+<h3 id="引入POI的概念：point-of-interest。"><a href="#引入POI的概念：point-of-interest。" class="headerlink" title="引入POI的概念：point of interest。"></a>引入POI的概念：point of interest。</h3><p>POI泛指关卡场景中，玩家的兴趣点。在BR图中，大部分是以城镇的形态存在的。下文中的BR指的是大逃杀模式玩法。<br><br></p>
+<h3 id="POI的规划："><a href="#POI的规划：" class="headerlink" title="POI的规划："></a>POI的规划：</h3><ol>
+<li>从游戏体验定位确定地图大小</li>
+<li>思考地图整体布局</li>
+<li>规划POI之间的数量区间</li>
+<li>调节POI之间的距离</li>
+<li>规划POI之间的整体吸引力</li>
+</ol>
+<h3 id="1-地图体验规划，确定地图大小"><a href="#1-地图体验规划，确定地图大小" class="headerlink" title="1.地图体验规划，确定地图大小"></a>1.地图体验规划，确定地图大小</h3><ol>
+<li>地图尺寸前期规划是结合 地图在自身产品中的定位 和 预期地图体验设计 来决定的。</li>
+<li>市场上逃杀类大地图趋势明显从大图&#x2F;慢节奏&#x2F;时长长 转变为 小图&#x2F;快节奏&#x2F;时长短。</li>
+<li>趋势：推出的地图尺寸不断缩小，节奏不断加快。玩家对于慢节奏转快节奏接受度较高，对于快节奏转慢节奏接受度较低</li>
+<li>定位：地图主题与体验定位，与自身已经上线的地图拉开差距（这样用来保证不分流，容纳更多不同喜好的玩家）</li>
+<li>玩家群体的属性导向，比如休闲玩家对于慢节奏图是有偏好的<br></li>
+</ol>
+<h3 id="2-确定POI布局"><a href="#2-确定POI布局" class="headerlink" title="2.确定POI布局"></a>2.确定POI布局</h3><p>目前市场上主要两种POI呈现形态，一种是大部分的游戏都使用的离散的卫星POI，一种是基于写实城市的紧凑POI。 这个差异在根本上影响到POI设计的逻辑。<br>在PUBGM，CODM，COD BO4的blackout，Fortnite，Apex用的都是卫星城的离散poi布局，只有wz是采用城镇化整体的方式。为什么会有这种布局差异？主要是由于核心玩法导致的。<br>目标引导：当毒圈开始收缩的时候，玩家的行进目标会是玩家的兴趣点来行进的，也就是玩家通常会以POI为下一个进圈目标。 在下一个圈也是同理，有POI的情况，通常玩家的转移路径沿着POI。</p>
+<h3 id="POI数量规划"><a href="#POI数量规划" class="headerlink" title="POI数量规划"></a>POI数量规划</h3><p>大逃杀的缩圈机制不是按照距离缩圈，而是按照地图大小比例缩圈。每次缩圈都是重要的节奏时段。 因为是按比例缩圈，所以控制数量只能控制POI的颗粒度。<br>每一个节奏时段里，要有合适数量的城区。这个非常重要，POI就像是一个个目标点会吸引玩家。城区数量过少，会导致玩家提前的聚集交火，并且在后期的圈中很容易完全无城。 如果城区数量过多，那么会导致玩家没有目标点，过分分散，难以前期相遇打架。 我们详细去看市面上传统大逃杀的POI数量，会发现大概在15-30个。<br>以PUBG第三圈为例，雨林图和livik的颗粒度大概都在2-3个城区。我们看一下第三圈所在的节奏阶段。 livik第二圈结束到第三圈，已经11分20s了，第三圈缩完就15分了。 全局大概20分钟，第三圈已经是节奏的中后段。 2个城区左右让玩家聚集交火是非常合适的一个体验。 这个数量是波动的，不同类型的需求，我可以进行微调，比如说，我想要玩家提前聚集打架，那么我可能有更少的城镇数量。 我想要玩家在第三圈仍然处于中期，那么这个颗粒度同样是可以调整多的。</p>
+<h3 id="POI距离规划"><a href="#POI距离规划" class="headerlink" title="POI距离规划"></a>POI距离规划</h3><p>这一步其实是要控制玩家在POI之间的转移时间。我们预期整场BR的整体节奏中，有多少时间是用于转移的。像社交类型的BR，会把这部分时长的占比拉长。<br>然而，POI距离除以玩家载具速度或者玩家速度并不直接等于转移时间。转移时间有多种影响因素。 我们需要考虑到POI周围的载具投放量，路网分布，地形因素，例如山脉或者水域等等。<br>利用距离规划达到一个转移时间合理的目的，再反推POI的距离是否还应该细节调整。</p>
+<h3 id="POI吸引力规划"><a href="#POI吸引力规划" class="headerlink" title="POI吸引力规划"></a>POI吸引力规划</h3><p>如果POI设计越不均衡，会让玩家更聚集到同一个点，会产生问题：地图的利用率降低，进而导致地图的重复可玩性降低。前期需要有POI的吸引力分布规划，才能保持整个地图的可玩性。<br>当一张图中部分城区吸引力过强，过于不均衡，会影响到地图的利用率，继而减少玩家体验的丰富性，再继续影响到图整体的重复可玩性。所以前期我们需要有POI的吸引力分布规划，才能保持整个地图的可玩性。<br>影响POI吸引力的三个因素：</p>
+<ol>
+<li>资源搜索效率</li>
+<li>位置 位置越靠中心，不用跑图的概率越高。</li>
+</ol>
+<h3 id="POI设计"><a href="#POI设计" class="headerlink" title="POI设计"></a>POI设计</h3><p><img src="https://pic.imgdb.cn/item/65603d06c458853aefc537d6.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 
-<!-- history -->
-
-<div class="row">
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                flex布局
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/08/21/8-21%E4%B8%80%E5%A4%A7%E6%B3%A2%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92%E9%9D%A2%E8%AF%95%E5%89%8D%E5%87%86%E5%A4%87/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/03/18/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="trm-anima-link">
-                                        flex弹性布局
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">03/18</li>
-                                        <li class="trm-accent-color">17:41</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
+            
+                <img alt="cover" class="no-fancybox" src="https://pic.imgdb.cn/item/64a7bee31ddac507ccdb0bd2.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%BF%BD/">
+                    追
+                </a>
             </div>
-            
+            <h5>
+                <a href="/2023/08/21/8-21%E4%B8%80%E5%A4%A7%E6%B3%A2%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92%E9%9D%A2%E8%AF%95%E5%89%8D%E5%87%86%E5%A4%87/" class="trm-anima-link">
+                    8/21一大波游戏策划面试前准备
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/08/21</li>
+                <li>17:07</li>
+                
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -495,6 +551,10 @@
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
     
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
         <i class="iconfont fas fa-arrow-up"></i>
@@ -533,6 +593,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
